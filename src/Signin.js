@@ -35,7 +35,7 @@ class Signin extends Component{
                           <button type="button"><Link to="/Home">Sign In</Link></button>
                        </li>
                        <li>
-                          <p>Belum punya akun?<Link to="/Signup">Sign Up</Link></p>
+                          <p>Don't have an account yet?<Link to="/Signup">Sign Up</Link></p>
                        </li>
                     </ul>
                  </form>
