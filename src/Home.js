@@ -1,20 +1,25 @@
 import React, { Component } from "react";
+
+import MainArticle from "./Home/Mainarticle";
+import SpacingGrid from "./Home/Post";
+import Categorybar from "./Category-bar";
 import "./App.css";
 
-class Home extends Component{
+class Category extends Component{
     render(){
         return(
             <div>
-                <h1>Hello World</h1>
-                <ul>
-                    <li>pertama</li>
-                    <li>kedua</li>
-                    <li>ketiga</li>
-                    <li>keempat</li>
-                </ul>
+               <Categorybar />
+               <div className="popular-post">
+                   <div className="main-article">
+                      <MainArticle />
+                   </div>
+                  <br></br>
+                  <SpacingGrid />
+               </div>
             </div>
         )
     };
 }
 
-export default Home;
+export default Category;

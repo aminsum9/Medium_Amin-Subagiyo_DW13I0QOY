@@ -9,6 +9,9 @@ import {
 import Signin from "./Signin";
 import Signup from "./Signup";
 import Home from "./Home";
+import Mobile from "./Category/Mobile";
+import Network from "./Category/Network";
+import Web from "./Category/Web";
 import "./App.css";
 
 export default function App() {
@@ -25,8 +28,17 @@ export default function App() {
           <Route path="/Home">
             <Home />
           </Route>
+          <Route path="/Mobile">
+            <Mobile />
+          </Route>
+          <Route path="/Network">
+            <Network />
+          </Route>
+          <Route path="/Web">
+            <Web />
+          </Route>
           <Route path="/">
-            <Signin />
+            <Signup />
           </Route>
         </Switch>
       </div>

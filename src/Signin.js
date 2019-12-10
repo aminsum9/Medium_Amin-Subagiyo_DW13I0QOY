@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import Signup from "./Signup";
+import Home from "./Home";
 import "./App.css";
 
 class Signin extends Component{
@@ -8,6 +9,7 @@ class Signin extends Component{
       return(
         <div>
           <nav className="app-nav">
+             <h1>MasterCode</h1>
               <Link to="/Signin" className="nav-link">Sign In</Link>
               <Link to="/Signup" className="nav-link">Sign Up</Link>
           </nav>
@@ -26,11 +28,11 @@ class Signin extends Component{
                           <label for="password">Password</label>
                        </li>
                        <li>
-                          <input type="password" name="password" id="password" placeholder="  create new password..."></input>
+                          <input type="password" name="password" id="password" placeholder="  fill new password..."></input>
                        </li>
                        <br></br>
                        <li>
-                          <button type="button">Sign In</button>
+                          <button type="button"><Link to="/Home">Sign In</Link></button>
                        </li>
                        <li>
                           <p>Belum punya akun?<Link to="/Signup">Sign Up</Link></p>
