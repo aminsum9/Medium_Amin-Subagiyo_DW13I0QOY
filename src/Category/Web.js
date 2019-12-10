@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import Categorybar from '../Category-bar';
+import Contain from "./Category-contain";
 
 class Web extends Component{
     render(){
         return(
             <div>
                 <Categorybar />
-                <h1>This is Web</h1>
+                <Contain />
             </div>
         )
     };
