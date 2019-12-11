@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function TransitionsModal() {
    const classes = useStyles();
-   const [open, buka] = React.useState(false);
+   const [open, buka, bukak] = React.useState(false);
 
    const signinOpen = () => {
    buka(true);
@@ -87,7 +87,7 @@ export default function TransitionsModal() {
             aria-labelledby="transition-modal-title"
             aria-describedby="transition-modal-description"
             className={classes.modal}
-            open={open}
+            bukak={open}
             onClose={handleClose}
             closeAfterTransition
             BackdropComponent={Backdrop}
@@ -95,7 +95,7 @@ export default function TransitionsModal() {
             timeout: 500,
             }}
       >
-         <Fade in={open}>
+         <Fade in={bukak}>
                         <div className="signup regist">
                         <h1>Sign Up</h1>
                            <form action="" method="">

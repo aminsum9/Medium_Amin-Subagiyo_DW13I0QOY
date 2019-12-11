@@ -38,6 +38,7 @@ export default function SpacingGrid() {
             <Grid item>
               <Paper className={classes.paper}>
                 <h1 className="last-post-title">Last Post</h1>
+                <Mediacard />
               </Paper>         
             </Grid>
         </Grid>

@@ -28,11 +28,10 @@ function Article(){
         setSpacing(Number(event.target.value));
     };
     return(
-        <div className="post">
-            <div className="konten">
+        <div className="post konten">
                 <h1>What is Google?</h1>
                 <img src="https://www.tripsavvy.com/thmb/oOoIxfAquiM7PBa_sDMXNdo_wtk=/2416x1600/filters:fill(auto,1)/how-to-visit-the-googleplex-google-hq-mountain-view-57e2d4515f9b586c3529ba9c.jpg"></img>
-                <p>Google LLC[5] adalah sebuah perusahaan multinasional Amerika Serikat yang berkekhususan pada jasa dan produk Internet. Produk-produk tersebut meliputi teknologi pencarian, komputasi web, perangkat lunak, dan periklanan daring.[6] Sebagian besar labanya berasal dari AdWords.[7][8]
+                <p id="main">Google LLC[5] adalah sebuah perusahaan multinasional Amerika Serikat yang berkekhususan pada jasa dan produk Internet. Produk-produk tersebut meliputi teknologi pencarian, komputasi web, perangkat lunak, dan periklanan daring.[6] Sebagian besar labanya berasal dari AdWords.[7][8]
 
                 Google didirikan oleh Larry Page dan Sergey Brin saat masih mahasiswa Ph.D. di Universitas Stanford. Mereka berdua memegang 16 persen saham perusahaan. Mereka menjadikan Google sebagai perusahaan swasta pada tanggal 4 September 1998. Pernyataan misinya adalah "mengumpulkan informasi dunia dan membuatnya dapat diakses dan bermanfaat oleh semua orang",[9] dan slogan tidak resminya adalah "Don't be evil".[10][11] Pada tahun 2006, kantor pusat Google pindah ke Mountain View, California.
 
@@ -79,7 +78,6 @@ function Article(){
                 </Grid>
                 </div>
             </div>
-      </div>
     );
 }
 
