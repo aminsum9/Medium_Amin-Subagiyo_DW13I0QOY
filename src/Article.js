@@ -2,11 +2,8 @@ import React from "react";
 import ContainedButtons from "./Article-part/Follow";
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import FormLabel from '@material-ui/core/FormLabel';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import RadioGroup from '@material-ui/core/RadioGroup';
-import Radio from '@material-ui/core/Radio';
 import Paper from '@material-ui/core/Paper';
+import { Link } from "react-router-dom";
 import "./App.js";
 
 const useStyles = makeStyles(theme => ({
@@ -59,16 +56,22 @@ function Article(){
                         <Grid item>
                             <Paper className={classes.paper}>
                                 <img src="http://bisnisbandung.com/wp-content/uploads/2017/12/youtube-crowd-uproar-protest-ss-19201920.jpg"></img>
+                                <Link>You Tube</Link>
+                                <p>You Tube is the most popular video sharing...</p>
                             </Paper>
                         </Grid>
                         <Grid item>
                             <Paper className={classes.paper}>
                                 <img src="https://cnet1.cbsistatic.com/img/eOEoOQ4eSDQPxbPCJASBnbsjpmQ=/1092x0/2019/08/14/d9363e04-fd4f-4a81-97ae-88a25d5feef0/gettyimages-858489898.jpg"></img>
+                                <Link>Instagram</Link>
+                                <p>Instagram is the most popular social media...</p>
                             </Paper>
                         </Grid>
                         <Grid item>
                             <Paper className={classes.paper}>
                                 <img src="https://devclass.com/wp-content/uploads/2018/12/Oracle.jpg"></img>
+                                <Link>Oracle</Link>
+                                <p>Oracle is the most popular and biggest database management...</p>
                             </Paper>
                         </Grid>
                     </Grid>
