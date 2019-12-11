@@ -1,5 +1,8 @@
 html{
-  background: linear-gradient(to left, lightgrey, white);
+  background: url(https://images.idgesg.net/images/article/2019/02/iot_internet_of_things_lifestyle_connected_appliances_by_elenabs_gettyimages-1018211724_2400x1600-100788445-large.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 700px;
   margin: 0px;
   padding: 0px;
   height: 100%;
@@ -13,50 +16,39 @@ html{
   padding-left: -5px;
   width: 500px;
   height: 460px;
-  background: white;
   display: block;
   font-family: 'Courier New', Courier, monospace;
   font-size: 20px;
   text-align: center;
-  /* align-content: stretch; */
   border: 2px solid grey;
   border-radius: 10px;
-  position: relative;
-  top: 50%;
-  left: 75%;
-  transform: translate(-50%, 2%);
 }
 .signup{
   padding-top: 5px;
   padding-left: -5px;
   width: 500px;
   height: 500px;
-  background: white;
   display: block;
   font-family: 'Courier New', Courier, monospace;
   font-size: 20px;
   text-align: center;
-  /* align-content: stretch; */
   border: 2px solid grey;
   border-radius: 10px;
-  position: relative;
-  top: 50%;
-  left: 75%;
-  transform: translate(-50%, 2%);
+}
+.regist{
+  margin: auto;
+  padding-top: 30px;
+  background: #fff;
+  background-size: 100% 100%;
 }
 .regist h1{
   font-family: 'Courier New', Courier, monospace;
-  font-size: 40px;
+  font-size: 30px;
 }
-.regist ul{
-  list-style-type: none;
-  margin-left: -35px;
-  margin-top: 50px;
-}
-.regist ul li{
+.regist {
   margin-top: 5px;
 }
-.regist ul li button{
+.regist button{
   background: grey;
   border: none;
   width: 80%;
@@ -65,16 +57,17 @@ html{
   font-size: 20px;
   color: #fff;
 }
-.regist ul li input{
+.regist input{
   width: 80%;
   height: 25px;
   background: transparent;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid black;
   border-top: none;
   border-left: none;
   border-right: none;
   color: black;
   outline: none;
+  font-size: 20px;
 }
 
 /* App.js */
@@ -83,7 +76,7 @@ html{
   text-align: center;
 }
 .app-nav{
-  background: aqua;
+  background: #fff;
   display: flex;
   height: 60px;
   width:100%;
@@ -92,12 +85,15 @@ html{
 }
 .app-nav h1{
   position: relative;
-  top: -22px;
+  top: -17px;
   left: 20px;
   font-size: 33px;
-  color: darkblue;
+  color: black;
   cursor: pointer;
-  font-style: italic;
+  font-family: baskerville old face;
+}
+.start{
+  text-decoration: none;
 }
 .nav-link{
   text-decoration: none;
@@ -133,21 +129,27 @@ html{
 }
 
 /* Home.js */
-
+.title{
+  color: black;
+  font-family: baskerville old face;
+  font-style: bold;
+  cursor: pointer;
+  position: relative;
+  top: 0px;
+  left: 20px;
+}
 .app-nav-home{
-  position: fixed;
-  top: 1%;
-  left: 1.5%;
-  margin-top: 10px;
+  margin-top: 50px;
   width: 97%;
   height: 40px;
-  background: grey;
+  background: #fff;
   box-shadow: 0px 2px 2px lightgrey;
   overflow: hidden;
   z-index: 100;
+  margin: auto;
 }
 .nav-link-home{
-  color: #fff;
+  color: black;
   display: flex;
   align-items: center;
   float: left;
@@ -162,15 +164,6 @@ html{
 }
 .popular-post{
   margin: 40px;
-}
-.app-nav-home h1{
-  color: #fff;
-  cursor: pointer;
-  font-style: italic;
-  font-size: 25px;
-  float: right;
-  padding-right: 30px;
-  margin-top: 2px;
 }
 
 /* Post */
@@ -192,12 +185,40 @@ html{
   padding: 20px;
 }
 
+/* Article */
+.post{
+  width: 95%;
+  height: 1400px;
+  margin: auto;
+  text-align: center;
+  box-shadow: 2px 2px 2px grey;
+  border: 1px;
+  background: aqua;
+}
+.post img{
+  width: 1000px;
+  height: 700px;
+}
+.konten{
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+.konten p{
+  padding: 10px;
+}
 /* main article */
 
 .main-article{
-  margin-top: 70px;
-  display: flex;
-  width: 100%;
+  padding: 10px;
+  margin: auto;
+}
+.new-post{
+  width: 500px;
+  height: 500px;
+}
+.new-article{
+  height: 180px;
 }
 
 /* Category */

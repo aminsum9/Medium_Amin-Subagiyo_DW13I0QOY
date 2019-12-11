@@ -12,6 +12,7 @@ import Home from "./Home";
 import Mobile from "./Category/Mobile";
 import Network from "./Category/Network";
 import Web from "./Category/Web";
+import Article from "./Article";
 import "./App.css";
 
 export default function App() {
@@ -37,8 +38,11 @@ export default function App() {
           <Route path="/Web">
             <Web />
           </Route>
+          <Route path="/Article">
+            <Article />
+          </Route>
           <Route path="/">
-            <Signup />
+            <Signin />
           </Route>
         </Switch>
       </div>

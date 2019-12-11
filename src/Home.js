@@ -14,7 +14,9 @@ class Category extends Component{
                    <div className="main-article">
                       <MainArticle />
                    </div>
-                  <br></br>
+                   <br></br>
+                   <br></br>
+                   <hr></hr>
                   <SpacingGrid />
                </div>
             </div>

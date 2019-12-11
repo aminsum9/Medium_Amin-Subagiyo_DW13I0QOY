@@ -1,52 +1,60 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
-import { display } from '@material-ui/system';
+import { Link } from 'react-router-dom';
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
+import Article from '../Article';
+import "../App.css";
+import Newpost from "./New-post";
 
-const useStyles = makeStyles({
-  card: {
-    width: "100%",
-    height: "500px"
+const useStyles = makeStyles(theme => ({
+  root: {
+    flexGrow: 1,
   },
-  CardActionArea: {
-    width: 500
+  paper: {
+    height: 400,
+    width: 430,
   },
-  media: {
-    height: 350,
+  control: {
+    padding: theme.spacing(2),
   },
-});
+}));
 
-export default function MainArticle() {
+export default function SpacingGrid() {
+  const [spacing, setSpacing] = React.useState(2);
   const classes = useStyles();
 
+  const handleChange = event => {
+    setSpacing(Number(event.target.value));
+  };
+
   return (
-    <Card className={classes.card}>
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image="https://www.tripsavvy.com/thmb/oOoIxfAquiM7PBa_sDMXNdo_wtk=/2416x1600/filters:fill(auto,1)/how-to-visit-the-googleplex-google-hq-mountain-view-57e2d4515f9b586c3529ba9c.jpg"
-          title="Contemplative Reptile"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            Google
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            Google is the biggest inconporate in America
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-          Read More
-        </Button>
-      </CardActions>
-    </Card>
+    <Grid container className={classes.root} spacing={2}>
+      <Grid item xs={12}>
+        <Grid container justify="center" spacing={spacing}>
+            <Grid item>
+              <Paper className={classes.paper}>
+                <div className="main-article">
+                <img src="https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/08/google-play-store-apps-malware-796x450.jpg" width="100%"></img>
+                <p>google is one of most popular search engine</p>
+                </div>
+                <Link to="/Article">Read More</Link>
+              </Paper>
+            </Grid>
+            <Grid item>
+              <Paper className="new-post"><Newpost /></Paper>
+            </Grid>
+            <Grid item>
+              <Paper className={classes.paper}>
+                <div className="main-article">
+                <img src="https://cdn.vox-cdn.com/thumbor/CmBSQJuMj7ePmO-Rcv8FTXFXvls=/0x0:2040x1360/1200x800/filters:focal(857x517:1183x843)/cdn.vox-cdn.com/uploads/chorus_image/image/64802772/jbareham_180405_1777_facebook_0003.0.jpg" width="100%"></img>
+                <p>facebook is one of most popular social media</p>
+                </div>
+                <Link to="/Article">Read More</Link>
+              </Paper>
+            </Grid>
+        </Grid>
+      </Grid>
+    </Grid>
   );
 }
