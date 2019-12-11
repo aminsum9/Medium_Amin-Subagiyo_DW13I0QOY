@@ -188,12 +188,13 @@ html{
 /* Article */
 .post{
   width: 95%;
-  height: 1400px;
+  padding-bottom: 20px;
   margin: auto;
+  margin-bottom: 70px;
   text-align: center;
   box-shadow: 2px 2px 2px grey;
   border: 1px;
-  background: aqua;
+  background: #fff;
 }
 .post img{
   width: 1000px;
@@ -221,6 +222,17 @@ html{
   height: 180px;
 }
 
+/* Article */
+.comments{
+  margin: auto;
+  width: 1000px;
+  height: 200px;
+  background: #fff;
+  margin-bottom: 10px;
+  border: 1px solid lightgrey;
+  box-shadow: 2px 2px 6px grey;
+}
+
 /* Category */
 .category-container{
   display: flex;
@@ -228,4 +240,45 @@ html{
   margin-top: 70px;
   margin-left: 20px;
   margin-right: 20px;
+}
+.follow-claps{
+  background: #fff;
+  margin: auto;
+  margin-bottom: 20px;
+  width: 700px;
+}
+.claps{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+}
+.claps:hover{
+  box-shadow: 0px 0px 5px 5px grey;
+}
+.claps img{
+  width: 80%;
+  height: 80%;
+}
+.Mainarticle{
+  width: 100%;
+}
+.Mainarticle img{
+  width: 100%;
+  height: 700px;
+}
+.related-post{
+  margin: auto;
+  width: 100%;
+  height: 600px;
+  background: lightgrey;
+}
+.related-post img{
+  width: 98%;
+  height: 50%;
+  padding: 5px 5px 5px 5px;
 }

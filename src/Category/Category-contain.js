@@ -3,7 +3,7 @@ import "../App.css";
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import MainArticle from "../Home/Mainarticle";
+import Main from './Mainarticle';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -26,7 +26,7 @@ export default function Contain() {
         <Grid container spacing={3}>
             <Grid item xs={12}>
                 <Paper className={classes.paper}>
-                    <MainArticle />
+                  <Main />
                 </Paper>
             </Grid>
             <Grid item xs={12} sm={6}>
