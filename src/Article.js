@@ -20,6 +20,19 @@ const useStyles = makeStyles(theme => ({
   }));
 
 function Article(){
+    const follows = [{
+        image: "https://upload.wikimedia.org/wikipedia/commons/a/a7/20180602_FIFA_Friendly_Match_Austria_vs._Germany_Mesut_%C3%96zil_850_0704.jpg",
+        nama: "Amin Subagiyo",
+        comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    }, {
+        image: "https://cdn-image.bisnis.com/posts/2018/05/21/797564/arab.jpg",
+        nama: "Salman",
+        comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    }, {
+        image: "https://cdn1-production-images-kly.akamaized.net/N0Tehi4JQFNlJcpBTO_6yCwcyVk=/680x383/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/2262586/original/040935100_1530188088-nikita_willy__2_.jpg",
+        nama: "Nikita Willy",
+        comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    }];
 
     const [spacing, setSpacing] = React.useState(2);
     const classes = useStyles();
@@ -28,7 +41,9 @@ function Article(){
         setSpacing(Number(event.target.value));
     };
     return(
-        <div className="post konten">
+
+        <div className="post">
+            <div>
                 <h1>What is Google?</h1>
                 <img src="https://www.tripsavvy.com/thmb/oOoIxfAquiM7PBa_sDMXNdo_wtk=/2416x1600/filters:fill(auto,1)/how-to-visit-the-googleplex-google-hq-mountain-view-57e2d4515f9b586c3529ba9c.jpg"></img>
                 <p id="main">Google LLC[5] adalah sebuah perusahaan multinasional Amerika Serikat yang berkekhususan pada jasa dan produk Internet. Produk-produk tersebut meliputi teknologi pencarian, komputasi web, perangkat lunak, dan periklanan daring.[6] Sebagian besar labanya berasal dari AdWords.[7][8]
@@ -42,9 +57,14 @@ function Article(){
                 Pada 10 Agustus 2015, Google melalui postingan blog, CEO Google Larry Page mengumumkan pembentukan perusahan baru bernama Alphabet yang akan menjadi perusahaan induk mencakupi Google dan usaha-usaha lain yang tak terlalu terkait erat dengan bisnis utama Google[26]. Pada restrukturisasi tersebut, Larry Page akan menjadi CEO perusahaan baru Alphabet. Sergey Brin menjabat sebagai President didampingi Erich Schmidt sebagai Executive Chairman. Sedangkan, CEO Google akan dijabat oleh Sundar Pichai[27].</p>
                 <hr width="1000px"></hr>
                 <ContainedButtons />
-                <div className="comments"></div>
-                <div className="comments"></div>
-                <div className="comments"></div>
+                {follows.map( follow => (
+                   <div className="follow">
+                       <img src={follow.image}></img>
+                       <strong>{follow.nama}</strong>
+                       <p>{follow.comment}</p>
+                       <div className="follow-button">Follow</div>
+                    </div>
+                ))}
                 <br></br>
                 <br></br>
                 <h1>Related Post</h1>
@@ -78,6 +98,7 @@ function Article(){
                 </Grid>
                 </div>
             </div>
+      </div>
     );
 }
 
