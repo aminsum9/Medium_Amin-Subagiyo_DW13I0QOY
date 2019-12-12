@@ -383,6 +383,26 @@ html {
   height: 400px;
   width: 100%;
   background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#comment-1-title {
+  font-family: verdana;
+  font-size: 16px;
+  z-index: 5;
+  position: relative;
+  left: 350px;
+  top: 150px;
+}
+#comment-title {
+  width: 700px;
+  height: 100px;
+  box-shadow: 0px 0px 4px grey;
+}
+#comment-title p {
+  font-family: verdana;
+  padding: 10px;
 }
 #comment-2 {
   width: 100%;
@@ -391,18 +411,27 @@ html {
   padding-top: 30px;
 }
 .comment-input {
-  height: 100px;
+  height: 150px;
   width: 700px;
   background: #fff;
   margin: auto;
   line-height: 10px;
+  padding-top: 10px;
 }
 .comment-input ul {
   list-style-type: none;
 }
+.comment-input ul li {
+  margin-bottom: 10px;
+}
 .comment-input input {
   width: 90%;
   height: 70px;
+  outline: none;
+  border: none;
+}
+#comment-label {
+  padding: 20px;
 }
 .comment-containt {
   position: relative;
@@ -414,9 +443,15 @@ html {
   margin-bottom: 10px;
   padding: 20px;
 }
+#bookmark {
+  width: 20px;
+  position: relative;
+  left: 680px;
+  top: 70px;
+}
 .comment-image {
-  width: 150px;
-  height: 150px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   float: left;
   padding-right: 20px;

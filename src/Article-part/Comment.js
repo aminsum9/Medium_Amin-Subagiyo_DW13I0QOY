@@ -1,6 +1,5 @@
 import React from "react";
 import ArticleBar from "../Home/Article-bar";
-import "./script.js";
 import "../App.css";
 
 export default function Comment() {
@@ -29,16 +28,27 @@ export default function Comment() {
   return (
     <div>
       <ArticleBar />
-      <div id="comment-1"></div>
+      <p id="comment-1-title">Showing response for:</p>
+      <div id="comment-1">
+        <div id="comment-title">
+          <p>If You Only Read A Few Books In 2018, Read These</p>
+        </div>
+      </div>
       <div id="comment-2">
         <div className="comment-input">
           <form>
             <ul>
               <li>
-                <label for="comment">Masukkan Komentar</label>
+                <label for="comment" id="comment-label">
+                  <strong>Response</strong>
+                </label>
               </li>
               <li>
-                <input type="text" id="comment"></input>
+                <input
+                  type="text"
+                  id="comment"
+                  placeholder="write response..."
+                ></input>
               </li>
             </ul>
           </form>
@@ -48,6 +58,10 @@ export default function Comment() {
             <img src={comment.image} className="comment-image"></img>
             <h1>{comment.name}</h1>
             <div>{comment.contain}</div>
+            <img
+              src="https://www.freepngimg.com/thumb/instagram/60239-like-icons-bookmark-button-computer-facebook-instagram.png"
+              id="bookmark"
+            ></img>
           </div>
         ))}
       </div>
