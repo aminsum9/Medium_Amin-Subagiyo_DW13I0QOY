@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
-import Mediacard from "./Popularpost";
+import Popularpost from "./Popularpost";
 import "../App.css";
 
 const useStyles = makeStyles(theme => ({
@@ -32,13 +32,13 @@ export default function Post() {
           <Grid item>
             <Paper className={classes.paper}>
               <h1 className="popular-post-title">Popular Post</h1>
-              <Mediacard />
+              <Popularpost />
             </Paper>
           </Grid>
           <Grid item>
             <Paper className={classes.paper}>
               <h1 className="last-post-title">Last Post</h1>
-              <Mediacard />
+              <Popularpost />
             </Paper>
           </Grid>
         </Grid>

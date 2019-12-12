@@ -1,74 +1,79 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import Card from "@material-ui/core/Card";
+import CardContent from "@material-ui/core/CardContent";
+import Typography from "@material-ui/core/Typography";
+import "../App.js";
 
 const useStyles = makeStyles({
   card: {
     width: "100%"
   },
   bullet: {
-    display: 'inline-block',
-    margin: '0 2px',
-    transform: 'scale(0.8)',
+    display: "inline-block",
+    margin: "0 2px",
+    transform: "scale(0.8)"
   },
   title: {
-    fontSize: 14,
+    fontSize: 14
   },
   pos: {
-    marginBottom: 12,
-  },
+    marginBottom: 12
+  }
 });
 
 export default function SimpleCard() {
+  const populars = [
+    {
+      image: "https://img.utdstc.com/icons/android-studio-.png:l",
+      category: "android",
+      title: "What is Android Studio?",
+      content:
+        "Android Studio adalah Integrated Development Enviroment (IDE) untuk sistem operasi Android, yang dibangung diatas perangkat lunak JetBrains IntelliJ IDEA dan didesain khusus untuk pengembangan Android. IDE ini merupakan pengganti dari Eclipse Android Development Tools (ADT) yang sebelumnya merupakan IDE utama untuk pengembangan aplikasi android.[1]"
+    },
+    {
+      image: "https://angular.github.io/react-native-renderer/assets/react.png",
+      category: "web programming",
+      title: "What is React.js",
+      content:
+        "React Js adalah sebuah library JavaScript yang di buat oleh facebook. React bukanlah sebuah framework MVC. React adalah library yang bersifat composable user interface, yang artinya kita dapat membuat berbagai UI yang bisa kita bagi menjadi beberapa komponen."
+    },
+    {
+      image: "https://angular.github.io/react-native-renderer/assets/react.png",
+      category: "android",
+      title: "What is React Native",
+      content:
+        "Pada dasarnya react native adalah sebuah framework dari Javascript yang banyak dikembangkan oleh perusahaan besar dalam bidang teknologi seperti Facebook. Jadi, dengan react native kamu tidak perlu membuat aplikasi hybrid."
+    }
+  ];
+
   const classes = useStyles();
   const bull = <span className={classes.bullet}>•</span>;
 
   return (
     <Card className={classes.card}>
-      {/* article 1 */}
-      <CardContent>
-        <Typography className={classes.title} color="textSecondary" gutterBottom>
-          Word of the Day
-        </Typography>
-        <Typography variant="h5" component="h2">
-          Article 1
-        </Typography>
-        <Typography className={classes.pos} color="textSecondary">
-          adjective
-        </Typography>
-        <Typography variant="body2" component="p">
-          well meaning and kindly.
-          <br />
-          {'"a benevolent smile"'}
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Read More</Button>
-      </CardActions>
-    {/* article 2 */}
-    <CardContent>
-      <Typography className={classes.title} color="textSecondary" gutterBottom>
-        Word of the Day
-      </Typography>
-      <Typography variant="h5" component="h2">
-        Article 2
-      </Typography>
-      <Typography className={classes.pos} color="textSecondary">
-        adjective
-      </Typography>
-      <Typography variant="body2" component="p">
-        well meaning and kindly.
-        <br />
-        {'"a benevolent smile"'}
-      </Typography>
-    </CardContent>
-    <CardActions>
-      <Button size="small">Read More</Button>
-    </CardActions>
-  </Card>
+      {populars.map(popular => (
+        <CardContent>
+          <div>
+            <img src={popular.image} className="popular-image"></img>
+          </div>
+          <Typography
+            className={classes.title}
+            color="textSecondary"
+            gutterBottom
+          >
+            {popular.category}
+          </Typography>
+          <Typography variant="h5" component="h2">
+            {popular.title}
+          </Typography>
+          <Typography variant="body2" component="p">
+            {popular.content}
+            <br />
+            {'"a benevolent smile"'}
+          </Typography>
+        </CardContent>
+      ))}
+    </Card>
   );
 }
