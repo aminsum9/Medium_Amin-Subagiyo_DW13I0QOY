@@ -323,7 +323,7 @@ html {
 #clap {
   background: orange;
   position: relative;
-  left: 100px;
+  left: 56px;
   height: 70px;
   width: 70px;
 }
@@ -333,7 +333,7 @@ html {
 }
 #counter {
   position: relative;
-  left: 120px;
+  left: 80px;
   top: 10px;
 }
 .share {
