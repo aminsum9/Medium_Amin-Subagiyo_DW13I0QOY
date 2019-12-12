@@ -37,8 +37,8 @@ function Article() {
     },
     {
       image:
-        "https://cdn1-production-images-kly.akamaized.net/N0Tehi4JQFNlJcpBTO_6yCwcyVk=/680x383/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/2262586/original/040935100_1530188088-nikita_willy__2_.jpg",
-      nama: "Nikita Willy",
+        "https://yt3.ggpht.com/a/AGF-l7-Xf5FxKw2vayMhrqnz0gr5DAcnUjrK9ZDpFQ=s900-c-k-c0xffffffff-no-rj-mo",
+      nama: "Ria Ricis",
       comment:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     }
