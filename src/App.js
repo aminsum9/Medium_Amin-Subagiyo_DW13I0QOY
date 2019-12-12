@@ -7,6 +7,7 @@ import Mobile from "./Category/Mobile";
 import Network from "./Category/Network";
 import Web from "./Category/Web";
 import Article from "./Article";
+import Comment from "./Article-part/Comment";
 import "./App.css";
 
 export default function App() {
@@ -31,6 +32,9 @@ export default function App() {
           </Route>
           <Route path="/Article">
             <Article />
+          </Route>
+          <Route path="/Comment">
+            <Comment />
           </Route>
           <Route path="/">
             <Start />

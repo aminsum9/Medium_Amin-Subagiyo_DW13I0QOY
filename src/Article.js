@@ -5,6 +5,7 @@ import Paper from "@material-ui/core/Paper";
 import { Link } from "react-router-dom";
 import ArticleBar from "./Home/Article-bar";
 import Claps from "./Article-part/Claps";
+import Comment from "./Article-part/Comment";
 import "./App.js";
 
 const useStyles = makeStyles(theme => ({
@@ -52,7 +53,7 @@ function Article() {
   };
   return (
     <div className="post">
-      <ArticleBar title="Medium" />
+      <ArticleBar />
       <div>
         <br></br>
         <br></br>
@@ -189,6 +190,13 @@ function Article() {
             </div>
           </div>
         ))}
+        <div className="response-button">
+          <p>
+            <Link to="/Comment" id="link-response">
+              Response
+            </Link>
+          </p>
+        </div>
         <br></br>
         <br></br>
         <h1>Related Post</h1>

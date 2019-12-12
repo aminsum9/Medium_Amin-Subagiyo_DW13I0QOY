@@ -352,6 +352,76 @@ html {
   height: 25px;
   top: 0px;
 }
+/* comment / response */
+.response-button {
+  border: 2px solid rgba(3, 168, 150, 1);
+  border-radius: 10px;
+  height: 80px;
+  width: 800px;
+  margin: auto;
+  cursor: pointer;
+  text-decoration: none;
+}
+.response-button p {
+  font-size: 30px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -135%);
+}
+#link-response {
+  text-decoration: none;
+  color: rgba(3, 168, 150, 1);
+}
+.response-button:hover {
+  border: 2px solid aqua;
+  color: aqua;
+}
+
+/* comment contain */
+#comment-1 {
+  height: 400px;
+  width: 100%;
+  background: #fff;
+}
+#comment-2 {
+  width: 100%;
+  height: 1000px;
+  background: lightgrey;
+  padding-top: 30px;
+}
+.comment-input {
+  height: 100px;
+  width: 700px;
+  background: #fff;
+  margin: auto;
+  line-height: 10px;
+}
+.comment-input ul {
+  list-style-type: none;
+}
+.comment-input input {
+  width: 90%;
+  height: 70px;
+}
+.comment-containt {
+  position: relative;
+  top: 100px;
+  height: 200px;
+  width: 700px;
+  background: #fff;
+  margin: auto;
+  margin-bottom: 10px;
+  padding: 20px;
+}
+.comment-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  float: left;
+  padding-right: 20px;
+  padding-top: 20px;
+}
 /* main article */
 
 .main-article {

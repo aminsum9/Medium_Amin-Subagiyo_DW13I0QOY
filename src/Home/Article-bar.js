@@ -3,7 +3,7 @@ import "../App.css";
 
 class ArticleBar extends Component {
   render() {
-    return <div className="article-bar">{this.props.title}</div>;
+    return <div className="article-bar">Medium</div>;
   }
 }
 
