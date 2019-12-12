@@ -355,10 +355,18 @@ html {
   width: 500px;
 }
 .new-article {
-  height: 150px;
+  height: 160px;
   margin-bottom: 10px;
   background: lightgrey;
   margin: 10px;
+}
+/* New Post */
+.image-new-post {
+  width: 120px;
+  height: 120px;
+  margin-right: 10px;
+  background: aqua;
+  float: left;
 }
 
 /* Category */
