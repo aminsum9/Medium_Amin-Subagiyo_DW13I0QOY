@@ -318,17 +318,32 @@ html {
   width: 800px;
   margin: auto;
   padding: 10px;
+  display: flex;
 }
 #clap {
   background: orange;
   position: relative;
-  right: 350px;
+  left: 100px;
   height: 70px;
   width: 70px;
 }
 #clap img {
   width: 70%;
   height: 70%;
+}
+#counter {
+  position: relative;
+  left: 120px;
+  top: 10px;
+}
+.share {
+  position: relative;
+  left: 500px;
+}
+.share img {
+  width: 25px;
+  height: 25px;
+  top: 0px;
 }
 /* main article */
 
