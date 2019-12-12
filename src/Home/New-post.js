@@ -28,74 +28,41 @@ export default function Newpost() {
   const classes = useStyles();
   const bull = <span className={classes.bullet}>•</span>;
 
+  const articles = [{
+    category: "web",
+    title: "Blogger",
+    content: "blogger is the one of most polular blog maker.."
+  },{
+    category: "web",
+    title: "WordPress",
+    content: "WordPress is the one of most polular blog maker.."
+  },{
+    category: "web",
+    title: "Medium",
+    content: "Medium is the one of most polular blog maker.."
+  }];
+
   return (
     <Card className={classes.card}>
       {/* article 1 */}
-      <div className="new-article">
-      <CardContent>
-        <Typography className={classes.title} color="textSecondary" gutterBottom>
-          Word of the Day
-        </Typography>
-        <Typography variant="h5" component="h2">
-          Article 1
-        </Typography>
-        <Typography className={classes.pos} color="textSecondary">
-          adjective
-        </Typography>
-        <Typography variant="body2" component="p">
-          well meaning and kindly.
-          <br />
-          {'"a benevolent smile"'}
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Read More</Button>
-      </CardActions>
-      </div>
-      <div className="new-article">
-    {/* article 2 */}
-    <CardContent>
-      <Typography className={classes.title} color="textSecondary" gutterBottom>
-        Word of the Day
-      </Typography>
-      <Typography variant="h5" component="h2">
-        Article 2
-      </Typography>
-      <Typography className={classes.pos} color="textSecondary">
-        adjective
-      </Typography>
-      <Typography variant="body2" component="p">
-        well meaning and kindly.
-        <br />
-        {'"a benevolent smile"'}
-      </Typography>
-    </CardContent>
-    <CardActions>
-      <Button size="small">Read More</Button>
-    </CardActions>
-      </div>
-    {/* article 3 */}
-      <div className="new-article">
-    <CardContent>
-        <Typography className={classes.title} color="textSecondary" gutterBottom>
-          Word of the Day
-        </Typography>
-        <Typography variant="h5" component="h2">
-          Article 1
-        </Typography>
-        <Typography className={classes.pos} color="textSecondary">
-          adjective
-        </Typography>
-        <Typography variant="body2" component="p">
-          well meaning and kindly.
-          <br />
-          {'"a benevolent smile"'}
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Read More</Button>
-      </CardActions>
+      {articles.map( article => (
+        <div className="new-article">
+        <CardContent>
+          <Typography className={classes.title} color="textSecondary" gutterBottom>
+            {article.category}
+          </Typography>
+          <Typography variant="h5" component="h2">
+            {article.title}
+          </Typography>
+          <Typography variant="body2" component="p">
+            {article.content}
+          </Typography>
+        </CardContent>
+        <CardActions>
+          <Button size="small">Read More</Button>
+        </CardActions>
         </div>
+      ))}
   </Card>
   );
 }

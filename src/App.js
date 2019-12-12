@@ -1,13 +1,7 @@
 import React, { Component } from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-import Signin from "./Signin";
-import Signup from "./Signup";
+import Start from "./Start";
 import Home from "./Home";
 import Mobile from "./Category/Mobile";
 import Network from "./Category/Network";
@@ -20,11 +14,8 @@ export default function App() {
     <Router>
       <div>
         <Switch>
-          <Route path="/Signin">
-            <Signin />
-          </Route>
-          <Route path="/Signup">
-            <Signup />
+          <Route path="/Start">
+            <Start />
           </Route>
           <Route path="/Home">
             <Home />
@@ -42,11 +33,10 @@ export default function App() {
             <Article />
           </Route>
           <Route path="/">
-            <Signin />
+            <Start />
           </Route>
         </Switch>
       </div>
     </Router>
-   );
+  );
 }
-

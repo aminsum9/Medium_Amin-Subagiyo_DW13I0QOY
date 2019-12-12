@@ -1,105 +1,237 @@
 import React from "react";
-import ContainedButtons from "./Article-part/Follow";
-import { makeStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
+import { makeStyles } from "@material-ui/core/styles";
+import Grid from "@material-ui/core/Grid";
+import Paper from "@material-ui/core/Paper";
 import { Link } from "react-router-dom";
+import ArticleBar from "./Home/Article-bar";
+import Claps from "./Article-part/Claps";
 import "./App.js";
 
 const useStyles = makeStyles(theme => ({
-    root: {
-      flexGrow: 1,
+  root: {
+    flexGrow: 1
+  },
+  paper: {
+    height: 480,
+    width: 400
+  },
+  control: {
+    padding: theme.spacing(2)
+  }
+}));
+
+function Article() {
+  const follows = [
+    {
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/a/a7/20180602_FIFA_Friendly_Match_Austria_vs._Germany_Mesut_%C3%96zil_850_0704.jpg",
+      nama: "Amin Subagiyo",
+      comment:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
-    paper: {
-      height: 480,
-      width: 440,
+    {
+      image: "https://cdn-image.bisnis.com/posts/2018/05/21/797564/arab.jpg",
+      nama: "Salman",
+      comment:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
-    control: {
-      padding: theme.spacing(2),
-    },
-  }));
+    {
+      image:
+        "https://cdn1-production-images-kly.akamaized.net/N0Tehi4JQFNlJcpBTO_6yCwcyVk=/680x383/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/2262586/original/040935100_1530188088-nikita_willy__2_.jpg",
+      nama: "Nikita Willy",
+      comment:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    }
+  ];
 
-function Article(){
-    const follows = [{
-        image: "https://upload.wikimedia.org/wikipedia/commons/a/a7/20180602_FIFA_Friendly_Match_Austria_vs._Germany_Mesut_%C3%96zil_850_0704.jpg",
-        nama: "Amin Subagiyo",
-        comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    }, {
-        image: "https://cdn-image.bisnis.com/posts/2018/05/21/797564/arab.jpg",
-        nama: "Salman",
-        comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    }, {
-        image: "https://cdn1-production-images-kly.akamaized.net/N0Tehi4JQFNlJcpBTO_6yCwcyVk=/680x383/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/2262586/original/040935100_1530188088-nikita_willy__2_.jpg",
-        nama: "Nikita Willy",
-        comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    }];
+  const [spacing, setSpacing] = React.useState(2);
+  const classes = useStyles();
 
-    const [spacing, setSpacing] = React.useState(2);
-    const classes = useStyles();
-    
-    const handleChange = event => {
-        setSpacing(Number(event.target.value));
-    };
-    return(
-
-        <div className="post">
-            <div>
-                <h1>What is Google?</h1>
-                <img src="https://www.tripsavvy.com/thmb/oOoIxfAquiM7PBa_sDMXNdo_wtk=/2416x1600/filters:fill(auto,1)/how-to-visit-the-googleplex-google-hq-mountain-view-57e2d4515f9b586c3529ba9c.jpg"></img>
-                <p id="main">Google LLC[5] adalah sebuah perusahaan multinasional Amerika Serikat yang berkekhususan pada jasa dan produk Internet. Produk-produk tersebut meliputi teknologi pencarian, komputasi web, perangkat lunak, dan periklanan daring.[6] Sebagian besar labanya berasal dari AdWords.[7][8]
-
-                Google didirikan oleh Larry Page dan Sergey Brin saat masih mahasiswa Ph.D. di Universitas Stanford. Mereka berdua memegang 16 persen saham perusahaan. Mereka menjadikan Google sebagai perusahaan swasta pada tanggal 4 September 1998. Pernyataan misinya adalah "mengumpulkan informasi dunia dan membuatnya dapat diakses dan bermanfaat oleh semua orang",[9] dan slogan tidak resminya adalah "Don't be evil".[10][11] Pada tahun 2006, kantor pusat Google pindah ke Mountain View, California.
-
-                Sejak didirikan, pertumbuhan perusahaan yang cepat telah menghasilkan berbagai produk, akuisisi, dan kerja sama di bidang mesin pencari inti Google. Perusahaan ini menawarkan perangkat lunak produktivitas daring (dalam jaringan), termasuk surat elektronik (surel), paket aplikasi perkantoran, dan jejaring sosial. Produk-produk komputer mejanya meliputi aplikasi untuk menjelajah web, mengatur dan menyunting foto, dan pesan instan. Perusahaan ini memprakarsai pengembangan sistem operasi Android untuk telepon genggam dan Google Chrome OS[12] untuk jajaran netbook Chromebook. Google sudah beralih ke perangkat keras komunikasi. Mereka bekerja sama dengan berbagai produsen elektronik besar untuk memproduksi perangkat Nexus-nya dan mengakuisisi Motorola Mobility pada Mei 2012.[13] Tahun 2012, infrastruktur serat optik dipasang di Kansas untuk memfasilitasi layanan Internet pita lebar Google Fiber.[14]
-
-                Perusahaan ini diperkirakan mengoperasikan lebih dari satu juta server di beberapa pusat data di seluruh dunia[15] dan memproses lebih dari satu miliar kueri pencarian[16] dan sekitar 24 petabita data buatan pengguna setiap harinya.[17][18][19][20] Pada bulan Desember 2012, Alexa menyebut google.com sebagai situs web paling banyak dikunjungi di dunia. Situs-situs Google dalam bahasa lain masuk peringkat 100 teratas, sebagaimana halnya situs milik Google seperti YouTube dan Blogger.[21] Google menempati peringkat kedua di basis data ekuitas merek BrandZ.[22] Dominasi pasarnya menuai kritik mengenai hak cipta, penyensoran, dan privasi.[23][24]. Pada tahun 2014, Google juga mendapat penghargaaan dari Business Indeed sebagai perusahaan yang memiliki merk paling bernilai.[25]
-
-                Pada 10 Agustus 2015, Google melalui postingan blog, CEO Google Larry Page mengumumkan pembentukan perusahan baru bernama Alphabet yang akan menjadi perusahaan induk mencakupi Google dan usaha-usaha lain yang tak terlalu terkait erat dengan bisnis utama Google[26]. Pada restrukturisasi tersebut, Larry Page akan menjadi CEO perusahaan baru Alphabet. Sergey Brin menjabat sebagai President didampingi Erich Schmidt sebagai Executive Chairman. Sedangkan, CEO Google akan dijabat oleh Sundar Pichai[27].</p>
-                <hr width="1000px"></hr>
-                <ContainedButtons />
-                {follows.map( follow => (
-                   <div className="follow">
-                       <img src={follow.image}></img>
-                       <strong>{follow.nama}</strong>
-                       <p>{follow.comment}</p>
-                       <div className="follow-button">Follow</div>
-                    </div>
-                ))}
-                <br></br>
-                <br></br>
-                <h1>Related Post</h1>
-                <div className="related-post">
-                <Grid container className={classes.root} spacing={2}>
-                    <Grid item xs={12}>
-                    <Grid container justify="center" spacing={spacing}>
-                        <Grid item>
-                            <Paper className={classes.paper}>
-                                <img src="http://bisnisbandung.com/wp-content/uploads/2017/12/youtube-crowd-uproar-protest-ss-19201920.jpg"></img>
-                                <Link>You Tube</Link>
-                                <p>You Tube is the most popular video sharing...</p>
-                            </Paper>
-                        </Grid>
-                        <Grid item>
-                            <Paper className={classes.paper}>
-                                <img src="https://cnet1.cbsistatic.com/img/eOEoOQ4eSDQPxbPCJASBnbsjpmQ=/1092x0/2019/08/14/d9363e04-fd4f-4a81-97ae-88a25d5feef0/gettyimages-858489898.jpg"></img>
-                                <Link>Instagram</Link>
-                                <p>Instagram is the most popular social media...</p>
-                            </Paper>
-                        </Grid>
-                        <Grid item>
-                            <Paper className={classes.paper}>
-                                <img src="https://devclass.com/wp-content/uploads/2018/12/Oracle.jpg"></img>
-                                <Link>Oracle</Link>
-                                <p>Oracle is the most popular and biggest database management...</p>
-                            </Paper>
-                        </Grid>
-                    </Grid>
-                    </Grid>
-                </Grid>
-                </div>
+  const handleChange = event => {
+    setSpacing(Number(event.target.value));
+  };
+  return (
+    <div className="post">
+      <ArticleBar title="Medium" />
+      <div>
+        <br></br>
+        <br></br>
+        <br></br>
+        <img src="https://miro.medium.com/max/2000/1*-T8oo_JoKkMxfnPKLt_Ciw.jpeg"></img>
+        <h1>If You Only Read A Few Books In 2018, Read These</h1>
+        <p id="main">
+          If you’d liked to be jerked around less, provoked less, and more
+          productive and inwardly focused, where should you start? To me, the
+          answer is obvious: by turning to wisdom. Below is a list of 21 books
+          that will help lead you to a better, stronger 2018. Deep Work: Rules
+          for Focused Success in a Distracted World by Cal Newport Media
+          consumption went way up in 2017. For most of us, that meant happiness
+          and productivity went way down. The world is becoming noisier and will
+          become more so every day. If you can’t cultivate the ability to have
+          quiet, insightful, deeply focused periods of productive work, you’re
+          going to get screwed. This is a book that explains how to cultivate
+          and protect that skill — the ability to do deep work. I strongly urge
+          you to begin this practice in 2018— if you want to get anything done
+          or perform your best. The Subtle Art of Not Giving a F*ck: A
+          Counterintuitive Approach to Living a Good Life by Mark Manson To me,
+          practical philosophy has always been the art knowing what to — and
+          what not to — give a fuck about. That’s what Mark’s book is about.
+          It’s not about apathy. It’s about cultivating indifference to things
+          that don’t matter. Be careful, as Marcus Aurelius warns, not to give
+          the little things more time and thought they deserved. Maybe looking
+          back at this year reveals how much effort you’ve frittered away
+          worrying about the trivial. If so, let 2018 be a year that you only
+          devote energy to things that truly matter — get the important things
+          right by ignoring the insignificant. The Way to Love: The Last
+          Meditations of Anthony de Mello by Anthony de Mello Coach Shaka Smart
+          recommended this little book (and it’s a little book, probably the
+          smallest I’ve ever read. It fits in your palm). But it’s an incredibly
+          wise and helpful read. Written by a Catholic Priest who’d lived in
+          India, the book has this unusual convergence of eastern and western
+          thought. One of my favorite lines: “The question to ask is not ‘What’s
+          wrong with this person?’ but ‘What does this irritation tell me about
+          myself?’ I plan on regularly revisiting it throughout 2018. But What
+          If We’re Wrong by Chuck Klosterman It’s always good to remind
+          ourselves that almost everything we’re certain about will probably be
+          eventually proven wrong. Klosterman’s subtitle — Thinking About the
+          Present As If It Were the Past — is a brilliant exercise for getting
+          some perspective in 2018. Whether you think it’s going to be a year of
+          radical change for the better or a horrible year of excesses of
+          dangerous precedent, you’re probably wrong. You’re probably not even
+          in the ballpark. This book shows you why, not with lectures about
+          politics, but with a bunch of awesome thought experiments about music,
+          books, movies and science. Rules for Radicals: A Practical Primer for
+          Realistic Radicals by Saul Alinsky If Hillary Clinton had remembered
+          the lessons of Saul Alinsky (who she wrote her college thesis on), the
+          election may have turned out differently. Why? A notorious strategist
+          and community organizer, Alinsky was a die hard pragmatist, but he
+          also knew how to tell a story and create a collective cause. He could
+          work within the system but knew how to shake it up and generate
+          attention. This book is a classic and woefully underrated. Whatever
+          you set out to do in 2018, this book can provide you with strategic
+          guidance and insight. The Filter Bubble by Eli Pariser / Trust Me I’m
+          Lying by Ryan Holiday / The Brass Check by Upton Sinclair I strongly
+          recommend that you take the time in 2018 to read these books. In light
+          of this year, you owe it to yourself to study and better understand
+          how our media system works. In The Filter Bubble, Eli Pariser warns of
+          the danger of living in bubbles of personalization that reinforce and
+          insulate our worldview. Though Sinclair’s The Brass Check has been
+          almost entirely forgotten by history, it’s not only fascinating but a
+          timeless perspective. Sinclair deeply understood the economic
+          incentives of early 20th century journalism and thus could predict and
+          analyze the manipulative effect it had on The Truth. I used that book
+          as a model for my expose of the media system, Trust Me, I’m Lying.
+          Today, the incentives and pressures are different but they warp our
+          information in a similar way. In almost every substantial charge Upton
+          leveled against the yellow press, you could, today, sub in blogs and
+          the cable news cycle and be even more correct. 48 Laws of Power / 33
+          Strategies of War by Robert Greene Robert Greene is a master of human
+          psychology and human dynamics — he has a profound ability to explain
+          timeless truths through story and example. You can read the classics
+          and not always understand the lessons. But if you read Robert’s books,
+          I promise you will leave not just with actionable lessons but an
+          indelible sense of what to do in many trying and confusing situations.
+          I wrote earlier this year that strategic wisdom is not something we
+          are born with — but the lessons are there for us to pick up. Pick
+          these two up before the year ends and operate the next with a
+          strategic mindset and clarity. Conspiracy: Peter Thiel, Hulk Hogan,
+          Gawker, and the Anatomy of Intrigue by Ryan Holiday — If you want to
+          immerse yourself in the above topics of media and strategy, and are
+          looking for one book to teach you lessons in both, my book on the
+          nearly decade-long conspiracy that billionaire Peter Thiel waged
+          against Gawker will do this for you. This is a stunning story about
+          how power works in the modern age, and is a masterclass in strategy
+          and how to accomplish wildly ambitious aims. The Road To Character by
+          David Brooks When General Stanley McChrystal was asked on the Tim
+          Ferriss podcastwhat was a recent purchase that had most positively
+          impacted his life, he pointed to this book. I agree. It can be a bit
+          stilted and dense at times, but it should be assigned reading to any
+          young person today (a little challenge is a good thing). Illustrating
+          with examples and stories from great men and women, Brooks admonishes
+          the reader to undertake their own journey of character perfection. In
+          my own book, I explore the same topic (humility) from a different
+          angle using similar stories — I’m attacking ego, he’s building up
+          character. Both will be important for the next year. The Dip by Seth
+          Godin This book is a short 70 pages and it looks like something
+          someone would give as a joke gift, but it’s anything but. Godin talks
+          frankly about quitting and pushing through — and when to do each. Quit
+          when you’ll be mediocre, when the returns aren’t worth the investment,
+          when you no longer think you’ll enjoy the ends. Stick when the dip is
+          the obstacle that creates scarcity, when you’re simply bridging the
+          gap between beginner’s luck and mastery. I promise, next year you are
+          guaranteed to find yourself in moments when you don’t know what is the
+          right answer. This book will help you find it. Hillbilly Elegy: A
+          Memoir of a Family and Culture in Crisis by J. D. Vance / Strangers in
+          Their Own Land: Anger and Mourning on the American Right by Arlie
+          Russell Hochschild You might describe Hillbilly Elegy as a Ta-Nehisi
+          Coates style memoir about a community that — at least in progressive
+          circles — gets a lot less attention: disaffected, impoverished whites
+          (particularly in the mid-east and South). I thought the book was
+          empathetic, self-aware and inspiring. The author pokes some holes in
+          the concept of “white privilege” — certainly a third or fourth
+          generation hillbilly in Kentucky doesn’t walk around feeling like they
+          have it easy — and an explanation of some of the phenomenon behind
+          Donald Trump (notice I said explanation, not an excuse).
+        </p>
+        <hr width="1000px"></hr>
+        <Claps />
+        {follows.map(follow => (
+          <div className="follow">
+            <div className="image">
+              <img src={follow.image} />
             </div>
+            <div className="comment">
+              <strong>{follow.nama}</strong>
+              <p>{follow.comment}</p>
+            </div>
+            <div className="follow-button">
+              <div>Follow</div>
+            </div>
+          </div>
+        ))}
+        <br></br>
+        <br></br>
+        <h1>Related Post</h1>
+        <div className="related-post">
+          <Grid container className={classes.root} spacing={2}>
+            <Grid item xs={12}>
+              <Grid container justify="center" spacing={spacing}>
+                <Grid item>
+                  <Paper className={classes.paper}>
+                    <img src="http://bisnisbandung.com/wp-content/uploads/2017/12/youtube-crowd-uproar-protest-ss-19201920.jpg"></img>
+                    <Link>You Tube</Link>
+                    <p>You Tube is the most popular video sharing...</p>
+                  </Paper>
+                </Grid>
+                <Grid item>
+                  <Paper className={classes.paper}>
+                    <img src="https://cnet1.cbsistatic.com/img/eOEoOQ4eSDQPxbPCJASBnbsjpmQ=/1092x0/2019/08/14/d9363e04-fd4f-4a81-97ae-88a25d5feef0/gettyimages-858489898.jpg"></img>
+                    <Link>Instagram</Link>
+                    <p>Instagram is the most popular social media...</p>
+                  </Paper>
+                </Grid>
+                <Grid item>
+                  <Paper className={classes.paper}>
+                    <img src="https://devclass.com/wp-content/uploads/2018/12/Oracle.jpg"></img>
+                    <Link>Oracle</Link>
+                    <p>
+                      Oracle is the most popular and biggest database
+                      management...
+                    </p>
+                  </Paper>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
+          <hr style={{ width: "90%", marginTop: 30 }}></hr>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+        </div>
       </div>
-    );
+    </div>
+  );
 }
 
 export default Article;

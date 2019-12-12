@@ -1,23 +1,23 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import Grid from "@material-ui/core/Grid";
+import Paper from "@material-ui/core/Paper";
 import Mediacard from "./Popularpost";
 import "../App.css";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    flexGrow: 1,
+    flexGrow: 1
   },
   paper: {
-    width: 700,
+    width: 600
   },
   control: {
-    padding: theme.spacing(2),
-  },
+    padding: theme.spacing(2)
+  }
 }));
 
-export default function SpacingGrid() {
+export default function Post() {
   const [spacing, setSpacing] = React.useState(2);
   const classes = useStyles();
 
@@ -29,18 +29,18 @@ export default function SpacingGrid() {
     <Grid container className={classes.root} spacing={2}>
       <Grid item xs={12}>
         <Grid container justify="center" spacing={spacing}>
-            <Grid item>
-              <Paper className={classes.paper}>
-                <h1 className="popular-post-title">Popular Post</h1>
-                <Mediacard /> 
-              </Paper>         
-            </Grid>
-            <Grid item>
-              <Paper className={classes.paper}>
-                <h1 className="last-post-title">Last Post</h1>
-                <Mediacard />
-              </Paper>         
-            </Grid>
+          <Grid item>
+            <Paper className={classes.paper}>
+              <h1 className="popular-post-title">Popular Post</h1>
+              <Mediacard />
+            </Paper>
+          </Grid>
+          <Grid item>
+            <Paper className={classes.paper}>
+              <h1 className="last-post-title">Last Post</h1>
+              <Mediacard />
+            </Paper>
+          </Grid>
         </Grid>
       </Grid>
     </Grid>

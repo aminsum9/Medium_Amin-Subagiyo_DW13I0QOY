@@ -1,63 +1,70 @@
-html{
-  background: lightgrey;
+html {
+  background: #fff;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: 100% 700px;
   margin: 0;
   padding: 0;
   height: 100%;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
 }
-/* form regitration */
-.signin{
+/* form regitration / Start */
+.signin {
   padding-top: 5px;
   padding-left: -5px;
   width: 500px;
   height: 460px;
   display: block;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: 20px;
   text-align: center;
   border: 2px solid grey;
-  border-radius: 10px;
 }
-.signup{
+.signup {
   padding-top: 5px;
   padding-left: -5px;
   width: 500px;
   height: 500px;
   display: block;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: 20px;
   text-align: center;
   border: 2px solid grey;
-  border-radius: 10px;
 }
-.regist{
+.sign {
+  cursor: pointer;
+}
+#get-started button {
+  background: rgba(3, 168, 124, 1);
+  font-size: 20px;
+  padding: 10px;
+  margin-top: 6.5px;
+  border-radius: 3px;
+  color: #fff;
+}
+#get-started button:hover {
+  background: rgba(3, 168, 150, 1);
+}
+.regist {
   margin: auto;
+  margin-top: 70px;
   padding-top: 30px;
   background: #fff;
   background-size: 100% 100%;
 }
-.regist h1{
-  font-family: 'Courier New', Courier, monospace;
+.regist h1 {
+  font-family: "Courier New", Courier, monospace;
   font-size: 30px;
 }
-.regist {
-  margin-top: 5px;
-}
-.regist button{
+.regist button {
   background: grey;
   border: none;
   width: 80%;
   height: 40px;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: 20px;
   color: #fff;
 }
-.regist input{
+.regist input {
   width: 80%;
   height: 25px;
   background: transparent;
@@ -69,33 +76,45 @@ html{
   outline: none;
   font-size: 20px;
 }
+.start-page {
+  font-size: 45px;
+  font-family: baskerville old face;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.start-page h1 {
+  margin-top: 200px;
+  width: 900px;
+}
 
 /* App.js */
 
 .App {
   text-align: center;
 }
-.app-nav{
-  background: #fff;
+.app-nav {
+  position: fixed;
+  background: rgb(300, 300, 300, 0.8);
   display: flex;
   height: 60px;
-  width:100%;
+  width: 100%;
   clear: both;
-  box-shadow: 0px 2px 3px rgba(0,0,0,0.8);
+  box-shadow: 0px 2px 10px lightgrey;
 }
-.app-nav h1{
+.app-nav h1 {
   position: relative;
   top: -17px;
-  left: 20px;
+  left: 40px;
   font-size: 33px;
   color: black;
   cursor: pointer;
   font-family: baskerville old face;
 }
-.start{
+.start {
   text-decoration: none;
 }
-.nav-link{
+.nav-link {
   text-decoration: none;
   font-family: verdana;
   font-weight: bold;
@@ -104,17 +123,23 @@ html{
   padding-right: 20px;
   position: relative;
   left: 60%;
+  cursor: default;
+}
+.nav-link button {
+  background: transparent;
+  border: none;
+  font-size: 26px;
+  margin-top: 13px;
+  outline: none;
+  font-weight: 500;
+  cursor: pointer;
 }
 
-.nav-link:hover{
-  background: lightgrey;
-}
-
-.nav-link:active{
+.nav-link:active {
   color: -webkit-link;
 }
 
-.konten{
+.konten {
   background: lightgrey;
   width: 1000px;
   height: 1000px;
@@ -123,13 +148,13 @@ html{
   margin-bottom: 100px;
 }
 
-.konten h1{
+.konten h1 {
   text-align: center;
   line-height: 100px;
 }
 
 /* Home.js */
-.title{
+.title {
   color: black;
   font-family: baskerville old face;
   font-style: bold;
@@ -138,17 +163,18 @@ html{
   top: 0px;
   left: 20px;
 }
-.app-nav-home{
+.app-nav-home {
   margin-top: 50px;
   width: 97%;
   height: 40px;
   background: #fff;
-  box-shadow: 0px 2px 2px lightgrey;
+  border: 1px solid lightgrey;
+  box-shadow: 0px 2px 6px lightgrey;
   overflow: hidden;
   z-index: 100;
   margin: auto;
 }
-.nav-link-home{
+.nav-link-home {
   color: black;
   display: flex;
   align-items: center;
@@ -159,153 +185,188 @@ html{
   padding-right: 10px;
   font-family: verdana;
 }
-.nav-link-home:hover{
+.nav-link-home:hover {
   background: aqua;
 }
-.popular-post{
+.popular-post {
   margin: 40px;
+}
+.read-more {
+  padding-left: 20px;
 }
 
 /* Post */
-.popular-post-items{
+.popular-post-items {
 }
-.popular-post-items li{
+.popular-post-items li {
   list-style-type: none;
   height: 300px;
   background: #fff;
   width: 1000px;
 }
-.cardAction{
-  width:600px;
+.cardAction {
+  width: 600px;
 }
-.last-post-title{
+.last-post-title {
   padding: 20px;
 }
-.popular-post-title{
+.popular-post-title {
   padding: 20px;
 }
 
 /* Article real*/
-.post{
+.article-bar {
+  width: 100%;
+  height: 40px;
+  background: rgba(248, 250, 249, 0.9);
+  position: fixed;
+  top: 0;
+  box-shadow: 2px 4px 6px lightgrey;
+  font-family: baskerville old face;
+  padding-top: 8px;
+  padding-left: 10px;
+  font-size: 30px;
+  display: flex;
+  justify-content: left;
+  z-index: 10;
+}
+.post {
   width: 100%;
   height: 100%;
   margin: auto;
+  top: 0px;
   text-align: center;
   border: 1px;
   background: #fff;
   padding-top: 0px;
   margin-top: 0px;
 }
-.post img{
+.post img {
   width: 100%;
   height: 800px;
 }
-.post h1{
+.post h1 {
   padding-top: 50px;
   padding-bottom: 50px;
   font-size: 50px;
 }
-#main{
+#main {
   padding-top: 20px;
   padding-left: 300px;
   padding-right: 300px;
   font-size: 20px;
   padding-bottom: 50px;
 }
-.follow{
-    margin: auto;
-    width: 1000px;
-    height: 200px;
-    background: #fff;
-    margin-bottom: 10px;
-    box-shadow: 2px 2px 2px grey;
-    text-align: left;
+/* Follow */
+.follow {
+  margin: auto;
+  width: 800px;
+  height: 200px;
+  background: #fff;
+  margin-bottom: 10px;
+  box-shadow: 2px 2px 2px grey;
+  text-align: left;
+  display: flex;
 }
-.follow img{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    float: left;
-    padding: 10px;
+.follow strong {
+  height: 30px;
+  background: #fff;
 }
-.follow-button{
+.follow p {
+  width: 500px;
+  height: 100%;
+}
+.image {
+  width: 130px;
+  height: 100%;
+  background: #fff;
+  text-align: center;
+}
+.follow img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  float: left;
+  padding: 10px;
+}
+.follow-button {
+  width: 170px;
+  display: flex;
+  align-items: center;
+}
+.follow-button div {
   width: 100px;
   height: 40px;
-  border: 2px solid aqua;
+  border: 2px solid rgba(3, 168, 150, 1);
   border-radius: 10px;
   float: right;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
-  margin-right: 20px;
+  margin: auto;
   cursor: pointer;
-  color: darkblue;
+  color: rgba(3, 168, 150, 1);
   font-size: 20px;
-  font-family: comic san MS;
 }
-.follow-button:hover{
-  background: aqua;
+.follow-button div:hover {
+  background: rgba(3, 168, 150, 1);
+  color: #fff;
+}
+
+/* Claps */
+.claps {
+  width: 800px;
+  margin: auto;
+  padding: 10px;
+}
+#clap {
+  background: orange;
+  position: relative;
+  right: 350px;
+  height: 70px;
+  width: 70px;
+}
+#clap img {
+  width: 70%;
+  height: 70%;
 }
 /* main article */
 
-.main-article{
-  padding: 10px;
+.main-article {
+  padding: 5px;
   margin: auto;
 }
-.new-post{
+.new-post {
   width: 500px;
-  height: 500px;
 }
-.new-article{
-  height: 180px;
+.new-article {
+  height: 150px;
+  margin-bottom: 10px;
+  background: lightgrey;
+  margin: 10px;
 }
 
 /* Category */
-.category-container{
+.category-container {
   display: flex;
   justify-content: center;
   margin-top: 70px;
   margin-left: 20px;
   margin-right: 20px;
 }
-.follow-claps{
-  background: #fff;
-  margin: auto;
-  margin-bottom: 20px;
-  width: 700px;
-}
-.claps{
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid black;
-}
-.claps:hover{
-  box-shadow: 0px 0px 5px 5px grey;
-}
-.claps img{
-  width: 80%;
-  height: 80%;
-}
-.Mainarticle{
+.Mainarticle {
   width: 100%;
 }
-.Mainarticle img{
+.Mainarticle img {
   width: 100%;
   height: 700px;
 }
-.related-post{
+.related-post {
   margin: auto;
   width: 100%;
-  height: 600px;
-  background: lightgrey;
+  background: grey;
 }
-.related-post img{
+.related-post img {
   width: 98%;
   height: 50%;
   padding: 5px 5px 5px 5px;
