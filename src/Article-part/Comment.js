@@ -31,7 +31,7 @@ export default function Comment() {
       <ArticleBar />
       <div id="comment-1"></div>
       <div id="comment-2">
-        <div className="comment-input" onclick="open()">
+        <div className="comment-input">
           <form>
             <ul>
               <li>
