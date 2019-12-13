@@ -1,5 +1,6 @@
 import React from "react";
 import ArticleBar from "../Home/Article-bar";
+import Response from "./Response";
 import "../App.css";
 
 export default function Comment() {
@@ -28,6 +29,7 @@ export default function Comment() {
   return (
     <div>
       <ArticleBar />
+      {/* showing response for */}
       <p id="comment-1-title">Showing response for:</p>
       <div id="comment-1">
         <div id="comment-title">
@@ -35,24 +37,11 @@ export default function Comment() {
         </div>
       </div>
       <div id="comment-2">
+        {/* input */}
         <div className="comment-input">
-          <form>
-            <ul>
-              <li>
-                <label for="comment" id="comment-label">
-                  <strong>Response</strong>
-                </label>
-              </li>
-              <li>
-                <input
-                  type="text"
-                  id="comment"
-                  placeholder="write response..."
-                ></input>
-              </li>
-            </ul>
-          </form>
+          <Response />
         </div>
+        {/* response list */}
         {comments.map(comment => (
           <div className="comment-containt">
             <img src={comment.image} className="comment-image"></img>

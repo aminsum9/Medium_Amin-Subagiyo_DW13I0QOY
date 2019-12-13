@@ -3,11 +3,12 @@ import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
-import "../App.js";
+import "./Home.css";
 
 const useStyles = makeStyles({
   card: {
-    width: "100%"
+    width: "100%",
+    height: "70"
   },
   bullet: {
     display: "inline-block",
@@ -32,7 +33,8 @@ export default function SimpleCard() {
         "Android Studio adalah Integrated Development Enviroment (IDE) untuk sistem operasi Android, yang dibangung diatas perangkat lunak JetBrains IntelliJ IDEA dan didesain khusus untuk pengembangan Android. IDE ini merupakan pengganti dari Eclipse Android Development Tools (ADT) yang sebelumnya merupakan IDE utama untuk pengembangan aplikasi android.[1]"
     },
     {
-      image: "https://angular.github.io/react-native-renderer/assets/react.png",
+      image:
+        "http://blog.addthiscdn.com/wp-content/uploads/2014/11/addthis-react-flux-javascript-scaling.png",
       category: "web programming",
       title: "What is React.js",
       content:

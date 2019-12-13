@@ -33,6 +33,16 @@ export default function Start() {
     setRegOpen(true);
   };
 
+  const signinLinkOpen = () => {
+    setLoginOpen(false);
+    setRegOpen(true);
+  };
+
+  const signupLinkOpen = () => {
+    setRegOpen(false);
+    setLoginOpen(true);
+  };
+
   const handleClose = type => {
     if (type == "login") setLoginOpen(false);
     else setRegOpen(false);
@@ -106,7 +116,7 @@ export default function Start() {
               <div>
                 <p>
                   Don't have an account yet?
-                  <div onClick={signupOpen} className="sign">
+                  <div onClick={signinLinkOpen} className="sign">
                     Sign Up
                   </div>
                 </p>
@@ -176,7 +186,7 @@ export default function Start() {
               </div>
               <div>
                 <p>Have an account?</p>
-                <div onClick={signinOpen} className="sign">
+                <div onClick={signupLinkOpen} className="sign">
                   Sign In
                 </div>
               </div>

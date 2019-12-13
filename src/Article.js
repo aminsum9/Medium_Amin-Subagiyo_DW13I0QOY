@@ -5,8 +5,8 @@ import Paper from "@material-ui/core/Paper";
 import { Link } from "react-router-dom";
 import ArticleBar from "./Home/Article-bar";
 import Claps from "./Article-part/Claps";
-import Comment from "./Article-part/Comment";
-import "./App.js";
+import "./App.css";
+import "./Home/Home.css";
 
 const useStyles = makeStyles(theme => ({
   root: {
