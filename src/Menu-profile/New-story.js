@@ -7,7 +7,15 @@ class Newstory extends Component {
     return (
       <div>
         <NewStoryBar />
-        <h1>This is New Story</h1>
+        <div id="Section-content">
+          <h1>Title</h1>
+          <div id="New-story-content">
+            <div id="New-story-add">
+              <img src="https://cdn4.iconfinder.com/data/icons/ios7-essence/22/add_plus-512.png"></img>
+            </div>
+            <input type="text"></input>
+          </div>
+        </div>
       </div>
     );
   }

@@ -14,6 +14,14 @@ export default function NewStoryBar() {
             src="https://icon-library.net/images/icon-other/icon-other-26.jpg"
             id="other"
           ></img>
+          <img
+            src="https://cdn3.iconfinder.com/data/icons/line-icons-medium-version/64/bell-512.png"
+            id="bell"
+          ></img>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/a/a7/20180602_FIFA_Friendly_Match_Austria_vs._Germany_Mesut_%C3%96zil_850_0704.jpg"
+            id="account"
+          ></img>
         </div>
       </div>
     </div>
