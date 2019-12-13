@@ -185,10 +185,12 @@ export default function Start() {
                 </button>
               </div>
               <div>
-                <p>Have an account?</p>
-                <div onClick={signupLinkOpen} className="sign">
-                  Sign In
-                </div>
+                <p>
+                  Have an account?
+                  <div onClick={signupLinkOpen} className="sign">
+                    Sign In
+                  </div>
+                </p>
               </div>
             </form>
           </div>

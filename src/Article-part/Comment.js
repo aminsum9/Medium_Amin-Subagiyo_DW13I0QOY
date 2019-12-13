@@ -45,7 +45,7 @@ export default function Comment() {
         {comments.map(comment => (
           <div className="comment-containt">
             <img src={comment.image} className="comment-image"></img>
-            <h1>{comment.name}</h1>
+            <p className="comment-containt-name">{comment.name}</p>
             <div>{comment.contain}</div>
             <img
               src="https://www.freepngimg.com/thumb/instagram/60239-like-icons-bookmark-button-computer-facebook-instagram.png"

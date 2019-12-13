@@ -190,16 +190,17 @@ html {
 }
 #comment-1-title {
   font-family: verdana;
+  font-weight: 600;
   font-size: 16px;
   z-index: 5;
   position: relative;
-  left: 350px;
+  left: 330px;
   top: 150px;
 }
 #comment-title {
   width: 700px;
   height: 100px;
-  box-shadow: 0px 0px 4px grey;
+  box-shadow: 0px 0px 10px grey;
 }
 #comment-title p {
   font-family: verdana;
@@ -212,12 +213,31 @@ html {
   padding-top: 30px;
 }
 .comment-input {
-  height: 150px;
   width: 700px;
   background: #fff;
   margin: auto;
   line-height: 10px;
-  padding-top: 10px;
+  box-shadow: 0px 0px 10px grey;
+  text-align: center;
+  padding: 10px;
+}
+.comment-input textarea {
+  background: #fff;
+  width: 96%;
+  outline: none;
+  border: none;
+  font-size: 20px;
+}
+.comment-input button {
+  background: #fff;
+  border: 1px solid rgba(3, 168, 150, 1);
+  width: 100px;
+  height: 50px;
+  position: relative;
+  left: -288px;
+  border-radius: 10px;
+  color: rgba(3, 168, 150, 1);
+  cursor: pointer;
 }
 #comment-label {
   padding: 20px;
@@ -231,6 +251,11 @@ html {
   margin: auto;
   margin-bottom: 10px;
   padding: 20px;
+  box-shadow: 0px 0px 10px grey;
+}
+.comment-containt-name {
+  font-family: verdana;
+  font-weight: 700;
 }
 #bookmark {
   width: 20px;

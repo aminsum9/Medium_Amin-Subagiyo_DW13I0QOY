@@ -5,6 +5,7 @@ class Response extends Component {
     super(props);
     this.state = {
       inputHeight: 100,
+      placeholder: "Write a response...",
       showBtn: "none"
     };
   }
@@ -15,20 +16,25 @@ class Response extends Component {
           <textarea
             onFocus={() =>
               this.setState({
-                inputHeight: 300,
-                showBtn: "block"
+                inputHeight: 230,
+                showBtn: "block",
+                placeholder: ""
               })
             }
             onBlur={() =>
               this.setState({
                 inputHeight: 100,
-                showBtn: "none"
+                showBtn: "none",
+                placeholder: "Write a reponse..."
               })
             }
             style={{ height: this.state.inputHeight }}
+            placeholder={this.state.placeholder}
           ></textarea>
           <div style={{ display: this.state.showBtn }}>
-            <button>click me</button>
+            <button>
+              <strong>Publish</strong>
+            </button>
           </div>
         </div>
       </div>
