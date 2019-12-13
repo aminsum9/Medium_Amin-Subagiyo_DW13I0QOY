@@ -11,8 +11,8 @@ class Response extends Component {
   }
   render() {
     return (
-      <div className="app-comment-body">
-        <div className="app-comment-article-title">
+      <div>
+        <div>
           <textarea
             onFocus={() =>
               this.setState({

@@ -8,6 +8,8 @@ import Network from "./Category/Network";
 import Web from "./Category/Web";
 import Article from "./Article";
 import Comment from "./Article-part/Comment";
+import Newstory from "./Menu-profile/New-story";
+import NewStoryBar from "./Menu-profile/New-story-bar";
 import "./App.css";
 
 export default function App() {
@@ -35,6 +37,12 @@ export default function App() {
           </Route>
           <Route path="/Comment">
             <Comment />
+          </Route>
+          <Route path="/New-story">
+            <Newstory />
+          </Route>
+          <Route path="/New-story-bar">
+            <NewStoryBar />
           </Route>
           <Route path="/">
             <Start />

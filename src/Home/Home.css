@@ -122,38 +122,30 @@
   height: 100%;
 }
 
-/* Claps */
-.claps {
-  width: 800px;
-  margin: auto;
-  padding: 10px;
+/* Category */
+.category-container {
   display: flex;
+  justify-content: center;
+  margin-top: 70px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
-#clap {
-  background: orange;
-  position: relative;
-  left: 56px;
-  height: 70px;
-  width: 70px;
+.Mainarticle {
+  width: 100%;
 }
-#clap img {
-  width: 70%;
-  height: 70%;
+.Mainarticle img {
+  width: 100%;
+  height: 700px;
 }
-#counter {
-  position: relative;
-  left: 80px;
-  top: 10px;
+.related-post {
+  margin: auto;
+  width: 100%;
+  background: grey;
 }
-.share {
-  position: relative;
-  left: 500px;
-  z-index: 4;
-}
-.share img {
-  width: 25px;
-  height: 25px;
-  top: 0px;
+.related-post img {
+  width: 98%;
+  height: 50%;
+  padding: 5px 5px 5px 5px;
 }
 
 /* Follow */
@@ -211,29 +203,36 @@
   background: rgba(3, 168, 150, 1);
   color: #fff;
 }
-
-/* Category */
-.category-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 70px;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-.Mainarticle {
-  width: 100%;
-}
-.Mainarticle img {
-  width: 100%;
-  height: 700px;
-}
-.related-post {
+/* Claps / ada yang aneh */
+.claps {
+  width: 800px;
   margin: auto;
-  width: 100%;
-  background: grey;
+  padding: 10px;
+  display: flex;
 }
-.related-post img {
-  width: 98%;
-  height: 50%;
-  padding: 5px 5px 5px 5px;
+#clap {
+  background: orange;
+  position: relative;
+  left: 56px;
+  height: 70px;
+  width: 70px;
+}
+#clap img {
+  width: 70%;
+  height: 70%;
+}
+#counter {
+  position: relative;
+  left: 80px;
+  top: 10px;
+}
+.share {
+  position: relative;
+  left: 500px;
+  z-index: 4;
+}
+.share img {
+  width: 25px;
+  height: 25px;
+  top: 0px;
 }

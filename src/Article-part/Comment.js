@@ -1,7 +1,7 @@
 import React from "react";
 import ArticleBar from "../Home/Article-bar";
 import Response from "./Response";
-import "../App.css";
+import "./Articlepart.css";
 
 export default function Comment() {
   const comments = [
