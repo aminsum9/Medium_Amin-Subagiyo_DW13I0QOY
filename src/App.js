@@ -10,6 +10,7 @@ import Article from "./Article";
 import Comment from "./Article-part/Comment";
 import Newstory from "./Menu-profile/New-story";
 import NewStoryBar from "./Menu-profile/New-story-bar";
+import Stats from "./Menu-profile/Stats";
 import "./App.css";
 
 export default function App() {
@@ -43,6 +44,9 @@ export default function App() {
           </Route>
           <Route path="/New-story-bar">
             <NewStoryBar />
+          </Route>
+          <Route path="/Stats">
+            <Stats />
           </Route>
           <Route path="/">
             <Start />

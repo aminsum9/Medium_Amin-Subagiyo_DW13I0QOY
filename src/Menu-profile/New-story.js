@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import NewStoryBar from "./New-story-bar";
-import "./New-story.css";
+import "./Profile.css";
 
 class Newstory extends Component {
   render() {
