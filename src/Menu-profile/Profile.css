@@ -104,12 +104,10 @@ html {
 #Stats-contain {
   width: 1000px;
   margin-top: 70px;
-  background: aqua;
 }
 #stats-title {
   height: 100px;
   width: 100%;
-  background: grey;
 }
 #stats-title h1 {
   position: relative;
@@ -126,4 +124,25 @@ html {
   float: right;
   top: -50px;
   padding-left: 10px;
+}
+#Stats-contain hr {
+  position: relative;
+  bottom: 55px;
+}
+.ChartTabs {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  left: -20px;
+  top: -50px;
+}
+.ChartTabs li {
+  list-style: none;
+  float: left;
+  padding-left: 10px;
+  text-align: left;
+  width: 33%;
+  height: 100px;
+  border: 1px solid lightgrey;
+  border-top: none;
 }

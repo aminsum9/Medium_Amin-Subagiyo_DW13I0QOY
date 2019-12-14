@@ -14,6 +14,17 @@ class Stats extends Component {
             <p id="learn-more">Learn more about using stats</p>
           </div>
           <hr style={{ width: "100%" }}></hr>
+          <ul className="ChartTabs">
+            <li>
+              <p>Views</p>
+            </li>
+            <li>
+              <p>Reads</p>
+            </li>
+            <li>
+              <p>Fans</p>
+            </li>
+          </ul>
         </div>
       </div>
     );
