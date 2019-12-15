@@ -12,6 +12,7 @@ import Newstory from "./Menu-profile/New-story";
 import NewStoryBar from "./Menu-profile/New-story-bar";
 import Stats from "./Menu-profile/Stats";
 import Bookmark from "./Menu-profile/Bookmark";
+import Profile from "./Menu-profile/Profile";
 import "./App.css";
 
 export default function App() {
@@ -51,6 +52,9 @@ export default function App() {
           </Route>
           <Route path="/Bookmark">
             <Bookmark />
+          </Route>
+          <Route path="/Profile">
+            <Profile />
           </Route>
           <Route path="/">
             <Start />
