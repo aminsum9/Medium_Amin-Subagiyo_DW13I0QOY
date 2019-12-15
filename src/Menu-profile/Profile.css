@@ -145,4 +145,5 @@ html {
   height: 100px;
   border: 1px solid lightgrey;
   border-top: none;
+  cursor: pointer;
 }
