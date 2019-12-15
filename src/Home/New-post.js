@@ -3,7 +3,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
-import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import "../App.css";
 
@@ -52,7 +51,7 @@ export default function Newpost() {
   ];
 
   return (
-    <Card className={classes.card}>
+    <Card className={classes.card} style={{ texrDecoration: "none" }}>
       {/* article 1 */}
       {articles.map(article => (
         <div className="new-article">
@@ -74,9 +73,6 @@ export default function Newpost() {
               {article.content}
             </Typography>
           </CardContent>
-          <CardActions>
-            <Button size="small">Read More</Button>
-          </CardActions>
         </div>
       ))}
     </Card>

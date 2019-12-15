@@ -3,7 +3,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
-import Article from "../Article";
 import "../App.css";
 import Newpost from "./New-post";
 
@@ -33,20 +32,23 @@ export default function SpacingGrid() {
       <Grid item xs={12}>
         <Grid container justify="center" spacing={spacing}>
           <Grid item>
-            <Paper className={classes.paper}>
-              <div className="main-article">
-                <img
-                  src="https://miro.medium.com/max/2000/1*-T8oo_JoKkMxfnPKLt_Ciw.jpeg"
-                  width="100%"
-                ></img>
-                <p>
-                  If you’d liked to be jerked around less, provoked less, and
-                  more productive and inwardly focused, where should you
-                  start?...
-                </p>
-              </div>
-              <Link to="/Article" className="read-more">
-                Read More
+            <Paper className={classes.paper} style={{ boxShadow: "none" }}>
+              <Link
+                to="/Article"
+                className="read-more"
+                style={{ textDecoration: "none", color: "#000000" }}
+              >
+                <div className="main-article">
+                  <img
+                    src="https://miro.medium.com/max/2000/1*-T8oo_JoKkMxfnPKLt_Ciw.jpeg"
+                    width="100%"
+                  ></img>
+                  <p>
+                    If you’d liked to be jerked around less, provoked less, and
+                    more productive and inwardly focused, where should you
+                    start?...
+                  </p>
+                </div>
               </Link>
             </Paper>
           </Grid>
@@ -56,16 +58,19 @@ export default function SpacingGrid() {
             </Paper>
           </Grid>
           <Grid item>
-            <Paper className={classes.paper}>
-              <div className="main-article">
-                <img
-                  src="https://cdn.vox-cdn.com/thumbor/CmBSQJuMj7ePmO-Rcv8FTXFXvls=/0x0:2040x1360/1200x800/filters:focal(857x517:1183x843)/cdn.vox-cdn.com/uploads/chorus_image/image/64802772/jbareham_180405_1777_facebook_0003.0.jpg"
-                  width="100%"
-                ></img>
-                <p>facebook is one of most popular social media</p>
-              </div>
-              <Link to="/Article" className="read-more">
-                Read More
+            <Paper className={classes.paper} style={{ boxShadow: "none" }}>
+              <Link
+                to="/Article"
+                className="read-more"
+                style={{ textDecoration: "none", color: "#000000" }}
+              >
+                <div className="main-article">
+                  <img
+                    src="https://cdn.vox-cdn.com/thumbor/CmBSQJuMj7ePmO-Rcv8FTXFXvls=/0x0:2040x1360/1200x800/filters:focal(857x517:1183x843)/cdn.vox-cdn.com/uploads/chorus_image/image/64802772/jbareham_180405_1777_facebook_0003.0.jpg"
+                    width="100%"
+                  ></img>
+                  <p>facebook is one of most popular social media</p>
+                </div>
               </Link>
             </Paper>
           </Grid>
