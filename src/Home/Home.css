@@ -25,15 +25,7 @@
 }
 
 /* Home.js */
-.title {
-  color: black;
-  font-family: baskerville old face;
-  font-style: bold;
-  cursor: pointer;
-  position: relative;
-  top: 0px;
-  left: 20px;
-}
+
 .app-nav-home {
   margin-top: 50px;
   width: 97%;

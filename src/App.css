@@ -184,13 +184,15 @@ html {
 .main-article {
   padding: 5px;
   margin: auto;
+  box-shadow: none;
 }
 .new-post {
   width: 500px;
+  box-shadow: none;
 }
 .new-article {
   height: 160px;
   margin-bottom: 10px;
-  background: lightgrey;
+  border-bottom: 1px solid lightgrey;
   margin: 10px;
 }

@@ -13,6 +13,7 @@ import NewStoryBar from "./Menu-profile/New-story-bar";
 import Stats from "./Menu-profile/Stats";
 import Bookmark from "./Menu-profile/Bookmark";
 import Profile from "./Menu-profile/Profile";
+import HomeBar from "./Home-bar";
 import "./App.css";
 
 export default function App() {
@@ -55,6 +56,9 @@ export default function App() {
           </Route>
           <Route path="/Profile">
             <Profile />
+          </Route>
+          <Route path="./HomeBar">
+            <HomeBar />
           </Route>
           <Route path="/">
             <Start />

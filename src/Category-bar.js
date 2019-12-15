@@ -6,7 +6,6 @@ class Categorybar extends Component {
   render() {
     return (
       <div>
-        <h1 className="title">Medium</h1>
         <nav className="app-nav-home">
           <Link to="/Home" className="nav-link-home">
             Home
