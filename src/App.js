@@ -11,6 +11,7 @@ import Comment from "./Article-part/Comment";
 import Newstory from "./Menu-profile/New-story";
 import NewStoryBar from "./Menu-profile/New-story-bar";
 import Stats from "./Menu-profile/Stats";
+import Bookmark from "./Menu-profile/Bookmark";
 import "./App.css";
 
 export default function App() {
@@ -47,6 +48,9 @@ export default function App() {
           </Route>
           <Route path="/Stats">
             <Stats />
+          </Route>
+          <Route path="/Bookmark">
+            <Bookmark />
           </Route>
           <Route path="/">
             <Start />

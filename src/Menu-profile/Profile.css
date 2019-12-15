@@ -147,3 +147,75 @@ html {
   border-top: none;
   cursor: pointer;
 }
+
+/* Bookmark */
+.Bookmark {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Bookmark-container {
+  margin-top: 70px;
+  width: 1200px;
+  height: 100px;
+  background: #fff;
+}
+.Bookmark-container p {
+  font-weight: 600;
+  font-size: 30px;
+  background: #fff;
+  position: relative;
+  top: -21px;
+}
+.Bookmark-contain {
+  width: 100%;
+  height: 80px;
+  position: relative;
+  top: -40px;
+  border: 1px solid lightgrey;
+  display: flex;
+  flex-direction: row;
+}
+
+#Bookmark-mark-image {
+  width: 80px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid lightgrey;
+}
+#Bookmark-mark-image img {
+  width: 20px;
+  height: 20px;
+}
+#Bookmark-reading-here {
+  padding-top: 11px;
+  padding-left: 10px;
+  font-family: Baskerville old face;
+}
+#Bookmark-upgrade {
+  height: 100%;
+  width: 100px;
+  float: right;
+  position: relative;
+  left: 731px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#Bookmark-upgrade div {
+  width: 80px;
+  height: 40px;
+  background: black;
+  border-radius: 5px;
+}
+#Bookmark-upgrade div p {
+  font-size: 15px;
+  background: transparent;
+  color: #fff;
+  position: relative;
+  left: 10px;
+  top: -8px;
+}
