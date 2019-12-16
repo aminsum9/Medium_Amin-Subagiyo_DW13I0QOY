@@ -85,18 +85,33 @@ export default function ProfileUnderBar() {
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
-        <div
-          style={{
-            width: "700px",
-            height: "200px",
-            boxShadow: "0px 0px 7px lightgrey"
-          }}
-        >
-          Item One
-        </div>
+        <ul className="profile">
+          <li>
+            <p>Top 10 Elon Musk Productivity Secrets for Insane Success</p>
+            <p className="undertitle">Dan Silvestre</p>
+          </li>
+          <hr></hr>
+          <li>
+            <p>Psychologists Explain How To Stop Overthinking Everything</p>
+            <p className="undertitle">Thomas Oppong</p>
+          </li>
+        </ul>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item Two
+        <ul className="claps">
+          <li>
+            <div className="claps-title">
+              Top 10 Elon Musk Productivity Secrets for Insane Success
+            </div>
+            <img src="https://miro.medium.com/max/361/1*JmEUqbxA9nA3pr1yMwloOg.jpeg"></img>
+          </li>
+          <li>
+            <img src="https://miro.medium.com/fit/c/700/210/1*PwZsd2suQER-gRfM0g5w0w.png"></img>
+            <div className="claps-title">
+              Psychologists Explain How To Stop Overthinking Everything
+            </div>
+          </li>
+        </ul>
       </TabPanel>
       <TabPanel value={value} index={2}>
         Item Three
