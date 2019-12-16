@@ -85,7 +85,7 @@ export default function ArticleByPerson() {
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
-        <h1>Claps from Amin Subagiyo</h1>
+        <p className="Article-by-person-title">Claps from Amin Subagiyo</p>
         <ul className="profile">
           <li>
             <p>Top 10 Elon Musk Productivity Secrets for Insane Success</p>
@@ -99,7 +99,7 @@ export default function ArticleByPerson() {
         </ul>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <h1>Claps</h1>
+        <p className="Article-by-person-title">Claps</p>
         <ul className="claps">
           <li>
             <div className="claps-title">

@@ -234,7 +234,7 @@ html {
 }
 #edit-profile {
   width: 90px;
-  height: 25px;
+  height: 22px;
   background: #fff;
   border-radius: 5px;
   border: 1px solid grey;
@@ -277,6 +277,10 @@ html {
 }
 .claps li img {
   max-width: 100%;
+}
+.Article-by-person-title {
+  font-weight: 700;
+  font-size: 16px;
 }
 
 /* Profile - Profile */
