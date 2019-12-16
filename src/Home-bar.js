@@ -12,6 +12,8 @@ import AccountCircle from "@material-ui/icons/AccountCircle";
 import MailIcon from "@material-ui/icons/Mail";
 import NotificationsNoneIcon from "@material-ui/icons/NotificationsNone";
 import Avatar from "@material-ui/core/Avatar";
+import Home from "./Home";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
   grow: {
@@ -152,21 +154,24 @@ export default function HomeBar() {
         style={{ backgroundColor: "#ffffff", boxShadow: "none" }}
       >
         <Toolbar>
-          <Typography
-            className={classes.title}
-            variant="h6"
-            noWrap
-            style={{
-              color: "#000000",
-              fontFamily: "Abril Fatface",
-              fontSize: "32px",
-              fontWeight: "900",
-              position: "relative",
-              left: "130px"
-            }}
-          >
-            Medium
-          </Typography>
+          <Link to="/Home" style={{ textDecoration: "none" }}>
+            <Typography
+              className={classes.title}
+              variant="h6"
+              noWrap
+              style={{
+                color: "#000000",
+                fontFamily: "Abril Fatface",
+                fontSize: "32px",
+                fontWeight: "900",
+                position: "relative",
+                left: "130px",
+                textDecoration: "none"
+              }}
+            >
+              Medium
+            </Typography>
+          </Link>
           <div className={classes.search}>
             <div className={classes.searchIcon}></div>
           </div>

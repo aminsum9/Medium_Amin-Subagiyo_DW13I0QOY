@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import HomeBar from "../Home-bar";
+import NewProfileBar from "./Menu-profile-bar";
 import "./Profile.css";
 
 class Stats extends Component {
   render() {
     return (
       <div>
-        <HomeBar />
+        <NewProfileBar />
         <div id="Stats-contain">
           <div id="stats-title">
             <h1>Stats</h1>

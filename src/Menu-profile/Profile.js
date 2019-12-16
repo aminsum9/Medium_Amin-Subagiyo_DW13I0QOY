@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import MenuStoryBar from "./Menu-profile-bar";
-import ProfileUnderBar from "./Profile-underbar";
+import ArticleByPerson from "./Article-by-person";
 import "./script.js";
 import "./Profile.css";
 
@@ -26,7 +26,7 @@ class Profile extends Component {
             </div>
             <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/20180602_FIFA_Friendly_Match_Austria_vs._Germany_Mesut_%C3%96zil_850_0704.jpg"></img>
           </div>
-          <ProfileUnderBar />
+          <ArticleByPerson />
         </div>
       </div>
     );

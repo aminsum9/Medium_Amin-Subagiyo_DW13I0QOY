@@ -45,7 +45,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function ProfileUnderBar() {
+export default function ArticleByPerson() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
@@ -85,6 +85,7 @@ export default function ProfileUnderBar() {
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
+        <h1>Claps from Amin Subagiyo</h1>
         <ul className="profile">
           <li>
             <p>Top 10 Elon Musk Productivity Secrets for Insane Success</p>
@@ -98,6 +99,7 @@ export default function ProfileUnderBar() {
         </ul>
       </TabPanel>
       <TabPanel value={value} index={1}>
+        <h1>Claps</h1>
         <ul className="claps">
           <li>
             <div className="claps-title">
