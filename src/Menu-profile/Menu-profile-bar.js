@@ -147,7 +147,13 @@ export default function MenuProfileBar() {
 
   return (
     <div className={classes.grow}>
-      <AppBar position="static" style={{ backgroundColor: "#ffffff" }}>
+      <AppBar
+        position="static"
+        style={{
+          backgroundColor: "#ffffff",
+          boxShadow: "0px 0px 15px lightgrey"
+        }}
+      >
         <Toolbar>
           <Typography
             className={classes.title}
