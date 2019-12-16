@@ -96,12 +96,8 @@ html {
 }
 
 /* Stats */
-.Stats {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 #Stats-contain {
+  margin: auto;
   width: 1000px;
   margin-top: 70px;
 }
@@ -149,13 +145,8 @@ html {
 }
 
 /* Bookmark */
-.Bookmark {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 .Bookmark-container {
+  margin: auto;
   margin-top: 70px;
   width: 1200px;
   height: 100px;
@@ -220,15 +211,10 @@ html {
   top: -8px;
 }
 /* Profile */
-.Profile {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 .Profile-container {
   width: 728px;
   height: 700px;
+  margin: auto;
   margin-top: 70px;
 }
 #identity {

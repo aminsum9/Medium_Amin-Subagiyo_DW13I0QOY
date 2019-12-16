@@ -25,32 +25,26 @@
 }
 
 /* Home.js */
+/* Category Bar */
+.menu-item {
+  padding: 0 40px;
+  margin: 5px 10px;
+  user-select: none;
+  cursor: pointer;
+  border: none;
+}
+.menu-item-wrapper.active {
+  border: none;
+}
+.menu-item.active {
+  border: 1px green solid;
+}
 
-.app-nav-home {
-  margin-top: 50px;
-  width: 97%;
-  height: 40px;
-  background: #fff;
-  border: 1px solid lightgrey;
-  box-shadow: 0px 2px 6px lightgrey;
-  overflow: hidden;
-  z-index: 100;
-  margin: auto;
+.scroll-menu-arrow {
+  padding: 20px;
+  cursor: pointer;
 }
-.nav-link-home {
-  color: black;
-  display: flex;
-  align-items: center;
-  float: left;
-  text-decoration: none;
-  height: 100%;
-  padding-left: 10px;
-  padding-right: 10px;
-  font-family: verdana;
-}
-.nav-link-home:hover {
-  background: aqua;
-}
+/* ------------ */
 .popular-post {
   margin: 40px;
 }

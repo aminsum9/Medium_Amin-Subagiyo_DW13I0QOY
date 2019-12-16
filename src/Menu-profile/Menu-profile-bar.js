@@ -46,7 +46,7 @@ const useStyles = makeStyles(theme => ({
   notifications: {
     color: "grey",
     position: "relative",
-    right: "115px"
+    right: "80px"
   },
   searchIcon: {
     width: theme.spacing(7),
@@ -71,7 +71,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function HomeBar() {
+export default function MenuProfileBar() {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -147,10 +147,7 @@ export default function HomeBar() {
 
   return (
     <div className={classes.grow}>
-      <AppBar
-        position="static"
-        style={{ backgroundColor: "#ffffff", boxShadow: "none" }}
-      >
+      <AppBar position="static" style={{ backgroundColor: "#ffffff" }}>
         <Toolbar>
           <Typography
             className={classes.title}
@@ -162,7 +159,7 @@ export default function HomeBar() {
               fontSize: "32px",
               fontWeight: "900",
               position: "relative",
-              left: "130px"
+              left: "60px"
             }}
           >
             Medium
@@ -193,7 +190,7 @@ export default function HomeBar() {
               aria-haspopup="true"
               onClick={handleProfileMenuOpen}
               color="inherit"
-              style={{ position: "relative", right: "120px" }}
+              style={{ position: "relative", right: "80px" }}
             >
               <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
             </IconButton>

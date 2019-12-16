@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import NewStoryBar from "./New-story-bar";
+import MenuStoryBar from "./Menu-profile-bar";
 import ProfileUnderBar from "./Profile-underbar";
 import "./script.js";
 import "./Profile.css";
@@ -11,8 +11,8 @@ class Profile extends Component {
 
   render() {
     return (
-      <div className="Profile">
-        <NewStoryBar />
+      <div>
+        <MenuStoryBar />
         <div className="Profile-container">
           <div id="identity">
             <div id="identity-name">

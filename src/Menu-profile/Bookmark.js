@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import NewStoryBar from "./New-story-bar";
+import MenuProfileBar from "./Menu-profile-bar";
 
 class Bookmark extends Component {
   render() {
     return (
-      <div className="Bookmark">
-        <NewStoryBar />
+      <div>
+        <MenuProfileBar />
         <div className="Bookmark-container">
           <p>Bookmarks</p>
           <div className="Bookmark-contain">

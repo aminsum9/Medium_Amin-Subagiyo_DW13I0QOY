@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import NewStoryBar from "./New-story-bar";
+import HomeBar from "../Home-bar";
 import "./Profile.css";
 
 class Stats extends Component {
   render() {
     return (
-      <div className="Stats">
-        <NewStoryBar />
+      <div>
+        <HomeBar />
         <div id="Stats-contain">
           <div id="stats-title">
             <h1>Stats</h1>
