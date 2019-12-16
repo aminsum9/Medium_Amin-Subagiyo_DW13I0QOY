@@ -1,11 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function NewStoryBar() {
   return (
     <div class="New-story-bar">
       <div id="New-story-bar-1">
         <div id="New-story-bar-2">
-          <img src="https://cdn.dribbble.com/users/314298/screenshots/3796877/medium-dribbble.png"></img>
+          <Link to="../Home">
+            <img src="https://cdn.dribbble.com/users/314298/screenshots/3796877/medium-dribbble.png" />
+          </Link>
           <p>Draft</p>
         </div>
         <div id="New-story-bar-3">
