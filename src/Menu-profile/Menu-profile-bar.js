@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { fade, makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -149,21 +150,23 @@ export default function MenuProfileBar() {
     <div className={classes.grow}>
       <AppBar position="static" style={{ backgroundColor: "#ffffff" }}>
         <Toolbar>
-          <Typography
-            className={classes.title}
-            variant="h6"
-            noWrap
-            style={{
-              color: "#000000",
-              fontFamily: "Abril Fatface",
-              fontSize: "32px",
-              fontWeight: "900",
-              position: "relative",
-              left: "60px"
-            }}
-          >
-            Medium
-          </Typography>
+          <Link to="../Home" style={{ textDecoration: "none" }}>
+            <Typography
+              className={classes.title}
+              variant="h6"
+              noWrap
+              style={{
+                color: "#000000",
+                fontFamily: "Abril Fatface",
+                fontSize: "32px",
+                fontWeight: "900",
+                position: "relative",
+                left: "60px"
+              }}
+            >
+              Medium
+            </Typography>
+          </Link>
           <div className={classes.search}>
             <div className={classes.searchIcon}></div>
           </div>
