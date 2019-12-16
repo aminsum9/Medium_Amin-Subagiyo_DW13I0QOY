@@ -60,11 +60,11 @@ html {
 }
 #account {
   position: relative;
-  width: 30px;
-  height: 35px;
-  border-radius: 50%;
   left: 100px;
   top: -5px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
 }
 #Section-content {
   width: 1000px;
