@@ -14,6 +14,7 @@ import Stats from "./Menu-profile/Stats";
 import Bookmark from "./Menu-profile/Bookmark";
 import Profile from "./Menu-profile/Profile";
 import HomeBar from "./Home-bar";
+import Story from "./Menu-profile/Story";
 import "./App.css";
 
 export default function App() {
@@ -57,8 +58,11 @@ export default function App() {
           <Route path="/Profile">
             <Profile />
           </Route>
-          <Route path="./HomeBar">
+          <Route path="/HomeBar">
             <HomeBar />
+          </Route>
+          <Route path="/Story">
+            <Story />
           </Route>
           <Route path="/">
             <Start />

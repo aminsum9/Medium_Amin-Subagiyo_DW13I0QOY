@@ -301,3 +301,14 @@ html {
 .undertitle {
   font-size: 15px;
 }
+/* Profile */
+.Story-contain {
+  width: 1192px;
+  height: 100px;
+  background: aqua;
+  margin: auto;
+  margin-top: 70px;
+}
+#Story-title {
+  font-size: 36px;
+}
