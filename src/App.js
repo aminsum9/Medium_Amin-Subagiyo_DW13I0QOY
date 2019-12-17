@@ -15,6 +15,7 @@ import Bookmark from "./Menu-profile/Bookmark";
 import Profile from "./Menu-profile/Profile";
 import HomeBar from "./Home-bar";
 import Story from "./Menu-profile/Story";
+import DraftPublished from "./Menu-profile/draft-publihed";
 import "./App.css";
 
 export default function App() {
@@ -63,6 +64,9 @@ export default function App() {
           </Route>
           <Route path="/Story">
             <Story />
+          </Route>
+          <Route path="/DraftPublished">
+            <DraftPublished />
           </Route>
           <Route path="/">
             <Start />

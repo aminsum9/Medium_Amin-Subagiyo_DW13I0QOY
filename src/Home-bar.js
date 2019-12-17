@@ -12,7 +12,6 @@ import AccountCircle from "@material-ui/icons/AccountCircle";
 import MailIcon from "@material-ui/icons/Mail";
 import NotificationsNoneIcon from "@material-ui/icons/NotificationsNone";
 import Avatar from "@material-ui/core/Avatar";
-import Home from "./Home";
 import { Link } from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
@@ -85,13 +84,8 @@ export default function HomeBar() {
     setAnchorEl(event.currentTarget);
   };
 
-  const handleMobileMenuClose = () => {
-    setMobileMoreAnchorEl(null);
-  };
-
   const handleMenuClose = () => {
     setAnchorEl(null);
-    handleMobileMenuClose();
   };
 
   const handleMobileMenuOpen = event => {
@@ -109,8 +103,37 @@ export default function HomeBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+      <MenuItem>
+        <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+      </MenuItem>
+      <MenuItem>
+        <Link to="./New-story" style={{ textDecoration: "none" }}>
+          New Story
+        </Link>
+      </MenuItem>
+      <MenuItem>Stories</MenuItem>
+      <MenuItem>Series</MenuItem>
+      <MenuItem>
+        <Link to="./Stats" style={{ textDecoration: "none" }}>
+          Stats
+        </Link>
+      </MenuItem>
+      <MenuItem>Medium Partner Program</MenuItem>
+      <MenuItem>
+        <Link to="./Bookmark" style={{ textDecoration: "none" }}>
+          Bookmark
+        </Link>
+      </MenuItem>
+      <MenuItem>Publications</MenuItem>
+      <MenuItem>Costumes your interests</MenuItem>
+      <MenuItem>
+        <Link to="./Story" style={{ textDecoration: "none" }}>
+          Story
+        </Link>
+      </MenuItem>
+      <MenuItem>Settings</MenuItem>
+      <MenuItem>Help</MenuItem>
+      <MenuItem>Sign Out</MenuItem>
     </Menu>
   );
 
@@ -123,7 +146,6 @@ export default function HomeBar() {
       keepMounted
       transformOrigin={{ vertical: "top", horizontal: "right" }}
       open={isMobileMenuOpen}
-      onClose={handleMobileMenuClose}
     >
       <MenuItem>
         <IconButton aria-label="show 4 new mails" color="inherit">

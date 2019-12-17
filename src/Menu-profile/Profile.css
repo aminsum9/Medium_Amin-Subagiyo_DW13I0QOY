@@ -305,10 +305,16 @@ html {
 .Story-contain {
   width: 1192px;
   height: 100px;
-  background: aqua;
   margin: auto;
   margin-top: 70px;
 }
 #Story-title {
   font-size: 36px;
+}
+.Story-button {
+  float: right;
+  margin-top: -70px;
+}
+.Story-button button {
+  margin-left: 6px;
 }
