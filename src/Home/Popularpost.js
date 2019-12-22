@@ -8,7 +8,7 @@ import "./Home.css";
 const useStyles = makeStyles({
   card: {
     width: "100%",
-    height: "70"
+    boxShadow: "none"
   },
   bullet: {
     display: "inline-block",
@@ -26,22 +26,18 @@ const useStyles = makeStyles({
 export default function SimpleCard() {
   const populars = [
     {
-      image: "https://img.utdstc.com/icons/android-studio-.png:l",
       category: "android",
       title: "What is Android Studio?",
       content:
         "Android Studio adalah Integrated Development Enviroment (IDE) untuk sistem operasi Android, yang dibangung diatas perangkat lunak JetBrains IntelliJ IDEA dan didesain khusus untuk pengembangan Android. IDE ini merupakan pengganti dari Eclipse Android Development Tools (ADT) yang sebelumnya merupakan IDE utama untuk pengembangan aplikasi android."
     },
     {
-      image:
-        "http://blog.addthiscdn.com/wp-content/uploads/2014/11/addthis-react-flux-javascript-scaling.png",
       category: "web programming",
       title: "What is React.js",
       content:
         "React Js adalah sebuah library JavaScript yang di buat oleh facebook. React bukanlah sebuah framework MVC. React adalah library yang bersifat composable user interface, yang artinya kita dapat membuat berbagai UI yang bisa kita bagi menjadi beberapa komponen."
     },
     {
-      image: "https://angular.github.io/react-native-renderer/assets/react.png",
       category: "android",
       title: "What is React Native",
       content:
@@ -56,9 +52,6 @@ export default function SimpleCard() {
     <Card className={classes.card}>
       {populars.map(popular => (
         <CardContent>
-          <div>
-            <img src={popular.image} className="popular-image"></img>
-          </div>
           <Typography
             className={classes.title}
             color="textSecondary"

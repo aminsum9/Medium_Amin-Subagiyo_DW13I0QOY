@@ -8,15 +8,25 @@ import "./Home.css";
 const useStyles = makeStyles({
   card: {
     width: "100%",
-    height: "70"
+    overflowY: "auto",
+    overflow: "hidden",
+    texAlign: "justify",
+    boxShadow: "none"
+  },
+  container: {
+    height: "800px",
+    overflow: "auto",
+    margin: "15px -300px 15px 15px",
+    paddingRight: "300px"
   },
   bullet: {
     display: "inline-block",
-    margin: "0 2px",
-    transform: "scale(0.8)"
+    borderBottom: "1px solid lightgrey",
+    marginBottom: "10px"
   },
   image: {
     width: "160px",
+    height: "140px",
     paddingRight: "10px",
     float: "left"
   },
@@ -58,6 +68,34 @@ export default function LastPost() {
       title: "Introducing PHP:",
       content:
         "Bahasa pemrograman PHP biasanya tidak digunakan pada keseluruhan pengembangan website, melainkan dikombinasikan dengan beberapa bahasa pemrograman lain. Misalnya saja untuk mengatur tampilan, layout, dan berbagai macam menu menggunakan CSS."
+    },
+    {
+      image: "https://blog.pucc.or.id/wp-content/uploads/2019/06/php.jpg",
+      category: "web programming",
+      title: "Introducing PHP:",
+      content:
+        "Bahasa pemrograman PHP biasanya tidak digunakan pada keseluruhan pengembangan website, melainkan dikombinasikan dengan beberapa bahasa pemrograman lain. Misalnya saja untuk mengatur tampilan, layout, dan berbagai macam menu menggunakan CSS."
+    },
+    {
+      image: "https://blog.pucc.or.id/wp-content/uploads/2019/06/php.jpg",
+      category: "web programming",
+      title: "Introducing PHP:",
+      content:
+        "Bahasa pemrograman PHP biasanya tidak digunakan pada keseluruhan pengembangan website, melainkan dikombinasikan dengan beberapa bahasa pemrograman lain. Misalnya saja untuk mengatur tampilan, layout, dan berbagai macam menu menggunakan CSS."
+    },
+    {
+      image: "https://blog.pucc.or.id/wp-content/uploads/2019/06/php.jpg",
+      category: "web programming",
+      title: "Introducing PHP:",
+      content:
+        "Bahasa pemrograman PHP biasanya tidak digunakan pada keseluruhan pengembangan website, melainkan dikombinasikan dengan beberapa bahasa pemrograman lain. Misalnya saja untuk mengatur tampilan, layout, dan berbagai macam menu menggunakan CSS."
+    },
+    {
+      image: "https://blog.pucc.or.id/wp-content/uploads/2019/06/php.jpg",
+      category: "web programming",
+      title: "Introducing PHP:",
+      content:
+        "Bahasa pemrograman PHP biasanya tidak digunakan pada keseluruhan pengembangan website, melainkan dikombinasikan dengan beberapa bahasa pemrograman lain. Misalnya saja untuk mengatur tampilan, layout, dan berbagai macam menu menggunakan CSS."
     }
   ];
 
@@ -66,28 +104,30 @@ export default function LastPost() {
 
   return (
     <Card className={classes.card}>
-      {populars.map(popular => (
-        <CardContent>
-          <div>
-            <img src={popular.image} className={classes.image}></img>
-          </div>
-          <Typography
-            className={classes.title}
-            color="textSecondary"
-            gutterBottom
-          >
-            {popular.category}
-          </Typography>
-          <Typography variant="h5" component="h2">
-            {popular.title}
-          </Typography>
-          <Typography variant="body2" component="p">
-            {popular.content}
-            <br />
-            {'"a benevolent smile"'}
-          </Typography>
-        </CardContent>
-      ))}
+      <div className={classes.container}>
+        {populars.map(popular => (
+          <CardContent className={classes.bullet}>
+            <div>
+              <img src={popular.image} className={classes.image}></img>
+            </div>
+            <Typography
+              className={classes.title}
+              color="textSecondary"
+              gutterBottom
+            >
+              {popular.category}
+            </Typography>
+            <Typography variant="h5" component="h2">
+              {popular.title}
+            </Typography>
+            <Typography variant="body2" component="p">
+              {popular.content}
+              <br />
+              {'"a benevolent smile"'}
+            </Typography>
+          </CardContent>
+        ))}
+      </div>
     </Card>
   );
 }
