@@ -21,20 +21,20 @@ const list = [
   },
   {
     name: "ANDROID",
-    target: "/category"
+    target: "/Mobile"
   },
   {
     name: "OTOMOTIF",
-    target: "/category"
+    target: "/Mobile"
   },
 
   {
     name: "ELECTRONIC",
-    target: "/category"
+    target: "/Mobile"
   },
   {
     name: "CHEMISTRY",
-    target: "/category"
+    target: "/Mobile"
   }
 ];
 
@@ -49,10 +49,6 @@ const MenuItem = ({ text, target, selected }) => {
     </div>
   );
 };
-
-// const MenuItem = ({ text, target, selected }) => {
-//   return <div className={`menu-item ${selected ? "active" : ""}`}>{text}</div>;
-// };
 
 // All items component
 // Important! add unique key
