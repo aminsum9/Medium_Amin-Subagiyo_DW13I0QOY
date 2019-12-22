@@ -22,6 +22,8 @@
 }
 .popular-post-title {
   padding: 20px;
+  font-size: 23px;
+  font-weight: 600;
 }
 
 /* Home.js */

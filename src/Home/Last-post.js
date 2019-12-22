@@ -15,6 +15,11 @@ const useStyles = makeStyles({
     margin: "0 2px",
     transform: "scale(0.8)"
   },
+  image: {
+    width: "160px",
+    paddingRight: "10px",
+    float: "left"
+  },
   title: {
     fontSize: 14
   },
@@ -23,14 +28,14 @@ const useStyles = makeStyles({
   }
 });
 
-export default function SimpleCard() {
+export default function LastPost() {
   const populars = [
     {
       image: "https://img.utdstc.com/icons/android-studio-.png:l",
       category: "android",
       title: "What is Android Studio?",
       content:
-        "Android Studio adalah Integrated Development Enviroment (IDE) untuk sistem operasi Android, yang dibangung diatas perangkat lunak JetBrains IntelliJ IDEA dan didesain khusus untuk pengembangan Android. IDE ini merupakan pengganti dari Eclipse Android Development Tools (ADT) yang sebelumnya merupakan IDE utama untuk pengembangan aplikasi android."
+        "Android Studio adalah Integrated Development Enviroment (IDE) untuk sistem operasi Android, yang dibangung diatas perangkat lunak JetBrains IntelliJ IDEA dan didesain khusus untuk pengembangan Android. IDE ini merupakan pengganti dari Eclipse Android Development Tools (ADT) yang sebelumnya merupakan IDE utama untuk pengembangan aplikasi android.[1]"
     },
     {
       image:
@@ -46,6 +51,13 @@ export default function SimpleCard() {
       title: "What is React Native",
       content:
         "Pada dasarnya react native adalah sebuah framework dari Javascript yang banyak dikembangkan oleh perusahaan besar dalam bidang teknologi seperti Facebook. Jadi, dengan react native kamu tidak perlu membuat aplikasi hybrid."
+    },
+    {
+      image: "https://blog.pucc.or.id/wp-content/uploads/2019/06/php.jpg",
+      category: "web programming",
+      title: "Introducing PHP:",
+      content:
+        "Bahasa pemrograman PHP biasanya tidak digunakan pada keseluruhan pengembangan website, melainkan dikombinasikan dengan beberapa bahasa pemrograman lain. Misalnya saja untuk mengatur tampilan, layout, dan berbagai macam menu menggunakan CSS."
     }
   ];
 
@@ -57,7 +69,7 @@ export default function SimpleCard() {
       {populars.map(popular => (
         <CardContent>
           <div>
-            <img src={popular.image} className="popular-image"></img>
+            <img src={popular.image} className={classes.image}></img>
           </div>
           <Typography
             className={classes.title}

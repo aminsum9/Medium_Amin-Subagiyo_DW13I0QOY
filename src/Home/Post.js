@@ -3,17 +3,17 @@ import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import Popularpost from "./Popularpost";
-import "../App.css";
+import LastPost from "./Last-post";
 
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1
   },
   paper: {
-    width: 600
+    boxShadow: "none"
   },
   control: {
-    padding: theme.spacing(2)
+    padding: theme.spacing(1)
   }
 }));
 
@@ -29,15 +29,14 @@ export default function Post() {
     <Grid container className={classes.root} spacing={2}>
       <Grid item xs={12}>
         <Grid container justify="center" spacing={spacing}>
-          <Grid item>
+          <Grid item xs={8}>
             <Paper className={classes.paper}>
-              <h1 className="popular-post-title">Popular Post</h1>
-              <Popularpost />
+              <LastPost />
             </Paper>
           </Grid>
-          <Grid item>
+          <Grid item xs={4}>
             <Paper className={classes.paper}>
-              <h1 className="last-post-title">Last Post</h1>
+              <p className="popular-post-title">Popular on Medium</p>
               <Popularpost />
             </Paper>
           </Grid>
