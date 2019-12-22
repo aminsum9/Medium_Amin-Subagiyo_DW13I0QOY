@@ -2,19 +2,40 @@ import React, { Component } from "react";
 import ScrollMenu from "react-horizontal-scrolling-menu";
 import { Link } from "react-router-dom";
 import Button from "@material-ui/core/Button";
+import Mobile from "./Category/Mobile";
 import "./Home/Home.css";
 
 // list of items
 const list = [
-  { name: "HOME", target: "" },
-  { name: "ONEZERO" },
-  { name: "ELEMENTAL" },
-  { name: "GEN" },
-  { name: "ZORA" },
-  { name: "FORGE" },
-  { name: "HUMAN PARTS" },
-  { name: "MARKER" },
-  { name: "LEVEL" }
+  {
+    name: "HOME",
+    target: "/Mobile"
+  },
+  {
+    name: "ONE ZERO",
+    target: "/Mobile"
+  },
+  {
+    name: "PROGRAMMING",
+    target: "/Mobile"
+  },
+  {
+    name: "ANDROID",
+    target: "/category"
+  },
+  {
+    name: "OTOMOTIF",
+    target: "/category"
+  },
+
+  {
+    name: "ELECTRONIC",
+    target: "/category"
+  },
+  {
+    name: "CHEMISTRY",
+    target: "/category"
+  }
 ];
 
 // One item component
@@ -35,11 +56,13 @@ const MenuItem = ({ text, target, selected }) => {
 
 // All items component
 // Important! add unique key
-export const Menu = (list, selected) =>
+export const Menu = (list, selected, target) =>
   list.map(el => {
     const { name } = el;
 
-    return <MenuItem text={name} key={name} selected={selected} />;
+    return (
+      <MenuItem text={name} target={el.target} key={name} selected={selected} />
+    );
   });
 
 const Arrow = ({ text, className }) => {
@@ -49,7 +72,9 @@ const Arrow = ({ text, className }) => {
 const ArrowLeft = Arrow({ text: "<", className: "arrow-prev" });
 const ArrowRight = Arrow({ text: ">", className: "arrow-next" });
 
-const selected = "item1";
+const selected = () => {
+  return console.log("tes");
+};
 
 class Categorybar extends Component {
   constructor(props) {
