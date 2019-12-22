@@ -52,7 +52,7 @@ const MenuItem = ({ text, target, selected }) => {
 
 // All items component
 // Important! add unique key
-export const Menu = (list, selected, target) =>
+export const Menu = (list, selected) =>
   list.map(el => {
     const { name } = el;
 

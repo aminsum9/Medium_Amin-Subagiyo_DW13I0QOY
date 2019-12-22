@@ -36,13 +36,13 @@ html {
   border: 1px solid rgba(3, 168, 150, 1);
   background: rgba(3, 168, 150, 1);
   display: flex;
+  font-size: 12px;
   justify-content: center;
   align-items: center;
   border-radius: 2px;
   font-weight: 600;
   color: #fff;
   position: relative;
-  left: 80px;
 }
 #other {
   width: 20px;

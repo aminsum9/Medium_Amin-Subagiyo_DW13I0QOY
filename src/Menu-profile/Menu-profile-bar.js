@@ -108,8 +108,40 @@ export default function MenuProfileBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+      <MenuItem>
+        <Avatar
+          alt="Remy Sharp"
+          src="https://upload.wikimedia.org/wikipedia/commons/a/a7/20180602_FIFA_Friendly_Match_Austria_vs._Germany_Mesut_%C3%96zil_850_0704.jpg"
+        />
+      </MenuItem>
+      <MenuItem>
+        <Link to="./New-story" style={{ textDecoration: "none" }}>
+          New Story
+        </Link>
+      </MenuItem>
+      <MenuItem>Stories</MenuItem>
+      <MenuItem>Series</MenuItem>
+      <MenuItem>
+        <Link to="./Stats" style={{ textDecoration: "none" }}>
+          Stats
+        </Link>
+      </MenuItem>
+      <MenuItem>Medium Partner Program</MenuItem>
+      <MenuItem>
+        <Link to="./Bookmark" style={{ textDecoration: "none" }}>
+          Bookmark
+        </Link>
+      </MenuItem>
+      <MenuItem>Publications</MenuItem>
+      <MenuItem>Costumes your interests</MenuItem>
+      <MenuItem>
+        <Link to="./Story" style={{ textDecoration: "none" }}>
+          Story
+        </Link>
+      </MenuItem>
+      <MenuItem>Settings</MenuItem>
+      <MenuItem>Help</MenuItem>
+      <MenuItem>Sign Out</MenuItem>
     </Menu>
   );
 
@@ -201,7 +233,10 @@ export default function MenuProfileBar() {
               color="inherit"
               style={{ position: "relative", right: "80px" }}
             >
-              <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+              <Avatar
+                alt="Remy Sharp"
+                src="https://upload.wikimedia.org/wikipedia/commons/a/a7/20180602_FIFA_Friendly_Match_Austria_vs._Germany_Mesut_%C3%96zil_850_0704.jpg"
+              />
             </IconButton>
           </div>
           <div className={classes.sectionMobile}></div>

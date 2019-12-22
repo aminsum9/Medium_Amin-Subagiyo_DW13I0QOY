@@ -104,7 +104,10 @@ export default function HomeBar() {
       onClose={handleMenuClose}
     >
       <MenuItem>
-        <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+        <Avatar
+          alt="Remy Sharp"
+          src="https://upload.wikimedia.org/wikipedia/commons/a/a7/20180602_FIFA_Friendly_Match_Austria_vs._Germany_Mesut_%C3%96zil_850_0704.jpg"
+        />
       </MenuItem>
       <MenuItem>
         <Link to="./New-story" style={{ textDecoration: "none" }}>
@@ -222,7 +225,10 @@ export default function HomeBar() {
               color="inherit"
               style={{ position: "relative", right: "120px" }}
             >
-              <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+              <Avatar
+                alt="Remy Sharp"
+                src="https://upload.wikimedia.org/wikipedia/commons/a/a7/20180602_FIFA_Friendly_Match_Austria_vs._Germany_Mesut_%C3%96zil_850_0704.jpg"
+              />
             </IconButton>
           </div>
           <div className={classes.sectionMobile}></div>
