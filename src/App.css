@@ -184,7 +184,9 @@ html {
 .main-article {
   padding: 5px;
   margin: auto;
+  margin-bottom: 30px;
   box-shadow: none;
+  border-bottom: 1px solid lightgrey;
 }
 .new-post {
   width: 500px;

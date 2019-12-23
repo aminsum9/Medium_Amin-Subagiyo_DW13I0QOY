@@ -7,7 +7,8 @@ import LastPost from "./Last-post";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    flexGrow: 1
+    flexGrow: 1,
+    padding: "30px"
   },
   paper: {
     boxShadow: "none"
@@ -36,7 +37,16 @@ export default function Post() {
           </Grid>
           <Grid item xs={4}>
             <Paper className={classes.paper}>
-              <p className="popular-post-title">Popular on Medium</p>
+              <div className="popular-post-title">
+                <p>Popular on Medium</p>
+                <hr
+                  style={{
+                    width: "220px",
+                    float: "left"
+                  }}
+                ></hr>
+              </div>
+
               <Popularpost />
             </Paper>
           </Grid>

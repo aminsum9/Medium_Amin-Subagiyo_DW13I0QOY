@@ -21,8 +21,9 @@ const useStyles = makeStyles({
   },
   bullet: {
     display: "inline-block",
-    borderBottom: "1px solid lightgrey",
-    marginBottom: "10px"
+    borderBottom: "1px solid light  grey",
+    marginBottom: "20px",
+    borderBottom: "1px solid lightgrey"
   },
   image: {
     width: "160px",
@@ -65,37 +66,25 @@ export default function LastPost() {
     {
       image: "https://blog.pucc.or.id/wp-content/uploads/2019/06/php.jpg",
       category: "web programming",
-      title: "Introducing PHP:",
+      title: "Introducing PHP",
       content:
         "Bahasa pemrograman PHP biasanya tidak digunakan pada keseluruhan pengembangan website, melainkan dikombinasikan dengan beberapa bahasa pemrograman lain. Misalnya saja untuk mengatur tampilan, layout, dan berbagai macam menu menggunakan CSS."
     },
     {
-      image: "https://blog.pucc.or.id/wp-content/uploads/2019/06/php.jpg",
+      image:
+        "https://aboutcprogramming.files.wordpress.com/2015/11/pengertian-bahasa-pemrograman-c.jpg",
       category: "web programming",
-      title: "Introducing PHP:",
+      title: "Introducing C++",
       content:
-        "Bahasa pemrograman PHP biasanya tidak digunakan pada keseluruhan pengembangan website, melainkan dikombinasikan dengan beberapa bahasa pemrograman lain. Misalnya saja untuk mengatur tampilan, layout, dan berbagai macam menu menggunakan CSS."
+        "Assalamualaikum. c++ adalah bahasa pemrograman yang telah banyak digunakan oleh kalangan software enginer untuk mengembangkan sebuah perangkat lunak yang mutakhir. pada pembahasan kali ini anda di haruskan untuk mengetahui bahasa c++ karena bahasa ini sangat sangat di gunakan untuk membuat sebuah game."
     },
     {
-      image: "https://blog.pucc.or.id/wp-content/uploads/2019/06/php.jpg",
+      image:
+        "https://www.ideassn.org/wp-content/uploads/2017/06/python-logo.png",
       category: "web programming",
-      title: "Introducing PHP:",
+      title: "Introducing Python",
       content:
-        "Bahasa pemrograman PHP biasanya tidak digunakan pada keseluruhan pengembangan website, melainkan dikombinasikan dengan beberapa bahasa pemrograman lain. Misalnya saja untuk mengatur tampilan, layout, dan berbagai macam menu menggunakan CSS."
-    },
-    {
-      image: "https://blog.pucc.or.id/wp-content/uploads/2019/06/php.jpg",
-      category: "web programming",
-      title: "Introducing PHP:",
-      content:
-        "Bahasa pemrograman PHP biasanya tidak digunakan pada keseluruhan pengembangan website, melainkan dikombinasikan dengan beberapa bahasa pemrograman lain. Misalnya saja untuk mengatur tampilan, layout, dan berbagai macam menu menggunakan CSS."
-    },
-    {
-      image: "https://blog.pucc.or.id/wp-content/uploads/2019/06/php.jpg",
-      category: "web programming",
-      title: "Introducing PHP:",
-      content:
-        "Bahasa pemrograman PHP biasanya tidak digunakan pada keseluruhan pengembangan website, melainkan dikombinasikan dengan beberapa bahasa pemrograman lain. Misalnya saja untuk mengatur tampilan, layout, dan berbagai macam menu menggunakan CSS."
+        "Python merupakan bahasa pemrograman tingkat tinggi yang diracik oleh Guido van Rossum. Python banyak digunakan untuk membuat berbagai macam program, seperti: program CLI, Program GUI (desktop), Aplikasi Mobile, Web, IoT, Game, Program untuk Hacking, dsb. Python juga dikenal dengan bahasa pemrograman yang mudah dipelajari, karena struktur sintaknya rapi dan mudah dipahami."
     }
   ];
 

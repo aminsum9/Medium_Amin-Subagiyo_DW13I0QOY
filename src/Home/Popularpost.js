@@ -10,6 +10,9 @@ const useStyles = makeStyles({
     width: "100%",
     boxShadow: "none"
   },
+  content: {
+    display: "flex"
+  },
   bullet: {
     display: "inline-block",
     margin: "0 2px",
@@ -26,18 +29,21 @@ const useStyles = makeStyles({
 export default function SimpleCard() {
   const populars = [
     {
+      index: 1,
       category: "android",
       title: "What is Android Studio?",
       content:
         "Android Studio adalah Integrated Development Enviroment (IDE) untuk sistem operasi Android, yang dibangung diatas perangkat lunak JetBrains IntelliJ IDEA dan didesain khusus untuk pengembangan Android. IDE ini merupakan pengganti dari Eclipse Android Development Tools (ADT) yang sebelumnya merupakan IDE utama untuk pengembangan aplikasi android."
     },
     {
+      index: 2,
       category: "web programming",
       title: "What is React.js",
       content:
         "React Js adalah sebuah library JavaScript yang di buat oleh facebook. React bukanlah sebuah framework MVC. React adalah library yang bersifat composable user interface, yang artinya kita dapat membuat berbagai UI yang bisa kita bagi menjadi beberapa komponen."
     },
     {
+      index: 3,
       category: "android",
       title: "What is React Native",
       content:
@@ -51,22 +57,27 @@ export default function SimpleCard() {
   return (
     <Card className={classes.card}>
       {populars.map(popular => (
-        <CardContent>
-          <Typography
-            className={classes.title}
-            color="textSecondary"
-            gutterBottom
-          >
-            {popular.category}
-          </Typography>
-          <Typography variant="h5" component="h2">
-            {popular.title}
-          </Typography>
-          <Typography variant="body2" component="p">
-            {popular.content}
-            <br />
-            {'"a benevolent smile"'}
-          </Typography>
+        <CardContent className={classes.content}>
+          <h1 style={{ paddingRight: "20px", color: "grey" }}>
+            {popular.index}
+          </h1>
+          <div style={{ float: "right" }}>
+            <Typography
+              className={classes.title}
+              color="textSecondary"
+              gutterBottom
+            >
+              {popular.category}
+            </Typography>
+            <Typography variant="h5" component="h2">
+              {popular.title}
+            </Typography>
+            <Typography variant="body2" component="p">
+              {popular.content}
+              <br />
+              {'"a benevolent smile"'}
+            </Typography>
+          </div>
         </CardContent>
       ))}
     </Card>

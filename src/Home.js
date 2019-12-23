@@ -8,8 +8,8 @@ import HomeBar from "./Home-bar";
 import "./App.css";
 
 const useStyle = makeStyles({
-  hr: {
-    backgroundColor: "lightgrey"
+  topPost: {
+    padding: "20px"
   }
 });
 
@@ -17,14 +17,14 @@ export default function Category() {
   const classes = useStyle();
   return (
     <div>
-      <HomeBar />
-      <Categorybar />
-      <div className="popular-post">
+      <div>
+        <HomeBar />
+        <Categorybar />
+      </div>
+      <div className={classes.topPost}>
         <div className="main-article">
           <MainArticle />
         </div>
-        <br />
-        <hr className={classes.hr}></hr>
         <Post />
       </div>
     </div>

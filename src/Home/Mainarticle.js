@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function SpacingGrid() {
+export default function MainArticle() {
   const [spacing, setSpacing] = React.useState(2);
   const classes = useStyles();
 
