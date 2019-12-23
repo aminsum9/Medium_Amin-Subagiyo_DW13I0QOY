@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Fab from "@material-ui/core/Fab";
 import IconButton from "@material-ui/core/IconButton";
-import "./Articlepart.css";
-// import "../Home/Home.css";
+import "../App.css";
+import "../Home/Home.css";
 
 class Claps extends Component {
   constructor(props) {
