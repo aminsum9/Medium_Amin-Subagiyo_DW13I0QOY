@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import Fab from "@material-ui/core/Fab";
 import IconButton from "@material-ui/core/IconButton";
-import "../App.css";
-import "../Home/Home.css";
+import "./Articlepart.css";
 
 class Claps extends Component {
   constructor(props) {
@@ -17,7 +16,14 @@ class Claps extends Component {
 
   render() {
     return (
-      <div class="claps">
+      <div
+        style={{
+          width: "800px",
+          margin: "10px",
+          margin: "auto",
+          display: "flex"
+        }}
+      >
         <Fab
           id="clap"
           onClick={() => this.setState({ counter: this.state.counter + 1 })}
