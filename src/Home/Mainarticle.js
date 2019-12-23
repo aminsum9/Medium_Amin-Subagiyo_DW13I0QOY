@@ -28,7 +28,12 @@ export default function MainArticle() {
   };
 
   return (
-    <Grid container className={classes.root} spacing={2}>
+    <Grid
+      container
+      className={classes.root}
+      spacing={2}
+      className="top-main-article"
+    >
       <Grid item xs={12}>
         <Grid container justify="center" spacing={spacing}>
           <Grid item>

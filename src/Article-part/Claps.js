@@ -19,9 +19,10 @@ class Claps extends Component {
       <div
         style={{
           width: "800px",
-          margin: "10px",
+          margin: "40px",
           margin: "auto",
-          display: "flex"
+          display: "flex",
+          padding: "20px"
         }}
       >
         <Fab
@@ -40,6 +41,9 @@ class Claps extends Component {
           </IconButton>
           <IconButton>
             <img src="https://www.freepngimg.com/thumb/instagram/60239-like-icons-bookmark-button-computer-facebook-instagram.png"></img>
+          </IconButton>
+          <IconButton>
+            <img src="https://cdn2.iconfinder.com/data/icons/interface-elements-2/512/more_options_menu_option-512.png"></img>
           </IconButton>
         </div>
       </div>

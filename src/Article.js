@@ -3,8 +3,9 @@ import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import { Link } from "react-router-dom";
-import ArticleBar from "./Home/Article-bar";
+import HomeBar from "./Home-bar";
 import Claps from "./Article-part/Claps";
+import Avatar from "@material-ui/core/Avatar";
 import "./App.css";
 import "./Home/Home.css";
 
@@ -14,10 +15,36 @@ const useStyles = makeStyles(theme => ({
   },
   paper: {
     height: 480,
-    width: 400
+    width: 400,
+    boxShadow: "none",
+    background: "none"
   },
   control: {
     padding: theme.spacing(2)
+  },
+  underRelated: {
+    background: "#424242"
+  },
+  relatedProfile: {
+    display: "flex",
+    alignItems: "center",
+    fontSize: "20px"
+  },
+  bottom: {
+    background: "none",
+    boxShadow: "none",
+    color: "#fff",
+    width: "380px",
+    textAlign: "left"
+  },
+  linkRelated: {
+    textDecoration: "none",
+    color: "black",
+    fontFamily: "Baskerville Old face",
+    textAlign: "left"
+  },
+  relatedPostAvatar: {
+    bottom: "0"
   }
 }));
 
@@ -31,15 +58,9 @@ function Article() {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
     {
-      image: "https://cdn-image.bisnis.com/posts/2018/05/21/797564/arab.jpg",
-      nama: "Salman",
-      comment:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    },
-    {
       image:
-        "https://yt3.ggpht.com/a/AGF-l7-Xf5FxKw2vayMhrqnz0gr5DAcnUjrK9ZDpFQ=s900-c-k-c0xffffffff-no-rj-mo",
-      nama: "Ria Ricis",
+        "https://cdn.i-scmp.com/sites/default/files/styles/768x768/public/d8/images/methode/2019/12/13/6b06cb22-1ca7-11ea-8971-922fdc94075f_image_hires_132744.jpg?itok=XditGQBc&v=1576214873",
+      nama: "King Salman",
       comment:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     }
@@ -53,7 +74,7 @@ function Article() {
   };
   return (
     <div className="post">
-      <ArticleBar />
+      <HomeBar />
       <div>
         <br></br>
         <br></br>
@@ -174,8 +195,8 @@ function Article() {
           have it easy — and an explanation of some of the phenomenon behind
           Donald Trump (notice I said explanation, not an excuse).
         </p>
-        <hr width="1000px"></hr>
         <Claps />
+        <hr width="800px" color="lightgrey"></hr>
         {follows.map(follow => (
           <div className="follow">
             <div className="image">
@@ -199,7 +220,7 @@ function Article() {
         </div>
         <br></br>
         <br></br>
-        <h1>Related Post</h1>
+        <h2>Related Post</h2>
         <div className="related-post">
           <Grid container className={classes.root} spacing={2}>
             <Grid item xs={12}>
@@ -207,35 +228,124 @@ function Article() {
                 <Grid item>
                   <Paper className={classes.paper}>
                     <img src="http://bisnisbandung.com/wp-content/uploads/2017/12/youtube-crowd-uproar-protest-ss-19201920.jpg"></img>
-                    <Link>You Tube</Link>
-                    <p>You Tube is the most popular video sharing...</p>
+                    <Link className={classes.linkRelated}>
+                      <h2>We Can Visit You Tube to Get Much of Video</h2>
+                    </Link>
+                    <div className={classes.relatedProfile}>
+                      <Avatar
+                        alt="Remy Sharp"
+                        src="/broken-image.jpg"
+                        className={classes.relatedPostAvatar}
+                      >
+                        <img
+                          style={{ height: "100%" }}
+                          src="https://miro.medium.com/max/960/1*K7Gi5y5g882yBNyhAEv84A.jpeg"
+                        ></img>
+                      </Avatar>
+                      <p>Jason Voorhees</p>
+                    </div>
                   </Paper>
                 </Grid>
                 <Grid item>
                   <Paper className={classes.paper}>
                     <img src="https://cnet1.cbsistatic.com/img/eOEoOQ4eSDQPxbPCJASBnbsjpmQ=/1092x0/2019/08/14/d9363e04-fd4f-4a81-97ae-88a25d5feef0/gettyimages-858489898.jpg"></img>
-                    <Link>Instagram</Link>
-                    <p>Instagram is the most popular social media...</p>
+                    <Link className={classes.linkRelated}>
+                      <h2>You Can Meet Your Favourite Artist Here</h2>
+                    </Link>
+                    <div className={classes.relatedProfile}>
+                      <Avatar
+                        alt="Remy Sharp"
+                        src="/broken-image.jpg"
+                        className={classes.relatedPostAvatar}
+                      >
+                        <img
+                          style={{ height: "100%" }}
+                          src="https://upload.wikimedia.org/wikipedia/commons/0/01/CoreyTaylorGmm.jpg"
+                        ></img>
+                      </Avatar>
+                      <p>Corey Taylor</p>
+                    </div>
                   </Paper>
                 </Grid>
                 <Grid item>
                   <Paper className={classes.paper}>
                     <img src="https://devclass.com/wp-content/uploads/2018/12/Oracle.jpg"></img>
-                    <Link>Oracle</Link>
-                    <p>
-                      Oracle is the most popular and biggest database
-                      management...
-                    </p>
+                    <Link className={classes.linkRelated}>
+                      <h2>Oracle is The World Most Bigger DBMS</h2>
+                    </Link>
+                    <div className={classes.relatedProfile}>
+                      <Avatar
+                        alt="Remy Sharp"
+                        className={classes.relatedPostAvatar}
+                      >
+                        <img
+                          style={{ height: "100%" }}
+                          src="https://gossipgist.com/uploads/19/lionel-messi.jpg"
+                        ></img>
+                      </Avatar>
+                      <p>Lionel Messi</p>
+                    </div>
                   </Paper>
                 </Grid>
               </Grid>
             </Grid>
           </Grid>
-          <hr style={{ width: "90%", marginTop: 30 }}></hr>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
+          <div className={classes.underRelated}>
+            <Grid container className={classes.root} spacing={2}>
+              <Grid item xs={12}>
+                <Grid container justify="center" spacing={spacing}>
+                  <Grid item>
+                    <Paper className={classes.bottom}>
+                      <h3>Discover Medium</h3>
+                      <p>
+                        Welcome to a place where words matter. On Medium, smart
+                        voices and original ideas take center stage - with no
+                        ads in sight.
+                      </p>
+                    </Paper>
+                  </Grid>
+                  <Grid item>
+                    <Paper className={classes.bottom}>
+                      <h3>Make Medium Yours</h3>
+                      <p>
+                        Follow all the topics you care about, and we’ll deliver
+                        the best stories for you to your homepage and inbox.
+                        Explore
+                      </p>
+                    </Paper>
+                  </Grid>
+                  <Grid item>
+                    <Paper className={classes.bottom}>
+                      <h3>Become a Member</h3>
+                      <p>
+                        Get unlimited access to the best stories on Medium — and
+                        support writers while you’re at it. Just $5/month.
+                        Upgrade
+                      </p>
+                    </Paper>
+                  </Grid>
+                </Grid>
+              </Grid>
+            </Grid>
+            <hr
+              style={{ width: "90%", marginTop: 30, color: "lightgrey" }}
+            ></hr>
+            <br></br>
+            <br></br>
+            <h2
+              style={{
+                textAlign: "left",
+                color: "#fff",
+                fontFamily: "Baskerville Old Face",
+                position: "relative",
+                left: "85px"
+              }}
+            >
+              Medium
+            </h2>
+            <br></br>
+            <br></br>
+          </div>
         </div>
       </div>
     </div>

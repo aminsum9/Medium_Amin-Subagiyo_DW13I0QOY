@@ -98,9 +98,9 @@
   display: flex;
 }
 #clap {
-  background: orange;
+  background: #fff;
   position: relative;
-  left: 56px;
+  left: 10px;
   height: 70px;
   width: 70px;
 }
@@ -110,7 +110,7 @@
 }
 #counter {
   position: relative;
-  left: 80px;
+  left: 20px;
   top: 10px;
 }
 .share {
@@ -131,7 +131,7 @@
   height: 200px;
   background: #fff;
   margin-bottom: 10px;
-  box-shadow: 2px 2px 2px grey;
+  border-bottom: 1px solid lightgrey;
   text-align: left;
   display: flex;
 }

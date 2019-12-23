@@ -121,7 +121,7 @@
 .related-post {
   margin: auto;
   width: 100%;
-  background: grey;
+  background: #f5f5f5;
 }
 .related-post img {
   width: 98%;
@@ -130,60 +130,6 @@
 }
 
 /* Follow */
-.follow {
-  margin: auto;
-  width: 800px;
-  height: 200px;
-  background: #fff;
-  margin-bottom: 10px;
-  box-shadow: 2px 2px 2px grey;
-  text-align: left;
-  display: flex;
-}
-.follow strong {
-  height: 30px;
-  background: #fff;
-}
-.follow p {
-  width: 500px;
-  height: 100%;
-}
-.image {
-  width: 130px;
-  height: 100%;
-  background: #fff;
-  text-align: center;
-}
-.follow img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  float: left;
-  padding: 10px;
-}
-.follow-button {
-  width: 170px;
-  display: flex;
-  align-items: center;
-}
-.follow-button div {
-  width: 100px;
-  height: 40px;
-  border: 2px solid rgba(3, 168, 150, 1);
-  border-radius: 10px;
-  float: right;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-  cursor: pointer;
-  color: rgba(3, 168, 150, 1);
-  font-size: 20px;
-}
-.follow-button div:hover {
-  background: rgba(3, 168, 150, 1);
-  color: #fff;
-}
 #counter {
   position: relative;
   left: 80px;
