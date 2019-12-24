@@ -1,5 +1,5 @@
 import React from "react";
-import ArticleBar from "../Home/Article-bar";
+import HomeBar from "../Home-bar";
 import Response from "./Response";
 import "./Articlepart.css";
 
@@ -28,7 +28,7 @@ export default function Comment() {
 
   return (
     <div>
-      <ArticleBar />
+      <HomeBar />
       {/* showing response for */}
       <p id="comment-1-title">Showing response for:</p>
       <div id="comment-1">
