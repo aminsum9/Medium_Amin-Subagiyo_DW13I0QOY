@@ -145,3 +145,48 @@
   height: 25px;
   top: 0px;
 }
+
+/* Popular Post */
+.cardPopular {
+  width: 100%;
+  box-shadow: none;
+}
+.contentPopular {
+  display: flex;
+}
+.titlePopular {
+  font-size: 14;
+}
+
+/* Last Post */
+.cardLastPost {
+  width: 100%;
+  overflow-y: auto;
+  overflow: hidden;
+  text-align: justify;
+  box-shadow: none;
+}
+.containerLastPost {
+  height: 800px;
+  overflow: auto;
+  margin: 15px -300px 15px 15px;
+  padding-right: "300px";
+}
+.bulletLastPost {
+  display: inline-block;
+  border-bottom: 1px solid light grey;
+  margin-bottom: 20px;
+  border-bottom: 1px solid lightgrey;
+}
+.imageLastPost {
+  width: 160px;
+  height: 140px;
+  padding-right: 10px;
+  float: left;
+}
+.titleLastPost {
+  font-size: 14;
+}
+.posLastPost {
+  margin-bottom: 12;
+}

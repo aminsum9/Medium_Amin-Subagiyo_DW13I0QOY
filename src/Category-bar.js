@@ -9,7 +9,7 @@ import "./Home/Home.css";
 const list = [
   {
     name: "HOME",
-    target: "/Mobile"
+    target: "/Home"
   },
   {
     name: "ONE ZERO",

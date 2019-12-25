@@ -1,0 +1,78 @@
+.root {
+  flex-grow: 1;
+  width: 1200px;
+  height: 354px;
+  margin: auto;
+  margin-bottom: 100px;
+}
+.container {
+  margin-bottom: 40px;
+}
+.paper {
+  height: 354px;
+  text-align: center;
+  color: text;
+  box-shadow: none;
+  background: #6a0bff;
+  text-align: center;
+  background-color: #6a0bff;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+.paperContain {
+  display: center;
+  flex-direction: column;
+  align-items: center;
+  margin: none;
+  padding: none;
+}
+
+/* Bottom Articles */
+.OuterGrid {
+  display: flex;
+  flex-direction: row;
+  width: 680px;
+  height: 160px;
+  margin-left: 200px !important;
+  margin-right: 200px !important;
+  margin-bottom: 30px !important;
+  height: 150px;
+}
+
+.PostItem {
+  display: flex;
+  flex-direction: column;
+  margin-left: 65px;
+  max-width: 400px;
+}
+
+.PostTitle {
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 500;
+}
+
+.PieceOfContent {
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+.Author {
+  font-size: 14px;
+  line-height: 16px;
+  margin-top: 20px;
+}
+
+.Time {
+  font-size: 12px;
+  line-height: 14px;
+  margin-top: 6px;
+}
+
+.Photo img {
+  width: 240px;
+  height: 150px;
+  margin-left: 45px;
+}
