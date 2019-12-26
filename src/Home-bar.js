@@ -130,6 +130,11 @@ export default function HomeBar() {
       <MenuItem>Publications</MenuItem>
       <MenuItem>Costumes your interests</MenuItem>
       <MenuItem>
+        <Link to="./Profile" style={{ textDecoration: "none" }}>
+          Profile
+        </Link>
+      </MenuItem>
+      <MenuItem>
         <Link to="./Story" style={{ textDecoration: "none" }}>
           Story
         </Link>

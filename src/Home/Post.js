@@ -47,7 +47,6 @@ export default function Post() {
                   }}
                 ></hr>
               </div>
-
               <Popularpost />
             </Paper>
           </Grid>

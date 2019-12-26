@@ -108,9 +108,9 @@ export default function Start() {
               <br></br>
               <div>
                 <button type="button">
-                  <Link to="/Home" className="start">
-                    Sign In
-                  </Link>
+                  {/* <Link to="/Home" className="start"> */}
+                  Sign In
+                  {/* </Link> */}
                 </button>
               </div>
               <div>
@@ -142,19 +142,31 @@ export default function Start() {
             <h1>Sign Up</h1>
             <form action="" method="">
               <div>
-                <label for="name">Full Name</label>
+                <label for="fullname">Full Name</label>
               </div>
               <div>
                 <input
                   type="text"
-                  name="name"
-                  id="name"
+                  name="fullname"
+                  id="fullname"
                   placeholder="  fill your full name..."
                 ></input>
               </div>
               <br></br>
               <div>
-                <label for="email">Username</label>
+                <label for="username">Username</label>
+              </div>
+              <div>
+                <input
+                  type="text"
+                  name="username"
+                  id="username"
+                  placeholder="  fill your username..."
+                ></input>
+              </div>
+              <br></br>
+              <div>
+                <label for="email">Email</label>
               </div>
               <div>
                 <input
@@ -179,9 +191,9 @@ export default function Start() {
               <br></br>
               <div>
                 <button type="button">
-                  <Link to="./Home" className="start">
-                    Sign Up
-                  </Link>
+                  {/* <Link to="./Home" className="start"> */}
+                  Sign Up
+                  {/* </Link> */}
                 </button>
               </div>
               <div>

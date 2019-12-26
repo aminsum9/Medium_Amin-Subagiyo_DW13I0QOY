@@ -33,7 +33,7 @@ export default class SimpleCard extends Component {
                 color="textSecondary"
                 gutterBottom
               >
-                {/* {article.category} */}
+                {/* {article.category.name} */}
               </Typography>
               <Typography variant="h5" component="h2">
                 {article.title}
