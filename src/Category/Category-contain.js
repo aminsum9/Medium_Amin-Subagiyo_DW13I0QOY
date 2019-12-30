@@ -88,7 +88,7 @@ class Contain extends Component {
             </Paper>
           </Grid>
           <Grid item xs={12} sm={5}>
-            <Paper className="paper">
+            <Paper className="paper" style={{ backgroundColor: "aqua" }}>
               <div>
                 <h1>OneZero’s Best Tech and Science Stories of 2019</h1>
                 <h3>
@@ -107,7 +107,7 @@ class Contain extends Component {
           <Grid item xs={12} sm={5}>
             <Paper
               className="paper"
-              style={{ backgroundColor: "#fff", color: "#000000" }}
+              style={{ backgroundColor: "magenta", color: "#000000" }}
             >
               <div>
                 <h1>
@@ -141,7 +141,7 @@ class Contain extends Component {
             </Paper>
           </Grid>
           <Grid item xs={12} sm={5}>
-            <Paper className="paper">
+            <Paper className="paper" style={{ backgroundColor: "aqua" }}>
               <div>
                 <h1>Cybertrucks and Folding Phones: 2019’s Worst Tech Ideas</h1>
                 <h3>A rundown of a no good, very bad year in tech ideas</h3>
@@ -156,7 +156,7 @@ class Contain extends Component {
           <Grid item xs={12} sm={5}>
             <Paper
               className="paper"
-              style={{ backgroundColor: "#fff", color: "#000000" }}
+              style={{ backgroundColor: "magenta", color: "#000000" }}
             >
               <div>
                 <h1>Stories From Beyond: The Articles We Loved in 2019</h1>

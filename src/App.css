@@ -88,6 +88,18 @@ html {
   width: 900px;
 }
 
+.modalStart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.paperStart {
+  /* backgroundColor: theme.palette.background.paper, */
+  border: 2px solid #000;
+  box-shadow: none;
+  /* padding: theme.spacing(2, 4, 3) */
+}
+
 /* App.js */
 
 .App {

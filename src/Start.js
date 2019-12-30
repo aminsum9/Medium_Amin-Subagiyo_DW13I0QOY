@@ -6,22 +6,40 @@ import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
 import "./App.css";
 
-const useStyles = makeStyles(theme => ({
-  modal: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center"
-  },
-  paper: {
-    backgroundColor: theme.palette.background.paper,
-    border: "2px solid #000",
-    boxShadow: theme.shadows[5],
-    padding: theme.spacing(2, 4, 3)
-  }
-}));
-
 export default function Start() {
-  const classes = useStyles();
+  // For Login
+  // constructor() {
+  //   super();
+  //   this.state = {
+  //     email: "",
+  //     password: "",
+  //     errors: {}
+  //   };
+
+  //   this.onChange = this.onChange.bind(this);
+  //   this.onSubmit = this.onSubmit.bind(this);
+  // }
+
+  // onChange(e) {
+  //   this.setState({ [e.target.name]: e.target.value });
+  // }
+  // onSubmit(e) {
+  //   e.preventDefault();
+
+  //   const user = {
+  //     email: this.state.email,
+  //     password: this.state.password
+  //   };
+
+  //   login(user).then(() => {
+  //     if (localStorage.getItem("tokenn")) {
+  //       window.location = "/";
+  //     } else {
+  //       window.location = "/login";
+  //       alert("Wrong Password or email");
+  //     }
+  //   });
+  // }
   const [loginOpen, setLoginOpen] = useState(false);
   const [regOpen, setRegOpen] = useState(false);
 
@@ -66,10 +84,11 @@ export default function Start() {
       <div class="start-page">
         <h1>Get smarter about what matters to you.</h1>
       </div>
+      {/* Log In */}
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
-        className={classes.modal}
+        className="modalStart"
         open={loginOpen}
         onClose={() => handleClose("login")}
         closeAfterTransition
@@ -81,7 +100,7 @@ export default function Start() {
         <Fade in={loginOpen}>
           <div className="signin regist">
             <h1>Sign In</h1>
-            <form action="" method="">
+            <form /*onSubmit={this.onSubmit}*/>
               <div>
                 <label for="email">Username</label>
               </div>
@@ -90,6 +109,7 @@ export default function Start() {
                   type="text"
                   name="email"
                   id="email"
+                  // onChange={this.onChange}
                   placeholder="  fill your email..."
                 ></input>
               </div>
@@ -102,15 +122,16 @@ export default function Start() {
                   type="password"
                   name="password"
                   id="password"
+                  // onChange={this.onChange}
                   placeholder="  fill new password..."
                 ></input>
               </div>
               <br></br>
               <div>
                 <button type="button">
-                  {/* <Link to="/Home" className="start"> */}
-                  Sign In
-                  {/* </Link> */}
+                  <Link to="/Home" className="start">
+                    Sign In
+                  </Link>
                 </button>
               </div>
               <div>
@@ -125,10 +146,11 @@ export default function Start() {
           </div>
         </Fade>
       </Modal>
+      {/* Registration */}
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
-        className={classes.modal}
+        className="modalStart"
         open={regOpen}
         onClose={() => handleClose("register")}
         closeAfterTransition

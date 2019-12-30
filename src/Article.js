@@ -44,7 +44,8 @@ const useStyles = makeStyles(theme => ({
     textAlign: "left"
   },
   relatedPostAvatar: {
-    bottom: "0"
+    bottom: "0",
+    marginRight: "10px"
   }
 }));
 
@@ -220,8 +221,11 @@ function Article() {
         </div>
         <br></br>
         <br></br>
-        <h2>Related Post</h2>
+
         <div className="related-post">
+          <h3 style={{ float: "left", marginLeft: "40px" }}>
+            More From Medium
+          </h3>
           <Grid container className={classes.root} spacing={2}>
             <Grid item xs={12}>
               <Grid container justify="center" spacing={spacing}>
