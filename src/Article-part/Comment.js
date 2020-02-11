@@ -27,6 +27,10 @@ export default function Comment() {
     }
   ];
 
+  const onClick = () => {
+    comments.push({ name: "tes" });
+  };
+
   return (
     <div>
       <HomeBar />
@@ -43,6 +47,7 @@ export default function Comment() {
           <Response />
         </div>
         {/* response list */}
+        <button onClick={onClick}>tes</button>
         {comments.map(comment => (
           <div className="comment-containt">
             <div

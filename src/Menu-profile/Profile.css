@@ -73,28 +73,46 @@ html {
   font-family: Baskerville old face;
   font-size: 20px;
   position: relative;
-  padding-left: 100px;
+  display: flex;
+  justify-content: center;
 }
-#New-story-content {
-  height: 60px;
+#form-add-story {
+  background: none;
 }
-#New-story-add {
-  width: 50px;
+#new-story-title {
+  width: 800px;
+  height: 20px;
+}
+#new-story-add {
+  width: 800px;
+  margin: auto;
+}
+#new-story-select-category {
+  width: 825px;
+  color: grey;
+}
+#new-story-image {
+  width: 800px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+#new-story-image-add {
+  width: 700px;
   height: 50px;
-  border-radius: 50%;
-  border: 1px solid black;
-  float: left;
 }
-#New-story-add img {
-  width: 100%;
+#new-story-image img {
+  width: 100px;
   height: 100%;
+  margin-left: 20px;
+  border: 1px solid light grey;
 }
-#Section-content input {
-  height: 50px;
-  outline: none;
-  border: none;
+#new-story-button {
+  display: flex;
+  justify-content: center;
 }
-
 /* Stats */
 #Stats-contain {
   margin: auto;

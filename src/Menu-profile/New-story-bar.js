@@ -7,12 +7,14 @@ import Typography from "@material-ui/core/Typography";
 import Badge from "@material-ui/core/Badge";
 import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
-import SearchIcon from "@material-ui/icons/Search";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import MailIcon from "@material-ui/icons/Mail";
 import NotificationsNoneIcon from "@material-ui/icons/NotificationsNone";
 import Avatar from "@material-ui/core/Avatar";
 import { Link } from "react-router-dom";
+//Import Redux
+import { connect } from "react-redux";
+import { postArticle } from "../_actions/article";
 
 const useStyles = makeStyles(theme => ({
   grow: {
@@ -72,7 +74,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function HomeBar() {
+function HomeBar(data, postData) {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -88,8 +90,13 @@ export default function HomeBar() {
     setAnchorEl(null);
   };
 
-  const handleMobileMenuOpen = event => {
-    setMobileMoreAnchorEl(event.currentTarget);
+  // const handleMobileMenuOpen = event => {
+  //   setMobileMoreAnchorEl(event.currentTarget);
+  // };
+
+  const onClick = () => {
+    console.log(data);
+    postArticle(data);
   };
 
   const menuId = "primary-search-account-menu";
@@ -109,34 +116,30 @@ export default function HomeBar() {
           src="https://upload.wikimedia.org/wikipedia/commons/a/a7/20180602_FIFA_Friendly_Match_Austria_vs._Germany_Mesut_%C3%96zil_850_0704.jpg"
         />
       </MenuItem>
-      <MenuItem>
-        <Link to="./New-story" style={{ textDecoration: "none" }}>
-          New Story
-        </Link>
-      </MenuItem>
-      <MenuItem>Stories</MenuItem>
+      <Link to="./New-story" style={{ textDecoration: "none", color: "#000" }}>
+        <MenuItem>New Story</MenuItem>
+      </Link>
+      <Link to="./Story" style={{ textDecoration: "none", color: "#000" }}>
+        <MenuItem>Stories</MenuItem>
+      </Link>
       <MenuItem>Series</MenuItem>
-      <MenuItem>
-        <Link to="./Stats" style={{ textDecoration: "none" }}>
-          Stats
-        </Link>
-      </MenuItem>
+      <Link to="./Stats" style={{ textDecoration: "none", color: "#000" }}>
+        <MenuItem>Stats</MenuItem>
+      </Link>
       <MenuItem>Medium Partner Program</MenuItem>
-      <MenuItem>
-        <Link to="./Bookmark" style={{ textDecoration: "none" }}>
-          Bookmark
-        </Link>
-      </MenuItem>
+      <Link to="./Bookmark" style={{ textDecoration: "none", color: "#000" }}>
+        <MenuItem>Bookmark</MenuItem>
+      </Link>
       <MenuItem>Publications</MenuItem>
       <MenuItem>Costumes your interests</MenuItem>
-      <MenuItem>
-        <Link to="./Story" style={{ textDecoration: "none" }}>
-          Story
-        </Link>
-      </MenuItem>
+      <Link to="/Profile" style={{ textDecoration: "none", color: "#000" }}>
+        <MenuItem>Profile</MenuItem>
+      </Link>
       <MenuItem>Settings</MenuItem>
       <MenuItem>Help</MenuItem>
-      <MenuItem>Sign Out</MenuItem>
+      <Link to="./Start" style={{ textDecoration: "none", color: "#000" }}>
+        <MenuItem>Sign Out</MenuItem>
+      </Link>
     </Menu>
   );
 
@@ -222,6 +225,7 @@ export default function HomeBar() {
               color="inherit"
               className={classes.notifications}
               style={{ position: "relative", right: "120px" }}
+              onClick={onClick}
             >
               <div id="Publish">Publish</div>
             </IconButton>
@@ -266,35 +270,19 @@ export default function HomeBar() {
   );
 }
 
-// import React from "react";
-// import { Link } from "react-router-dom";
+const mapStateToProps = state => {
+  return {
+    postarticle: state.postarticle
+  };
+};
 
-// export default function NewStoryBar() {
-//   return (
-//     <div class="New-story-bar">
-//       <div id="New-story-bar-1">
-//         <div id="New-story-bar-2">
-//           <Link to="../Home">
-//             <img src="https://cdn.dribbble.com/users/314298/screenshots/3796877/medium-dribbble.png" />
-//           </Link>
-//           <p>Draft</p>
-//         </div>
-//         <div id="New-story-bar-3">
-//           <div id="Publish">Publish</div>
-//           <img
-//             src="https://icon-library.net/images/icon-other/icon-other-26.jpg"
-//             id="other"
-//           ></img>
-//           <img
-//             src="https://cdn3.iconfinder.com/data/icons/line-icons-medium-version/64/bell-512.png"
-//             id="bell"
-//           ></img>
-//           <img
-//             src="https://upload.wikimedia.org/wikipedia/commons/a/a7/20180602_FIFA_Friendly_Match_Austria_vs._Germany_Mesut_%C3%96zil_850_0704.jpg"
-//             id="account"
-//           ></img>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
+const mapDispatchToProps = dispatch => {
+  return {
+    postArticle: articles => {
+      console.log(articles);
+      dispatch(postArticle(articles));
+    }
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(HomeBar);

@@ -89,7 +89,7 @@ class Categorybar extends Component {
   };
 
   componentDidMount() {
-    axios.get("http://localhost:5000/api/v1/categories").then(res => {
+    axios.get("http://localhost:5002/api/v1/categories").then(res => {
       const categories = res.data;
       this.setState({ categories });
     });
@@ -107,9 +107,9 @@ class Categorybar extends Component {
           data={this.state.categories.map(cat => (
             <MenuItem
               text={cat.name}
-              target={"/Mobile"}
+              // target={"/Mobile"}
               key={cat.name}
-              selected={selected}
+              // selected={selected}
             />
           ))}
           // data={menu}

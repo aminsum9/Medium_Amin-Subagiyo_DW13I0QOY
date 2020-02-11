@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import axios, { post } from "axios";
 import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
@@ -7,42 +8,85 @@ import Fade from "@material-ui/core/Fade";
 import "./App.css";
 
 export default function Start() {
-  // For Login
-  // constructor() {
-  //   super();
-  //   this.state = {
-  //     email: "",
-  //     password: "",
-  //     errors: {}
-  //   };
-
-  //   this.onChange = this.onChange.bind(this);
-  //   this.onSubmit = this.onSubmit.bind(this);
-  // }
-
-  // onChange(e) {
-  //   this.setState({ [e.target.name]: e.target.value });
-  // }
-  // onSubmit(e) {
-  //   e.preventDefault();
-
-  //   const user = {
-  //     email: this.state.email,
-  //     password: this.state.password
-  //   };
-
-  //   login(user).then(() => {
-  //     if (localStorage.getItem("tokenn")) {
-  //       window.location = "/";
-  //     } else {
-  //       window.location = "/login";
-  //       alert("Wrong Password or email");
-  //     }
-  //   });
-  // }
   const [loginOpen, setLoginOpen] = useState(false);
   const [regOpen, setRegOpen] = useState(false);
+  //Sign In
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState("failed");
+  //Sign Up
+  const [regFullname, setRegFullname] = useState();
+  const [regUsername, setRegUsername] = useState();
+  const [regEmail, setRegEmail] = useState();
+  const [regPassword, setRegPassword] = useState();
+  //message
+  const [regMessage, setMessage] = useState();
 
+  //function Sign In
+  const onChangeEmail = e => {
+    setEmail(e.target.value);
+  };
+
+  const onChangePassword = e => {
+    setPassword(e.target.value);
+    if (password == null || email == null) {
+      setPassword("failed");
+    }
+  };
+
+  const onClickLogin = () => {
+    const data = {
+      email: email,
+      password: password
+    };
+    console.log(data);
+    return post(`http://localhost:5002/api/v1/login`, data).then(response => {
+      if (response.data.user != null) {
+        window.location = "/Home";
+      } else {
+        setMessage(response.data.message);
+      }
+    });
+  };
+
+  //function Sign Up
+  const onRegFullname = e => {
+    setRegFullname(e.target.value);
+  };
+
+  const onRegUsername = e => {
+    setRegUsername(e.target.value);
+  };
+
+  const onRegEmail = e => {
+    setRegEmail(e.target.value);
+  };
+
+  const onRegPassword = e => {
+    setRegPassword(e.target.value);
+  };
+
+  const onSignUp = () => {
+    const data = {
+      fullname: regFullname,
+      username: regUsername,
+      email: regEmail,
+      password: regPassword,
+      is_active: 1
+    };
+    return post(`http://localhost:5002/api/v1/register`, data).then(
+      response => {
+        const res = response.data;
+        if (res.message == "success") {
+          alert(res.message);
+          window.location = "/Home";
+        } else {
+          setMessage(res.message);
+        }
+      }
+    );
+  };
+
+  //control modal
   const signinOpen = () => {
     setLoginOpen(true);
   };
@@ -52,18 +96,25 @@ export default function Start() {
   };
 
   const signinLinkOpen = () => {
+    setMessage("");
     setLoginOpen(false);
     setRegOpen(true);
   };
 
   const signupLinkOpen = () => {
+    setMessage("");
     setRegOpen(false);
     setLoginOpen(true);
   };
 
   const handleClose = type => {
-    if (type == "login") setLoginOpen(false);
-    else setRegOpen(false);
+    if (type == "login") {
+      setLoginOpen(false);
+      setMessage("");
+    } else {
+      setRegOpen(false);
+      setMessage("");
+    }
   };
 
   return (
@@ -100,6 +151,9 @@ export default function Start() {
         <Fade in={loginOpen}>
           <div className="signin regist">
             <h1>Sign In</h1>
+            {regMessage != null && (
+              <p style={{ color: "red", fontSize: "17px" }}>{regMessage}</p>
+            )}
             <form /*onSubmit={this.onSubmit}*/>
               <div>
                 <label for="email">Username</label>
@@ -109,7 +163,7 @@ export default function Start() {
                   type="text"
                   name="email"
                   id="email"
-                  // onChange={this.onChange}
+                  onChange={onChangeEmail}
                   placeholder="  fill your email..."
                 ></input>
               </div>
@@ -122,16 +176,16 @@ export default function Start() {
                   type="password"
                   name="password"
                   id="password"
-                  // onChange={this.onChange}
+                  onChange={onChangePassword}
                   placeholder="  fill new password..."
                 ></input>
               </div>
               <br></br>
               <div>
-                <button type="button">
-                  <Link to="/Home" className="start">
-                    Sign In
-                  </Link>
+                <button type="button" onClick={onClickLogin}>
+                  {/* <Link to="/Home" className="start"> */}
+                  Sign In
+                  {/* </Link> */}
                 </button>
               </div>
               <div>
@@ -162,6 +216,9 @@ export default function Start() {
         <Fade in={regOpen}>
           <div className="signup regist">
             <h1>Sign Up</h1>
+            {regMessage != null && (
+              <p style={{ color: "red", fontSize: "17px" }}>{regMessage}</p>
+            )}
             <form action="" method="">
               <div>
                 <label for="fullname">Full Name</label>
@@ -172,6 +229,7 @@ export default function Start() {
                   name="fullname"
                   id="fullname"
                   placeholder="  fill your full name..."
+                  onChange={onRegFullname}
                 ></input>
               </div>
               <br></br>
@@ -184,6 +242,7 @@ export default function Start() {
                   name="username"
                   id="username"
                   placeholder="  fill your username..."
+                  onChange={onRegUsername}
                 ></input>
               </div>
               <br></br>
@@ -196,6 +255,7 @@ export default function Start() {
                   name="email"
                   id="email"
                   placeholder="  fill your email..."
+                  onChange={onRegEmail}
                 ></input>
               </div>
               <br></br>
@@ -208,11 +268,12 @@ export default function Start() {
                   name="password"
                   id="password"
                   placeholder="  create new password..."
+                  onChange={onRegPassword}
                 ></input>
               </div>
               <br></br>
               <div>
-                <button type="button">
+                <button type="button" onClick={onSignUp}>
                   {/* <Link to="./Home" className="start"> */}
                   Sign Up
                   {/* </Link> */}

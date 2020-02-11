@@ -25,7 +25,9 @@ export default function Category() {
         <div className="main-article">
           <MainArticle />
         </div>
-        <Post />
+        <div style={{ maxWidth: "1400px", margin: "auto" }}>
+          <Post />
+        </div>
       </div>
     </div>
   );

@@ -30,23 +30,26 @@ export default function Newpost() {
   const articles = [
     {
       image:
-        "https://yt3.ggpht.com/a/AGF-l7-9-FRpBK_E7OQcduUOufKvX3SEXv8svC1Cfg=s900-c-k-c0xffffffff-no-rj-mo",
-      category: "web",
-      title: "Blogger",
-      content: "blogger is the one of most polular blog maker.."
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSnK5dwCwWuUVn7HNrMesLwzghfc3WSFwNP2wxFTU0v4h5Prwou",
+      category: "music",
+      title: "Bagaimana Kabar Grub Band Lawas Yang Satu Ini?",
+      content:
+        "Setelah sekian lama tidak kelihatan di layar televisi, bagaimana kabar grub band music yang satu ini..."
     },
     {
       image:
-        "https://ultrawebjogja.com/wp-content/uploads/2019/07/wordpress.png",
-      category: "web",
-      title: "WordPress",
-      content: "WordPress is the one of most polular blog maker.."
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTUSfj9mQebP0AcfO5p7ptQxYf4DzHN_jrX6TJ3nui_rGz7eSIp",
+      category: "health",
+      title: "Anda Sering Merasa Sakit Padahal Sehat?",
+      content:
+        "Hipokondria adalah suatu kondisi gangguan kesehatan yang mana..."
     },
     {
-      image: "https://medium.com/icons/monogram-mask.svg",
-      category: "web",
-      title: "Medium",
-      content: "Medium is the one of most polular blog maker.."
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQo3lXrZ5n6V7yJv1asb3qv5pcFF3TMX7DVOmvwdSwsChUUh55e",
+      category: "programming",
+      title: "Yup, Berkenalan Dengan DBMS Yang Satu Ini?",
+      content: "Pernahkan anda mendengar Mongo DB. Dalam dunia programming..."
     }
   ];
 
@@ -66,7 +69,11 @@ export default function Newpost() {
             >
               {article.category}
             </Typography>
-            <Typography variant="h5" component="h2">
+            <Typography
+              variant="h6"
+              component="h3"
+              className="new-article-title"
+            >
               {article.title}
             </Typography>
             <Typography variant="body2" component="p">

@@ -114,34 +114,36 @@ export default function MenuProfileBar() {
           src="https://upload.wikimedia.org/wikipedia/commons/a/a7/20180602_FIFA_Friendly_Match_Austria_vs._Germany_Mesut_%C3%96zil_850_0704.jpg"
         />
       </MenuItem>
-      <MenuItem>
-        <Link to="./New-story" style={{ textDecoration: "none" }}>
-          New Story
-        </Link>
-      </MenuItem>
-      <MenuItem>Stories</MenuItem>
+
+      <Link to="./New-story" style={{ textDecoration: "none", color: "#000" }}>
+        <MenuItem>New Story</MenuItem>
+      </Link>
+
+      <Link to="./Story" style={{ textDecoration: "none", color: "#000" }}>
+        <MenuItem>Stories</MenuItem>
+      </Link>
+
       <MenuItem>Series</MenuItem>
-      <MenuItem>
-        <Link to="./Stats" style={{ textDecoration: "none" }}>
-          Stats
-        </Link>
-      </MenuItem>
+
+      <Link to="./Stats" style={{ textDecoration: "none", color: "#000" }}>
+        <MenuItem>Stats</MenuItem>
+      </Link>
+
       <MenuItem>Medium Partner Program</MenuItem>
-      <MenuItem>
-        <Link to="./Bookmark" style={{ textDecoration: "none" }}>
-          Bookmark
-        </Link>
-      </MenuItem>
+
+      <Link to="./Bookmark" style={{ textDecoration: "none", color: "#000" }}>
+        <MenuItem>Bookmark</MenuItem>
+      </Link>
       <MenuItem>Publications</MenuItem>
       <MenuItem>Costumes your interests</MenuItem>
-      <MenuItem>
-        <Link to="./Story" style={{ textDecoration: "none" }}>
-          Story
-        </Link>
-      </MenuItem>
+      <Link to="/Profile" style={{ textDecoration: "none", color: "#000" }}>
+        <MenuItem>Profile</MenuItem>
+      </Link>
       <MenuItem>Settings</MenuItem>
       <MenuItem>Help</MenuItem>
-      <MenuItem>Sign Out</MenuItem>
+      <Link to="./Signin" style={{ textDecoration: "none", color: "#000" }}>
+        <MenuItem>Sign Out</MenuItem>
+      </Link>
     </Menu>
   );
 

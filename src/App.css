@@ -23,7 +23,7 @@ html {
   padding-top: 5px;
   padding-left: -5px;
   width: 500px;
-  height: 500px;
+  /* height: 500px; */
   display: block;
   font-family: "Courier New", Courier, monospace;
   font-size: 20px;
@@ -201,6 +201,7 @@ html {
   margin: auto;
   margin-bottom: 30px;
   box-shadow: none;
+  max-width: 1400px;
 }
 .new-post {
   width: 500px;

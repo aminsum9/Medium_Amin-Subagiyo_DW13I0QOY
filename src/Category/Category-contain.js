@@ -75,6 +75,21 @@ class Contain extends Component {
           }}
         >
           <h1 style={{ fontSize: "70px" }}>OneZero</h1>
+          <div
+            style={{
+              marginLeft: "20px",
+              fontSize: "20px",
+              width: "500px",
+              fontFamily: "sans-serif"
+            }}
+          >
+            <p>
+              <span style={{ color: "blue" }}>
+                The undercurrents of the future.
+              </span>{" "}
+              A Medium publication about tech and science.
+            </p>
+          </div>
         </div>
         {/* line 1 */}
         <Grid container className="container">
