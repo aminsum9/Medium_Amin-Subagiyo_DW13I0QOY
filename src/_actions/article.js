@@ -8,7 +8,7 @@ export const postArticle = data => {
     type: POST_ARTICLE,
     payload: axios({
       method: "POST",
-      url: "http://localhost:5002/api/v1/article",
+      url: "http://localhost:5000/api/v1/article",
       data: data.data,
       headers: {
         Authorization: "Bearer " + token

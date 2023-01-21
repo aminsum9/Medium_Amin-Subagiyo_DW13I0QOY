@@ -6,7 +6,7 @@ export const getCategories = () => {
     type: GET_CATEGORIES,
     payload: axios({
       method: "GET",
-      url: "http://localhost:5002/api/v1/categories"
+      url: "http://localhost:5000/api/v1/categories"
     })
   };
 };

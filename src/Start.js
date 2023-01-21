@@ -39,7 +39,7 @@ export default function Start() {
       password: password
     };
     console.log(data);
-    return post(`http://localhost:5002/api/v1/login`, data).then(response => {
+    return post(`http://localhost:5000/api/v1/login`, data).then(response => {
       if (response.data.user != null) {
         window.location = "/Home";
       } else {
@@ -73,7 +73,7 @@ export default function Start() {
       password: regPassword,
       is_active: 1
     };
-    return post(`http://localhost:5002/api/v1/register`, data).then(
+    return post(`http://localhost:5000/api/v1/register`, data).then(
       response => {
         const res = response.data;
         if (res.message == "success") {

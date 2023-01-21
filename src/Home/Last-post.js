@@ -12,7 +12,7 @@ export default class LastPost extends Component {
   }
 
   componentDidMount() {
-    axios.get(`http://localhost:5002/api/v1/articles`).then(res => {
+    axios.get(`http://localhost:5000/api/v1/articles`).then(res => {
       const articles = res.data;
       console.log(res.data);
       this.setState({ articles });
