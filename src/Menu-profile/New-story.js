@@ -7,145 +7,167 @@ import { connect } from "react-redux";
 import { getCategories } from "../_actions/categories";
 import { postArticle } from "../_actions/article";
 
-class Newstory extends Component {
-  constructor() {
-    super();
-    this.state = {
-      title: "",
-      content: "",
-      category_id: "",
-      image: "",
-      data: []
-    };
-  }
+const Newstory = (props) => {
+  var [state, setState] = React.useState({
+    title: "",
+    content: "",
+    category_id: "",
+    image: { url: "", name: "", file: "" },
+    data: [],
+  });
 
-  onChange = e => {
-    this.setState({ [e.target.name]: e.target.value });
-    window.setTimeout(this.stateData, 500);
+  const onChange = (e) => {
+    const target = e.target.name;
+    const value = e.target.value;
+
+    setState(prevState => ({...prevState, [target]: value }));
   };
 
-  stateData = () => {
-    const data = {
-      title: this.state.title,
-      content: this.state.content,
-      category_id: this.state.category_id,
-      image: this.state.image
-    };
-    // console.log(data);
-    this.setState({ data });
+  const hiddenFileInput = React.useRef(null);
+
+  // Programatically click the hidden file input element
+  // when the Button component is clicked
+  const handleClick = (event) => {
+    hiddenFileInput.current.click();
   };
 
-  onClick = () => {
-    const data = {
-      title: this.state.title,
-      content: this.state.content,
-      category_id: this.state.category_id,
-      image: this.state.image
+  const handleFileChange = async (e) => {
+    let files = e.target.files;
+    const imageUrl = URL.createObjectURL(files[0]);
+    console.log(imageUrl, " ----imageUrl");
+
+    let reader = new FileReader();
+    reader.readAsDataURL(files[0]);
+
+    reader.onload = (e) => {
+      console.warn("img data", e.target);
+      setState((prevState) => ({
+        ...prevState,
+        image: { file: e.target.result, url: imageUrl },
+      }));
     };
-    this.setState({ data });
+
+    // let reader2 = new FileReader();
+    // var urlImage = reader.readAsDataURL(files[0]);
+    // console.warn("url image", urlImage);
+    // setState((prevState) => ({ ...prevState, image: {file: "", url: urlImage} }));
   };
 
-  componentDidMount() {
-    this.props.getCategories();
-  }
+  const handleSaveStory = () => {
 
-  render() {
-    const { categories } = this.props.categories;
+    var formData = new FormData();
 
-    return (
-      <div>
-        <NewStoryBar data={this.state.data} />
-        {/* <svg width="400" height="200">
-          <polygon
-            points="110,10 40,198 190,78 10,78 160,198"
+    formData.append('title', state.title)
+    formData.append('content', state.content)
+    formData.append('category_id', state.category_id)
+    // formData.append('image', state.image)
+
+    console.log(formData, ' -----formData')
+
+    props.postArticle(formData);
+  };
+
+  React.useEffect(() => {
+    props.getCategories();
+  }, []);
+
+  const { categories } = props.categories;
+
+  return (
+    <div>
+      <NewStoryBar postArticle={() => handleSaveStory()} />
+      <div id="Section-content">
+        <form id="form-add-story">
+          <div
             style={{
-              fill: "lime",
-              stroke: "purple",
-              strokeWidth: 5
-              // fillRule: "evenodd"
+              flexDirection: "row",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
             }}
-          />
-        </svg> */}
-        <div id="Section-content">
-          <form id="form-add-story">
+          >
             <TextField
               id="new-story-title"
-              label="Title"
+              label="Judul"
               multiline
-              rows="4"
+              minRows="4"
               variant="outlined"
               name="title"
-              onChange={this.onChange}
+              onChange={onChange}
             />
-            <br></br>
-            <br></br>
-            <TextField
-              id="new-story-add"
-              label="Article"
-              multiline
-              rows="4"
-              variant="outlined"
-              name="content"
-              onChange={this.onChange}
-            />
-            <br></br>
-            <br></br>
-            <div>
-              <select
-                id="new-story-select-category"
-                name="category_id"
-                onChange={this.onChange}
-              >
-                <option>please select one...</option>
-                {categories.map((entry, index) => {
-                  return (
-                    <option key={index} value={entry.id}>
-                      {entry.name}
-                    </option>
-                  );
-                })}
-              </select>
-            </div>
             <div id="new-story-image">
-              <TextField
-                id="new-story-image-add"
-                label="Image Url"
-                multiline
-                rows="4"
-                variant="outlined"
-                name="image"
-                onChange={this.onChange}
+              <img src={state.image.url} alt={state.image.name || "-"} />
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleClick(e);
+                }}
+              >
+                {state.image.url ? (
+                  <p style={{color: "red"}}>hapus gambar</p>
+                ): (
+                  <p style={{color: "green"}}>tambah gambar</p>
+                )}
+              </button>
+              <input
+                type="file"
+                ref={hiddenFileInput}
+                onChange={handleFileChange}
+                style={{ display: "none" }}
               />
-              <img src={this.state.image}></img>
             </div>
-            {/* <button type="button" onClick={this.onClick}>
-              Create Article
-            </button> */}
-          </form>
-        </div>
+          </div>
+          <br></br>
+          <div>
+            <select
+              id="new-story-select-category"
+              name="category_id"
+              onChange={onChange}
+            >
+              <option>pilih kategori</option>
+              {categories.map((entry, index) => {
+                return (
+                  <option key={index} value={entry.id}>
+                    {entry.name}
+                  </option>
+                );
+              })}
+            </select>
+          </div>
+          <br></br>
+          <TextField
+            id="new-story-add"
+            label="Artikel"
+            multiline
+            minRows="10"
+            variant="outlined"
+            name="content"
+            onChange={onChange}
+          />
+          <br></br>
+        </form>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
-const data = new Newstory().onClick();
-console.log(data);
-
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
-    categories: state.categories
+    categories: state.categories,
   };
 };
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   // console.log(this.state.title);
   return {
-    postArticle: () => {
+    postArticle: (data) => {
+      console.log(data, ' ---data di sini')
       dispatch(postArticle(data));
     },
     getCategories: () => {
       dispatch(getCategories());
-    }
+    },
   };
 };
 

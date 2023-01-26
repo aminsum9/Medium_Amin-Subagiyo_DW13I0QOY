@@ -40,8 +40,11 @@ export default function Start() {
     };
     console.log(data);
     return post(`http://localhost:5000/api/v1/login`, data).then(response => {
-      if (response.data.user != null) {
-        window.location = "/Home";
+      if (response.data.success != null) {
+        if(response.data.token){
+          localStorage.setItem('token', response.data.token)
+          window.location = "/Home";
+        }
       } else {
         setMessage(response.data.message);
       }

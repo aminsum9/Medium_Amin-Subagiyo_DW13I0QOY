@@ -105,10 +105,10 @@ export default function ArticleByPerson() {
             <div className="claps-title">
               Top 10 Elon Musk Productivity Secrets for Insane Success
             </div>
-            <img src="https://miro.medium.com/max/361/1*JmEUqbxA9nA3pr1yMwloOg.jpeg"></img>
+            <img src="https://miro.medium.com/max/361/1*JmEUqbxA9nA3pr1yMwloOg.jpeg" alt="-"></img>
           </li>
           <li>
-            <img src="https://miro.medium.com/fit/c/700/210/1*PwZsd2suQER-gRfM0g5w0w.png"></img>
+            <img src="https://miro.medium.com/fit/c/700/210/1*PwZsd2suQER-gRfM0g5w0w.png" alt="-"></img>
             <div className="claps-title">
               Psychologists Explain How To Stop Overthinking Everything
             </div>

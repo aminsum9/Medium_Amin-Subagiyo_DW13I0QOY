@@ -1,5 +1,5 @@
 import React from "react";
-import { fade, makeStyles } from "@material-ui/core/styles";
+import { alpha, makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
@@ -34,9 +34,9 @@ const useStyles = makeStyles(theme => ({
     position: "relative",
     right: "90px",
     borderRadius: theme.shape.borderRadius,
-    backgroundColor: fade(theme.palette.common.white, 0.15),
+    backgroundColor: alpha(theme.palette.common.white, 0.15),
     "&:hover": {
-      backgroundColor: fade(theme.palette.common.white, 0.25)
+      backgroundColor: alpha(theme.palette.common.white, 0.25)
     },
     marginRight: theme.spacing(2),
     marginLeft: 0,
@@ -74,7 +74,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-function HomeBar(data, postData) {
+function HomeBar(props, postData) {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -95,8 +95,7 @@ function HomeBar(data, postData) {
   // };
 
   const onClick = () => {
-    console.log(data);
-    postArticle(data);
+    props.postArticle();
   };
 
   const menuId = "primary-search-account-menu";
@@ -155,7 +154,7 @@ function HomeBar(data, postData) {
     >
       <MenuItem>
         <IconButton aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="secondary">
+          <Badge overlap="rectangular" badgeContent={4} color="secondary">
             <MailIcon />
           </Badge>
         </IconButton>
@@ -278,10 +277,6 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    postArticle: articles => {
-      console.log(articles);
-      dispatch(postArticle(articles));
-    }
   };
 };
 

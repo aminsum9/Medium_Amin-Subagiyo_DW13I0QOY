@@ -148,7 +148,7 @@ export default function HomeBar() {
     >
       <MenuItem>
         <IconButton aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="secondary">
+          <Badge overlap="rectangular" badgeContent={4} color="secondary">
             <MailIcon />
           </Badge>
         </IconButton>
