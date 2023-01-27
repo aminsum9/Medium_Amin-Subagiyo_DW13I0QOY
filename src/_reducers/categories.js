@@ -14,7 +14,6 @@ export const categories = (state = initialState, action) => {
         isLoading: true
       };
     case `${GET_CATEGORIES}_FULFILLED`:
-      console.log(action.payload);
       return {
         ...state,
         categories: action.payload.data,

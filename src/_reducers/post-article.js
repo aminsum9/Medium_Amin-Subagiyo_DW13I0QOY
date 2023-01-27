@@ -14,7 +14,6 @@ export const postarticle = (state = initialState, action) => {
         isLoading: true
       };
     case `${POST_ARTICLE}_FULFILLED`:
-      console.log(action.payload);
       return {
         ...state,
         postarticle: action.payload.postarticle,

@@ -34,11 +34,12 @@ export default function Start() {
   };
 
   const onClickLogin = () => {
+    
     const data = {
       email: email,
       password: password
     };
-    console.log(data);
+
     return post(`http://localhost:5000/api/v1/login`, data).then(response => {
       if (response.data.success != null) {
         if(response.data.token){

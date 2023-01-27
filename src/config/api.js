@@ -26,7 +26,7 @@ export const register = newUser => {
       }
     })
     .catch(err => {
-      console.log(err);
+      //
     });
 };
 
@@ -37,7 +37,6 @@ export const login = user => {
       password: user.password
     })
     .then(response => {
-      console.log(response);
       if (response.data.token === undefined) {
       } else {
         localStorage.setItem("token", response.data.token);
@@ -45,7 +44,7 @@ export const login = user => {
       }
     })
     .catch(err => {
-      console.log(err);
+      //
     });
 };
 

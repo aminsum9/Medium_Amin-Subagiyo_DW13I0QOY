@@ -69,7 +69,7 @@ const ArrowLeft = Arrow({ text: "<", className: "arrow-prev" });
 const ArrowRight = Arrow({ text: ">", className: "arrow-next" });
 
 const selected = () => {
-  return console.log("tes");
+  //
 };
 
 class Categorybar extends Component {

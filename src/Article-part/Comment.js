@@ -48,8 +48,8 @@ export default function Comment() {
         </div>
         {/* response list */}
         <button onClick={onClick}>tes</button>
-        {comments.map(comment => (
-          <div className="comment-containt">
+        {comments.map((comment, index) => (
+          <div key={index} className="comment-containt">
             <div
               style={{
                 display: "flex",

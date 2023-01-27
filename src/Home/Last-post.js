@@ -15,7 +15,6 @@ export default class LastPost extends Component {
   componentDidMount() {
     axios.get(`http://localhost:5000/api/v1/articles`).then(res => {
       const articles = res.data;
-      console.log(res.data);
       this.setState({ articles });
     });
   }
@@ -27,8 +26,8 @@ export default class LastPost extends Component {
         style={{ boxShadow: "none", width: "100%" }}
       >
         <div className="containerLastPost">
-          {this.state.articles.map(article => (
-            <CardContent className="bulletLastPost">
+          {this.state.articles.map((article, index) => (
+            <CardContent key={index} className="bulletLastPost">
               <div>
                 <img src={IMG_URL + article.image} className="imageLastPost"></img>
               </div>

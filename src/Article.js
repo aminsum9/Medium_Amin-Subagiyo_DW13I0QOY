@@ -198,8 +198,8 @@ function Article() {
         </p>
         <Claps />
         <hr width="800px" color="lightgrey"></hr>
-        {follows.map(follow => (
-          <div className="follow">
+        {follows.map((follow, index) => (
+          <div id={index} className="follow">
             <div className="image">
               <img src={follow.image} />
             </div>
@@ -228,7 +228,7 @@ function Article() {
           </h3>
           <Grid container className={classes.root} spacing={2}>
             <Grid item xs={12}>
-              <Grid container justify="center" spacing={spacing}>
+              <Grid container justifyContent="center" spacing={spacing}>
                 <Grid item>
                   <Paper className={classes.paper}>
                     <img src="http://bisnisbandung.com/wp-content/uploads/2017/12/youtube-crowd-uproar-protest-ss-19201920.jpg"></img>
@@ -297,7 +297,7 @@ function Article() {
           <div className={classes.underRelated}>
             <Grid container className={classes.root} spacing={2}>
               <Grid item xs={12}>
-                <Grid container justify="center" spacing={spacing}>
+                <Grid container justifyContent="center" spacing={spacing}>
                   <Grid item>
                     <Paper className={classes.bottom}>
                       <h3>Discover Medium</h3>

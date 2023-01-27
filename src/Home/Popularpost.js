@@ -14,7 +14,6 @@ export default class SimpleCard extends Component {
   componentDidMount() {
     axios.get(`http://localhost:5000/api/v1/articles/latest`).then(res => {
       const articles = res.data;
-      console.log(res.data);
       this.setState({ articles });
     });
   }
@@ -22,8 +21,8 @@ export default class SimpleCard extends Component {
   render() {
     return (
       <Card className="cardPopular" style={{ boxShadow: "none" }}>
-        {this.state.articles.map(article => (
-          <CardContent className="contentPopular">
+        {this.state.articles.map((article, index) => (
+          <CardContent key={index} className="contentPopular">
             <h1 style={{ paddingRight: "20px", color: "grey" }}>
               {article.id}
             </h1>

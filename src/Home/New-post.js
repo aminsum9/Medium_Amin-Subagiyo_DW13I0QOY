@@ -57,8 +57,8 @@ export default function Newpost() {
   return (
     <Card className={classes.card} style={{ boxShadow: "none" }}>
       {/* article 1 */}
-      {articles.map(article => (
-        <div className="new-article" style={{ texrDecoration: "none" }}>
+      {articles.map((article, index) => (
+        <div key={index} className="new-article" style={{ texrDecoration: "none" }}>
           <CardContent>
             <div className="image-new-post">
               <img src={article.image}></img>

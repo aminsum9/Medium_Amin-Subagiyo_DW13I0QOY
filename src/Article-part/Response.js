@@ -13,7 +13,6 @@ class Response extends Component {
   }
 
   onClick = () => {
-    // return console.log("tes");
     this.setState({
       allComment: [this.state.allComment, this.state.comment]
     });
@@ -27,7 +26,7 @@ class Response extends Component {
   };
 
   coba = comment => {
-    console.log(comment);
+    //
   };
 
   render() {

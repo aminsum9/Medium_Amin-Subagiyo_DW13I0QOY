@@ -194,9 +194,9 @@ class Contain extends Component {
             </Paper>
           </Grid>
         </Grid>
-        {this.state.postitems.map(item => {
+        {this.state.postitems.map((item, index) => {
           return (
-            <div>
+            <div key={index}>
               <div>
                 <center>
                   <hr
