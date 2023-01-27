@@ -106,7 +106,7 @@ html {
 #new-story-image img {
   width: 100px;
   height: 100px;
-  border: 1px solid light white;
+  border: 1px solid lightgrey;
 }
 #new-story-image button {
   margin-top: 7px;
@@ -330,6 +330,10 @@ html {
   font-size: 15px;
 }
 /* Profile */
+.Story{
+  margin: 0px;
+  padding: 0px;
+}
 .Story-contain {
   width: 1192px;
   height: 100px;
