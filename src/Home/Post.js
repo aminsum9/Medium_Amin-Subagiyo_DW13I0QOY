@@ -4,7 +4,6 @@ import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import Popularpost from "./Popularpost";
 import LastPost from "./Last-post";
-import axios from "axios";
 
 const useStyles = makeStyles(theme => ({
   root: {
