@@ -19,8 +19,7 @@ import DraftPublished from "./Menu-profile/draft-publihed";
 import "./App.css";
 
 export default function App() {
-
-  var token = localStorage.getItem('token');
+  var token = localStorage.getItem("token");
 
   return (
     <Router>
@@ -57,7 +56,7 @@ export default function App() {
             <Stats />
           </Route>
           <Route path="/Bookmark">
-            <Bookmark />
+              <Bookmark />
           </Route>
           <Route path="/Profile">
             <Profile />
@@ -72,13 +71,13 @@ export default function App() {
             <DraftPublished />
           </Route>
           {token ? (
-          <Route path="/">
-            <Home />
-          </Route>
-          ):(
-          <Route path="/">
-            <Start />
-          </Route>
+            <Route path="/">
+              <Home />
+            </Route>
+          ) : (
+            <Route path="/">
+              <Start />
+            </Route>
           )}
         </Switch>
       </div>

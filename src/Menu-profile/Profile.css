@@ -227,6 +227,7 @@ html {
 #Bookmark-upgrade div {
   width: 80px;
   height: 40px;
+  margin-right: 20px;
   background: black;
   border-radius: 5px;
 }
@@ -235,8 +236,8 @@ html {
   background: transparent;
   color: #fff;
   position: relative;
-  left: 10px;
-  top: -8px;
+  left: 12px;
+  top: -5px;
 }
 /* Profile */
 .Profile-container {
