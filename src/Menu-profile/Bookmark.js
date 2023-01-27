@@ -10,7 +10,7 @@ class Bookmark extends Component {
           <p>Bookmarks</p>
           <div className="Bookmark-contain">
             <div id="Bookmark-mark-image">
-              <img src="https://image.flaticon.com/icons/png/512/16/16714.png"></img>
+              <img src="https://image.flaticon.com/icons/png/512/16/16714.png" alt="-"></img>
             </div>
             <div id="Bookmark-reading-here">
               <p>Offline reading is here</p>

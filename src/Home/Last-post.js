@@ -29,7 +29,7 @@ export default class LastPost extends Component {
           {this.state.articles.map((article, index) => (
             <CardContent key={index} className="bulletLastPost">
               <div>
-                <img src={IMG_URL + article.image} className="imageLastPost"></img>
+                <img src={IMG_URL + article.image} className="imageLastPost" alt="-" />
               </div>
               <Typography
                 className="titleLastPost"

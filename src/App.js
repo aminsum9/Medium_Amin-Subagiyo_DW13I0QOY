@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Start from "./Start";
 import Home from "./Home";
@@ -17,7 +17,6 @@ import HomeBar from "./Home-bar";
 import Story from "./Menu-profile/Story";
 import DraftPublished from "./Menu-profile/draft-publihed";
 import "./App.css";
-import * as serviceWorker from "./serviceWorker";
 
 export default function App() {
 

@@ -52,7 +52,7 @@ const Newstory = (props) => {
     formData.append('title', state.title)
     formData.append('content', state.content)
     formData.append('category_id', state.category_id)
-    if(state.imageFile != ""){
+    if(state.imageFile !== ""){
       formData.append('image', state.imageFile)
     }
 

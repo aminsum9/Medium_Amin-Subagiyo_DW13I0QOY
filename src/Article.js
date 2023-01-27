@@ -73,6 +73,7 @@ function Article() {
   const handleChange = event => {
     setSpacing(Number(event.target.value));
   };
+  
   return (
     <div className="post">
       <HomeBar />
@@ -80,7 +81,7 @@ function Article() {
         <br></br>
         <br></br>
         <br></br>
-        <img src="https://miro.medium.com/max/2000/1*-T8oo_JoKkMxfnPKLt_Ciw.jpeg"></img>
+        <img src="https://miro.medium.com/max/2000/1*-T8oo_JoKkMxfnPKLt_Ciw.jpeg" alt="-" />
         <h1>If You Only Read A Few Books In 2018, Read These</h1>
         <p id="main">
           If you’d liked to be jerked around less, provoked less, and more
@@ -201,7 +202,7 @@ function Article() {
         {follows.map((follow, index) => (
           <div id={index} className="follow">
             <div className="image">
-              <img src={follow.image} />
+              <img src={follow.image} alt="-" />
             </div>
             <div className="comment">
               <strong>{follow.nama}</strong>
@@ -231,7 +232,7 @@ function Article() {
               <Grid container justifyContent="center" spacing={spacing}>
                 <Grid item>
                   <Paper className={classes.paper}>
-                    <img src="http://bisnisbandung.com/wp-content/uploads/2017/12/youtube-crowd-uproar-protest-ss-19201920.jpg"></img>
+                    <img src="http://bisnisbandung.com/wp-content/uploads/2017/12/youtube-crowd-uproar-protest-ss-19201920.jpg" alt="-" />
                     <Link className={classes.linkRelated}>
                       <h2>We Can Visit You Tube to Get Much of Video</h2>
                     </Link>
@@ -244,7 +245,8 @@ function Article() {
                         <img
                           style={{ height: "100%" }}
                           src="https://miro.medium.com/max/960/1*K7Gi5y5g882yBNyhAEv84A.jpeg"
-                        ></img>
+                          alt="-"
+                        />
                       </Avatar>
                       <p>Jason Voorhees</p>
                     </div>
@@ -252,7 +254,7 @@ function Article() {
                 </Grid>
                 <Grid item>
                   <Paper className={classes.paper}>
-                    <img src="https://cnet1.cbsistatic.com/img/eOEoOQ4eSDQPxbPCJASBnbsjpmQ=/1092x0/2019/08/14/d9363e04-fd4f-4a81-97ae-88a25d5feef0/gettyimages-858489898.jpg"></img>
+                    <img src="https://cnet1.cbsistatic.com/img/eOEoOQ4eSDQPxbPCJASBnbsjpmQ=/1092x0/2019/08/14/d9363e04-fd4f-4a81-97ae-88a25d5feef0/gettyimages-858489898.jpg" alt="-" />
                     <Link className={classes.linkRelated}>
                       <h2>You Can Meet Your Favourite Artist Here</h2>
                     </Link>
@@ -265,7 +267,8 @@ function Article() {
                         <img
                           style={{ height: "100%" }}
                           src="https://upload.wikimedia.org/wikipedia/commons/0/01/CoreyTaylorGmm.jpg"
-                        ></img>
+                          alt="-"
+                        />
                       </Avatar>
                       <p>Corey Taylor</p>
                     </div>
@@ -273,7 +276,7 @@ function Article() {
                 </Grid>
                 <Grid item>
                   <Paper className={classes.paper}>
-                    <img src="https://devclass.com/wp-content/uploads/2018/12/Oracle.jpg"></img>
+                    <img src="https://devclass.com/wp-content/uploads/2018/12/Oracle.jpg" alt="-" />
                     <Link className={classes.linkRelated}>
                       <h2>Oracle is The World Most Bigger DBMS</h2>
                     </Link>
@@ -285,7 +288,8 @@ function Article() {
                         <img
                           style={{ height: "100%" }}
                           src="https://gossipgist.com/uploads/19/lionel-messi.jpg"
-                        ></img>
+                          alt="-"
+                        />
                       </Avatar>
                       <p>Lionel Messi</p>
                     </div>

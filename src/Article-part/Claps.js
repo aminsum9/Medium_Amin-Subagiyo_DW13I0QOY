@@ -29,21 +29,21 @@ class Claps extends Component {
           id="clap"
           onClick={() => this.setState({ counter: this.state.counter + 1 })}
         >
-          <img src="https://static.thenounproject.com/png/1085294-200.png"></img>
+          <img src="https://static.thenounproject.com/png/1085294-200.png" alt="-" />
         </Fab>
         <p id="counter">{this.state.counter} claps</p>
         <div className="share">
           <IconButton>
-            <img src="https://storage.needpix.com/rsynced_images/facebook-719085_1280.png"></img>
+            <img src="https://storage.needpix.com/rsynced_images/facebook-719085_1280.png" alt="-" />
           </IconButton>
           <IconButton>
-            <img src="https://www.iconninja.com/files/552/369/307/socialmedia-social-news-network-tweet-twitter-share-icon.png"></img>
+            <img src="https://www.iconninja.com/files/552/369/307/socialmedia-social-news-network-tweet-twitter-share-icon.png" alt="-"/>
           </IconButton>
           <IconButton>
-            <img src="https://www.freepngimg.com/thumb/instagram/60239-like-icons-bookmark-button-computer-facebook-instagram.png"></img>
+            <img src="https://www.freepngimg.com/thumb/instagram/60239-like-icons-bookmark-button-computer-facebook-instagram.png" alt="-"/>
           </IconButton>
           <IconButton>
-            <img src="https://cdn2.iconfinder.com/data/icons/interface-elements-2/512/more_options_menu_option-512.png"></img>
+            <img src="https://cdn2.iconfinder.com/data/icons/interface-elements-2/512/more_options_menu_option-512.png" alt="-"/>
           </IconButton>
         </div>
       </div>

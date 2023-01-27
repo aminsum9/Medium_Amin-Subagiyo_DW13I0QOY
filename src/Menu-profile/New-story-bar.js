@@ -12,9 +12,6 @@ import MailIcon from "@material-ui/icons/Mail";
 import NotificationsNoneIcon from "@material-ui/icons/NotificationsNone";
 import Avatar from "@material-ui/core/Avatar";
 import { Link } from "react-router-dom";
-//Import Redux
-import { connect } from "react-redux";
-import { postArticle } from "../_actions/article";
 
 const useStyles = makeStyles(theme => ({
   grow: {
@@ -90,9 +87,9 @@ function HomeBar(props, postData) {
     setAnchorEl(null);
   };
 
-  // const handleMobileMenuOpen = event => {
-  //   setMobileMoreAnchorEl(event.currentTarget);
-  // };
+  const handleMobileMenuOpen = event => {
+    setMobileMoreAnchorEl(event.currentTarget);
+  };
 
   const onClick = () => {
     props.postArticle();
@@ -269,15 +266,4 @@ function HomeBar(props, postData) {
   );
 }
 
-const mapStateToProps = state => {
-  return {
-    postarticle: state.postarticle
-  };
-};
-
-const mapDispatchToProps = dispatch => {
-  return {
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(HomeBar);
+export default HomeBar;
