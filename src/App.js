@@ -17,10 +17,11 @@ import HomeBar from "./Home-bar";
 import Story from "./Menu-profile/Story";
 import DraftPublished from "./Menu-profile/draft-publihed";
 import "./App.css";
+import * as serviceWorker from "./serviceWorker";
 
 export default function App() {
 
-  var token = localStorage.getItem('token')
+  var token = localStorage.getItem('token');
 
   return (
     <Router>

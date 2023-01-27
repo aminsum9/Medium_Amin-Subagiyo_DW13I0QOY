@@ -122,7 +122,7 @@ export default function Start() {
 
   return (
     <div>
-      <nav className="app-nav">
+      <nav className="app-nav" data-testid="app-nav">
         <h1>Medium</h1>
         <Link to="/Signin" className="nav-link">
           <button type="button" onClick={signinOpen}>
@@ -135,7 +135,7 @@ export default function Start() {
           </button>
         </Link>
       </nav>
-      <div class="start-page">
+      <div className="start-page">
         <h1>Get smarter about what matters to you.</h1>
       </div>
       {/* Log In */}
