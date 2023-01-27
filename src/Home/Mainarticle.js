@@ -32,7 +32,6 @@ export default function MainArticle() {
       container
       className={classes.root}
       spacing={2}
-      className="top-main-article"
     >
       <Grid item xs={12}>
         <Grid container justify="center">

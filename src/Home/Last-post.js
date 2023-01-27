@@ -4,6 +4,7 @@ import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import axios from "axios";
 import "./Home.css";
+import { IMG_URL } from "../config/host";
 
 export default class LastPost extends Component {
   constructor(props) {
@@ -29,7 +30,7 @@ export default class LastPost extends Component {
           {this.state.articles.map(article => (
             <CardContent className="bulletLastPost">
               <div>
-                <img src={article.image} className="imageLastPost"></img>
+                <img src={IMG_URL + article.image} className="imageLastPost"></img>
               </div>
               <Typography
                 className="titleLastPost"

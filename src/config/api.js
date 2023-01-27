@@ -1,13 +1,14 @@
 // Learn more or give us feedback
 import axios from "axios";
+import {BASE_URL} from './host.js';
 
 export const API = axios.create({
-  baseURL: "http://localhost:5000/api/v1"
+  baseURL: BASE_URL
 });
 
 export const register = newUser => {
-  return axios
-    .post("http://localhost:5000/api/v1/register", {
+  return API
+    .post("api/v1/register", {
       name: newUser.name,
       username: newUser.username,
       email: newUser.email,
@@ -30,8 +31,8 @@ export const register = newUser => {
 };
 
 export const login = user => {
-  return axios
-    .post("http://localhost:5000/api/v1/login", {
+  return API
+    .post("api/v1/login", {
       email: user.email,
       password: user.password
     })
@@ -50,17 +51,17 @@ export const login = user => {
 
 export const updateProfile = data => {
   const token = localStorage.getItem("token");
-  axios.defaults.headers["Authorization"] = "Bearer " + token;
-  return axios
-    .put(`http://localhost:5000/api/v1/profile/edit`, data)
+  API.defaults.headers["Authorization"] = "Bearer " + token;
+  return API
+    .put(`api/v1/profile/edit`, data)
     .then(response => alert(response.data.message));
 };
 
 export const favorite = data => {
   const token = localStorage.getItem("token");
-  axios.defaults.headers["Authorization"] = "Bearer " + token;
-  return axios
-    .post("http://localhost:5000/api/v1/favorite", data)
+  API.defaults.headers["Authorization"] = "Bearer " + token;
+  return API
+    .post("api/v1/favorite", data)
     .then(response => {
       return response;
     });
