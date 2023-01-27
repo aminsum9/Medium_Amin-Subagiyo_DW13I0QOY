@@ -1,8 +1,9 @@
 import { POST_ARTICLE } from "../config/constants";
 import axios from "axios";
 //Setup Action Redux INC
-export const postArticle = async data => {
-  const token = await localStorage.getItem("token");
+export const postArticle = (data) => {
+  const token = localStorage.getItem("token");
+  
   return {
     type: POST_ARTICLE,
     payload: axios({
@@ -11,7 +12,8 @@ export const postArticle = async data => {
       data: data,
       headers: {
         Authorization: "Bearer " + token,
-        'Content-Type': 'multipart/form-data'}
-    })
+        "Content-Type": "multipart/form-data",
+      },
+    }),
   };
 };

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import NewStoryBar from "./New-story-bar";
 import "./Profile.css";
 import { TextField } from "@material-ui/core";
@@ -13,6 +13,7 @@ const Newstory = (props) => {
     content: "",
     category_id: "",
     image: { url: "", name: "", file: "" },
+    imageFile: "",
     data: [],
   });
 
@@ -34,35 +35,28 @@ const Newstory = (props) => {
   const handleFileChange = async (e) => {
     let files = e.target.files;
     const imageUrl = URL.createObjectURL(files[0]);
-    console.log(imageUrl, " ----imageUrl");
 
     let reader = new FileReader();
     reader.readAsDataURL(files[0]);
 
     reader.onload = (e) => {
-      console.warn("img data", e.target);
       setState((prevState) => ({
         ...prevState,
-        image: { file: e.target.result, url: imageUrl },
+        imageFile:  files[0],
+        image: { file: files[0], url: imageUrl, name: files[0].name},
       }));
     };
-
-    // let reader2 = new FileReader();
-    // var urlImage = reader.readAsDataURL(files[0]);
-    // console.warn("url image", urlImage);
-    // setState((prevState) => ({ ...prevState, image: {file: "", url: urlImage} }));
   };
 
-  const handleSaveStory = () => {
-
+  const handleSaveStory = async () => {
     var formData = new FormData();
 
     formData.append('title', state.title)
     formData.append('content', state.content)
     formData.append('category_id', state.category_id)
-    // formData.append('image', state.image)
-
-    console.log(formData, ' -----formData')
+    if(state.imageFile != ""){
+      formData.append('image', state.imageFile)
+    }
 
     props.postArticle(formData);
   };
@@ -159,10 +153,8 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-  // console.log(this.state.title);
   return {
     postArticle: (data) => {
-      console.log(data, ' ---data di sini')
       dispatch(postArticle(data));
     },
     getCategories: () => {

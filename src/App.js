@@ -19,6 +19,9 @@ import DraftPublished from "./Menu-profile/draft-publihed";
 import "./App.css";
 
 export default function App() {
+
+  var token = localStorage.getItem('token')
+
   return (
     <Router>
       <div>
@@ -68,9 +71,15 @@ export default function App() {
           <Route path="/DraftPublished">
             <DraftPublished />
           </Route>
+          {token ? (
+          <Route path="/">
+            <Home />
+          </Route>
+          ):(
           <Route path="/">
             <Start />
           </Route>
+          )}
         </Switch>
       </div>
     </Router>
