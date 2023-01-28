@@ -50,6 +50,9 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function Article() {
+
+  var [ claps, setClaps] = React.useState(0);
+
   const follows = [
     {
       image:

@@ -20,7 +20,7 @@ class Claps extends Component {
         style={{
           width: "800px",
           margin: "40px",
-          // margin: "auto",
+          margin: "auto",
           display: "flex",
           padding: "20px"
         }}
