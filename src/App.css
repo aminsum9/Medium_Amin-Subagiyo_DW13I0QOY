@@ -7,6 +7,10 @@ html {
   padding: 0;
   height: 100%;
 }
+body{
+  margin: 0px;
+  padding: 0px;
+}
 /* form regitration / Start */
 .signin {
   padding-top: 5px;
